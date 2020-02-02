@@ -1,0 +1,27 @@
+# этап сборки (build stage)
+FROM node:12.2.0-alpine as build-stage
+WORKDIR /usr/src/app
+RUN npm cache verify \
+#RUN npm cache clean --force
+npm install -g core-js@^3 \
+npm install -g @vue/cli
+#RUN npm install -g --unsafe-perm @vue/cli
+#RUN npm update -g core-js@latest
+COPY frontend/package.json /usr/src/app/package.json
+RUN npm install
+COPY frontend/ /usr/src/app/
+RUN npm run build
+
+#FROM node:latest as build-stage
+#WORKDIR /usr/src/app
+#COPY frontend/package.json ./
+#RUN npm install
+#COPY frontend/ /usr/src/app/
+#RUN npm run build
+
+# этап production (production-stage)
+FROM nginx:1.17.8-alpine as production-stage
+COPY nginx/conf.d/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build-stage /usr/src/app/dist /dist/
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
