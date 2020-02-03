@@ -5,6 +5,7 @@ import { axiosBase } from "../api/axios-base";
 import cars from "./modules/cars/cars";
 import mods from "./modules/mods/mods";
 import mortgages from "./modules/mortgages/mortgages";
+import user_info from "./modules/user_info/user_info";
 
 Vue.use(Vuex);
 
@@ -139,6 +140,7 @@ export default new Vuex.Store({
   modules: {
     cars,
     mods,
-    mortgages
+    mortgages,
+    user_info
   }
 });

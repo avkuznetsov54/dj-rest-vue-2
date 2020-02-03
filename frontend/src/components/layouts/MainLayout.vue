@@ -76,7 +76,10 @@
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
                   <v-list-item-title class="title">
-                    Application
+<!--                    <template v-for="item in USER_INFO_DATA">-->
+<!--                      {{ item.username }}-->
+<!--                    </template>-->
+                    {{ USER_INFO_DATA.username }}
                   </v-list-item-title>
                   <v-list-item-subtitle>
                     subtext
@@ -201,6 +204,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "main-layout",
   data: () => ({
@@ -250,6 +255,9 @@ export default {
         ]
       }
     ]
-  })
+  }),
+  computed: {
+    ...mapState("user_info", ["USER_INFO_DATA"])
+  }
 };
 </script>
