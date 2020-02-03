@@ -68,10 +68,11 @@
             <v-list>
               <v-list-item>
                 <v-list-item-avatar>
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    alt="John"
-                  />
+<!--                  <img-->
+<!--                    src="https://cdn.vuetifyjs.com/images/john.jpg"-->
+<!--                    alt="John"-->
+<!--                  />-->
+                  <v-icon large>mdi-account-circle</v-icon>
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
                   <v-list-item-title class="title">

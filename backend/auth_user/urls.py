@@ -3,7 +3,7 @@ from django.urls import path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView)
-from .views import ModsView, MyUserView, CustomTokenObtainPairView
+from .views import ModsView, MyUserView, CustomTokenObtainPairView, UserInfoCreateView
 
 from .views import Logout
 
@@ -19,6 +19,6 @@ urlpatterns = [
     # Return 'Mods' model objects
     path('mods/', ModsView.as_view(), name='mods_view'),
 
-    path('users', MyUserView.as_view()),
-
+    path('users/', MyUserView.as_view()),
+    path('user-info/', UserInfoCreateView.as_view()),
 ]

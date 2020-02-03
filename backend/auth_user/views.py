@@ -29,12 +29,31 @@ class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomJWTSerializer
 
 
-# class UserInfoView(TokenObtainPairView):
-#     serializer_class = UserInfoSerializer
-#     # permission_classes = (IsAuthenticated,)
+class UserInfoCreateView(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    # def get_queryset(self):
+    #     return User.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        # получаем refresh_token с фронта
+        refresh_token = request.data.get('refresh_token')
+        # определяем QuerySet
+        refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
+        # вытаскиваем user
+        # print(refresh_token_in_db.get().user)
+        # вытаскиваем все values
+        # print(refresh_token_in_db.values())
+        # ищем в модели User
+        queryset = User.objects.filter(username=refresh_token_in_db.get().user)
+        serializer = UserSerializer(queryset, many=True)
+        print(Response(serializer.data))
+        # возвращаем объект username
+        return Response(serializer.data)
 
 
 class MyUserView(generics.RetrieveAPIView):
+    """Вытаскиваем всех юзеров"""
     permission_classes = (IsAuthenticated, )
 
     def get_queryset(self):
@@ -44,16 +63,6 @@ class MyUserView(generics.RetrieveAPIView):
         queryset = self.get_queryset()
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
-# class MyUserView2(generics.RetrieveAPIView):
-#     serializer_class = UserSerializer
-#     queryset = User.objects.all()
-#     permission_classes = (IsAuthenticated, )
-#
-#     def filter_queryset(self, queryset):
-#         queryset = queryset.filter(username=self.request.user)
-#         return queryset
 
 
 # View for 'Mods' model

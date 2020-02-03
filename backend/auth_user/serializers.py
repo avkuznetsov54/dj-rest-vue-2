@@ -18,6 +18,7 @@ class CustomJWTSerializer(TokenObtainPairSerializer):
         """Обновляем поле last_login"""
         self.user.last_login = timezone.now()
         self.user.save()
+
         return RefreshToken.for_user(user)
 
     def validate(self, attrs):
@@ -47,8 +48,8 @@ class CustomJWTSerializer(TokenObtainPairSerializer):
         #         msg = _('Почта не является корпоративной!')
         #         raise serializers.ValidationError(msg)
 
+        # Default code
         data = super().validate(credentials)
-
         refresh = self.get_token(self.user)
         data['refresh'] = str(refresh)
         data['access'] = str(refresh.access_token)
