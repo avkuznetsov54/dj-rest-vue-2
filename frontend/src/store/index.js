@@ -123,6 +123,7 @@ export default new Vuex.Store({
           })
           // if successful update local storage:
           .then(response => {
+            console.log(response.data);
             context.commit("updateLocalStorage", {
               access: response.data.access,
               refresh: response.data.refresh

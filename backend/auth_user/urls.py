@@ -19,5 +19,6 @@ urlpatterns = [
     # Return 'Mods' model objects
     path('mods/', ModsView.as_view(), name='mods_view'),
 
-    path('users', MyUserView.as_view())
+    path('users', MyUserView.as_view()),
+
 ]

@@ -3,7 +3,7 @@ from django.utils import timezone
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from auth_user.models import Mods
+from .models import Mods
 
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import update_last_login
@@ -47,7 +47,31 @@ class CustomJWTSerializer(TokenObtainPairSerializer):
         #         msg = _('Почта не является корпоративной!')
         #         raise serializers.ValidationError(msg)
 
-        return super().validate(credentials)
+        data = super().validate(credentials)
+
+        refresh = self.get_token(self.user)
+        data['refresh'] = str(refresh)
+        data['access'] = str(refresh.access_token)
+
+        # Add extra responses here
+        # Возвращаем на фронт username и groups
+        data['username'] = self.user.username
+        data['groups'] = self.user.groups.values_list('name', flat=True)
+
+        return data
+
+
+# class UserInfoSerializer(TokenObtainPairSerializer):
+#     def validate(self, attrs):
+#         data = super().validate(attrs)
+#         refresh = self.get_token(self.user)
+#         data['refresh'] = str(refresh)
+#         data['access'] = str(refresh.access_token)
+#
+#         # Add extra responses here
+#         data['username'] = self.user.username
+#         data['groups'] = self.user.groups.values_list('name', flat=True)
+#         return data
 
 
 class GroupSerializer(serializers.ModelSerializer):

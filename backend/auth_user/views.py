@@ -29,6 +29,11 @@ class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomJWTSerializer
 
 
+# class UserInfoView(TokenObtainPairView):
+#     serializer_class = UserInfoSerializer
+#     # permission_classes = (IsAuthenticated,)
+
+
 class MyUserView(generics.RetrieveAPIView):
     permission_classes = (IsAuthenticated, )
 
@@ -39,6 +44,16 @@ class MyUserView(generics.RetrieveAPIView):
         queryset = self.get_queryset()
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+# class MyUserView2(generics.RetrieveAPIView):
+#     serializer_class = UserSerializer
+#     queryset = User.objects.all()
+#     permission_classes = (IsAuthenticated, )
+#
+#     def filter_queryset(self, queryset):
+#         queryset = queryset.filter(username=self.request.user)
+#         return queryset
 
 
 # View for 'Mods' model

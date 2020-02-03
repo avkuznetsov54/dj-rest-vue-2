@@ -3,8 +3,8 @@ from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 
-from mortgages.models import MortgagePrograms, Banks, TargetCredits
-from mortgages.serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer
+from .models import MortgagePrograms, Banks, TargetCredits
+from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer
 
 
 class MortgagePagination(PageNumberPagination):
