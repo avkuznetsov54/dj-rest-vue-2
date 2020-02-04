@@ -76,10 +76,7 @@
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
                   <v-list-item-title class="title">
-<!--                    <template v-for="item in USER_INFO_DATA">-->
-<!--                      {{ item.username }}-->
-<!--                    </template>-->
-                    {{ USER_INFO_DATA.username }}
+                    {{ GET_USER_INFO_DATA.username }}
                   </v-list-item-title>
                   <v-list-item-subtitle>
                     subtext
@@ -204,7 +201,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "main-layout",
@@ -257,7 +254,18 @@ export default {
     ]
   }),
   computed: {
-    ...mapState("user_info", ["USER_INFO_DATA"])
+    ...mapState("user_info", ["USER_INFO_DATA"]),
+    ...mapGetters("user_info", ["GET_USER_INFO_DATA"])
+  },
+  methods: {
+    ...mapActions("user_info", ["FETCH_USER_INFO"]),
+    get_user_info() {
+      const refresh_token = localStorage.getItem("refresh_token");
+      this.FETCH_USER_INFO(refresh_token);
+    }
+  },
+  created() {
+    this.get_user_info();
   }
 };
 </script>

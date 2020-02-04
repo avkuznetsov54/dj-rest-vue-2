@@ -9,7 +9,6 @@
 <script>
 import EmptyLayout from "./components/layouts/EmptyLayout";
 import MainLayout from "./components/layouts/MainLayout";
-import { mapActions } from "vuex";
 
 export default {
   components: {
@@ -20,16 +19,6 @@ export default {
     layout() {
       return (this.$route.meta.layout || "empty") + "-layout";
     }
-  },
-  methods: {
-    ...mapActions("user_info", ["FETCH_USER_INFO"]),
-    get_user_info() {
-      const refresh_token = localStorage.getItem("refresh_token");
-      this.FETCH_USER_INFO(refresh_token);
-    }
-  },
-  created() {
-    this.get_user_info();
   }
 };
 </script>

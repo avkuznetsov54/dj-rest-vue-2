@@ -1,12 +1,17 @@
 import store from "@/store";
 import { getAPI_user_info } from "@/api/user_info/axios-user_info";
+import router from "../../../router";
 
 const mortgagesModule = {
   namespaced: true,
   state: {
-    USER_INFO_DATA: null
+    USER_INFO_DATA: {}
   },
-  getters: {},
+  getters: {
+    GET_USER_INFO_DATA: state => {
+      return state.USER_INFO_DATA;
+    }
+  },
   mutations: {
     SET_UPDATE_USER_INFO_DATA(state, data) {
       state.USER_INFO_DATA = data;
@@ -40,6 +45,7 @@ const mortgagesModule = {
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
             console.log("[user_info] Не получилось");
+            router.push({ name: "logout" });
             reject(err);
           });
       });

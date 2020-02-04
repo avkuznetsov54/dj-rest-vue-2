@@ -37,19 +37,25 @@ class UserInfoCreateView(generics.ListCreateAPIView):
 
     def get(self, request, *args, **kwargs):
         # получаем refresh_token с фронта
-        refresh_token = request.GET.get('refresh_token')
-        # определяем QuerySet
-        refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
-        # вытаскиваем user
-        # print(refresh_token_in_db.get().user)
-        # вытаскиваем все values
-        # print(refresh_token_in_db.values())
-        # ищем в модели User
-        queryset = User.objects.filter(username=refresh_token_in_db.get().user)
-        serializer = UserSerializer(queryset, many=True)
-        # print(Response(serializer.data))
-        # возвращаем объект username
-        return Response(serializer.data)
+        if request.GET:
+            print(request.GET)
+            refresh_token = request.GET.get('refresh_token')
+            # определяем QuerySet
+            refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
+            # вытаскиваем user
+            # print(refresh_token_in_db.get().user)
+            # вытаскиваем все values
+            # print(refresh_token_in_db.values())
+            # ищем в модели User
+            queryset = User.objects.filter(username=refresh_token_in_db.get().user)
+            serializer = UserSerializer(queryset, many=True)
+            # print(Response(serializer.data))
+            # возвращаем объект username
+            return Response(serializer.data)
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    # def post(self, request, *args, **kwargs):
+    #     return self.create(request, *args, **kwargs)
 
 
 class MyUserView(generics.RetrieveAPIView):
