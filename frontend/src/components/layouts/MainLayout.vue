@@ -75,9 +75,9 @@
                   <v-icon large>mdi-account-circle</v-icon>
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
-<!--                  <v-list-item-title class="title">-->
-<!--                    {{ GET_USER_INFO_DATA.username }}-->
-<!--                  </v-list-item-title>-->
+                  <v-list-item-title class="title">
+                    {{ GET_USER_INFO_DATA.username }}
+                  </v-list-item-title>
                   <v-list-item-subtitle>
                     subtext
                   </v-list-item-subtitle>
