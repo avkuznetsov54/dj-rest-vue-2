@@ -45,7 +45,7 @@ const mortgagesModule = {
             // eslint-disable-next-line no-unused-vars
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
-            console.log("[user_info] Не получилось");
+            console.log("[user_info] refresh_token протух");
             router.push({ name: "logout" });
             reject(err);
           });
