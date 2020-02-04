@@ -25,12 +25,13 @@ const mortgagesModule = {
       // console.log(data);
       return new Promise((resolve, reject) => {
         getAPI_user_info
-          .get("api/v1/user-info/", {
-            headers: {
-              Authorization: `Bearer ${store.state.accessToken}`
-            },
-            params: {refresh_token: data}
-          }) // proof that your access token is still valid; if not the
+          .request({
+            url: "api/v1/user-info/",
+            method: "post",
+            data: { refresh_token: data },
+            headers: { Authorization: `Bearer ${store.state.accessToken}` } // the new access token is attached to the authorization header
+          })
+          // proof that your access token is still valid; if not the
           // axios getAPI response interceptor will attempt to get a new  access token from the server. check out ../api/axios-base.js getAPI instance response interceptor
           .then(response => {
             // console.log("GetAPI successfully got the mods");

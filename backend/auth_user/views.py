@@ -35,12 +35,12 @@ class UserInfoCreateView(generics.ListCreateAPIView):
     # def get_queryset(self):
     #     return User.objects.all()
 
-    def get(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         # получаем refresh_token с фронта
-        if request.GET:
+        if request.data:
             try:
-                print(request.GET)
-                refresh_token = request.GET.get('refresh_token')
+                # print(request.GET)
+                refresh_token = request.data.get('refresh_token')
                 # определяем QuerySet
                 refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
                 # вытаскиваем user
@@ -54,9 +54,10 @@ class UserInfoCreateView(generics.ListCreateAPIView):
                 # возвращаем объект username
                 return Response(serializer.data)
             except:
-                print('неправельные токен')
+                # print('неправельные токен')
                 return Response(status=status.HTTP_404_NOT_FOUND)
         return Response(status=status.HTTP_404_NOT_FOUND)
+        # return Response(status=status.HTTP_200_OK)
 
     # def post(self, request, *args, **kwargs):
     #     return self.create(request, *args, **kwargs)

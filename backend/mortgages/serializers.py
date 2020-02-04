@@ -17,6 +17,7 @@ class BanksSerializer(serializers.ModelSerializer):
 class MortgageProgramsSerializer(serializers.ModelSerializer):
     # programs_bank = serializers.SerializerMethodField()
 
+    # включаем данные из связанных моделей
     bank = BanksSerializer(source='programs_bank')
     targets = TargetCreditsSerializer(source='programs_target', many=True)
 
