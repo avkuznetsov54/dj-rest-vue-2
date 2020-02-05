@@ -8,17 +8,17 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-<!--      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">-->
-<!--        <span class="hidden-sm-and-down">Dashboard</span>-->
-<!--      </v-toolbar-title>-->
-<!--      <v-text-field-->
-<!--        flat-->
-<!--        solo-inverted-->
-<!--        hide-details-->
-<!--        prepend-inner-icon="mdi-magnify"-->
-<!--        label="Search"-->
-<!--        class="hidden-sm-and-down"-->
-<!--      />-->
+      <!--      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">-->
+      <!--        <span class="hidden-sm-and-down">Dashboard</span>-->
+      <!--      </v-toolbar-title>-->
+      <!--      <v-text-field-->
+      <!--        flat-->
+      <!--        solo-inverted-->
+      <!--        hide-details-->
+      <!--        prepend-inner-icon="mdi-magnify"-->
+      <!--        label="Search"-->
+      <!--        class="hidden-sm-and-down"-->
+      <!--      />-->
       <v-spacer />
       <v-btn icon>
         <v-icon>mdi-apps</v-icon>
@@ -68,10 +68,10 @@
             <v-list>
               <v-list-item>
                 <v-list-item-avatar>
-<!--                  <img-->
-<!--                    src="https://cdn.vuetifyjs.com/images/john.jpg"-->
-<!--                    alt="John"-->
-<!--                  />-->
+                  <!--                  <img-->
+                  <!--                    src="https://cdn.vuetifyjs.com/images/john.jpg"-->
+                  <!--                    alt="John"-->
+                  <!--                  />-->
                   <v-icon large>mdi-account-circle</v-icon>
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
@@ -87,29 +87,29 @@
               <v-divider></v-divider>
 
               <v-list dense nav>
-<!--                <v-list-item-->
-<!--                  v-for="item in itemsUserIcon"-->
-<!--                  :key="item.title"-->
-<!--                  :to="item.url"-->
-<!--                  link-->
-<!--                >-->
-<!--                  <v-list-item-icon>-->
-<!--                    <v-icon>{{ item.icon }}</v-icon>-->
-<!--                  </v-list-item-icon>-->
+                <!--                <v-list-item-->
+                <!--                  v-for="item in itemsUserIcon"-->
+                <!--                  :key="item.title"-->
+                <!--                  :to="item.url"-->
+                <!--                  link-->
+                <!--                >-->
+                <!--                  <v-list-item-icon>-->
+                <!--                    <v-icon>{{ item.icon }}</v-icon>-->
+                <!--                  </v-list-item-icon>-->
 
-<!--                  <v-list-item-content align="left">-->
-<!--                    <v-list-item-title>{{ item.title }}</v-list-item-title>-->
-<!--                  </v-list-item-content>-->
-<!--                </v-list-item>-->
+                <!--                  <v-list-item-content align="left">-->
+                <!--                    <v-list-item-title>{{ item.title }}</v-list-item-title>-->
+                <!--                  </v-list-item-content>-->
+                <!--                </v-list-item>-->
                 <template v-if="GET_USER_INFO_DATA.groups != false">
-                <v-list-item to="/#">
-                  <v-list-item-icon>
-                    <v-icon>mdi-settings</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content align="left">
-                    <v-list-item-title>Администрирование</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
+                  <v-list-item to="/#">
+                    <v-list-item-icon>
+                      <v-icon>mdi-settings</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content align="left">
+                      <v-list-item-title>Администрирование</v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
                 </template>
 
                 <v-list-item to="/logout">
@@ -120,7 +120,6 @@
                     <v-list-item-title>Выход</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-
               </v-list>
             </v-list>
           </v-card>
@@ -156,74 +155,79 @@
 
         <v-divider></v-divider>
 
-        <template v-if="GET_USER_INFO_DATA.is_staff">
-          <v-subheader>Доступ группы</v-subheader>
+        <template v-if="GET_USER_INFO_DATA.groups != false">
+          <v-subheader>Доступ для группы</v-subheader>
 
-          <template v-for="item in items">
-          <v-row v-if="item.heading" :key="item.heading">
-            <v-col cols="6">
-              <v-subheader v-if="item.heading">
-                {{ item.heading }}
-              </v-subheader>
-            </v-col>
-            <v-col cols="6">
-              <a href="#!" class="body-2 black--text">EDIT</a>
-            </v-col>
-          </v-row>
+          <div v-for="(group, i) in GET_USER_INFO_DATA.groups" :key="i">
+            <template v-if="group.name === 'Редактор Ипотека'">
+              <template v-for="item in itemsMortgage">
+                <v-row v-if="item.heading" :key="item.heading">
+                  <v-col cols="6">
+                    <v-subheader v-if="item.heading">
+                      {{ item.heading }}
+                    </v-subheader>
+                  </v-col>
+                  <v-col cols="6">
+                    <a href="#!" class="body-2 black--text">EDIT</a>
+                  </v-col>
+                </v-row>
 
-          <v-list-group
-            v-else-if="item.children"
-            :key="item.text"
-            v-model="item.model"
-            :prepend-icon="item.model ? item.icon : item['icon-alt']"
-            append-icon=""
-          >
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title>
-                  {{ item.text }}
-                </v-list-item-title>
-              </v-list-item-content>
+                <v-list-group
+                  v-else-if="item.children"
+                  :key="item.text"
+                  v-model="item.model"
+                  :prepend-icon="item.model ? item.icon : item['icon-alt']"
+                  append-icon=""
+                >
+                  <template v-slot:activator>
+                    <v-list-item-content>
+                      <v-list-item-title>
+                        {{ item.text }}
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </template>
+                  <v-list-item
+                    v-for="(child, i) in item.children"
+                    :key="i"
+                    link
+                  >
+                    <v-list-item-action v-if="child.icon">
+                      <v-icon>{{ child.icon }}</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                      <v-list-item-title>
+                        {{ child.text }}
+                      </v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list-group>
+
+                <v-list-item v-else :key="item.text" link>
+                  <v-list-item-action>
+                    <v-icon>{{ item.icon }}</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title>
+                      {{ item.text }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </template>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link>
-              <v-list-item-action v-if="child.icon">
-                <v-icon>{{ child.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  {{ child.text }}
-                </v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
-
-          <v-list-item v-else :key="item.text" link>
-            <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ item.text }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-
+          </div>
 
           <v-divider></v-divider>
         </template>
-
-
       </v-list>
     </v-navigation-drawer>
     <!--    END Sidebar-->
 
     <v-content>
       <v-container v-bind:fluid="drawer">
-<!--        class="fill-height" -->
-<!--        <v-row align="center" justify="center">-->
-          <router-view />
-<!--        </v-row>-->
+        <!--        class="fill-height" -->
+        <!--        <v-row align="center" justify="center">-->
+        <router-view />
+        <!--        </v-row>-->
       </v-container>
     </v-content>
   </v-app>
@@ -241,7 +245,7 @@ export default {
       { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
       // { title: "Login", url: "/login", icon: "mdi-account" },
       // { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
-      { title: "Ипотека", url: "/mortgagelist"},
+      { title: "Ипотека", url: "/mortgagelist" },
       { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
       // { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
       // { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
@@ -256,18 +260,16 @@ export default {
       // { title: "Click Me 4" },
       { title: "Выход", url: "/logout", icon: "mdi-logout" }
     ],
-    items: [
+    itemsMortgage: [
       {
         icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",
-        text: "More",
+        text: 'Редактирование "Ипотека"',
         model: false,
         children: [
-          { icon: "mdi-plus", text: "Import" },
-          { icon: "mdi-plus", text: "Export" },
-          { icon: "mdi-plus", text: "Print" },
-          { icon: "mdi-plus", text: "Undo changes" },
-          { icon: "mdi-plus", text: "Other contacts" }
+          { icon: "mdi-plus", text: "Банки" },
+          { icon: "mdi-plus", text: "Цель ипотеки" },
+          { icon: "mdi-plus", text: "Программы" }
         ]
       }
     ]

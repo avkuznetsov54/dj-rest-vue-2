@@ -547,6 +547,9 @@ export default {
       // this.fetchMortgages(this.url, params);
       this.FETCH_MORTGAGES(params);
       // console.log(this.BANKS_DATA);
+      if (!this.showFullMortgage) {
+        this.none();
+      }
     }
   },
   created() {
