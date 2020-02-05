@@ -86,7 +86,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'groups')
+        fields = ('username', 'email', 'is_staff', 'groups')
 
 
 class ModSerializer(serializers.ModelSerializer):

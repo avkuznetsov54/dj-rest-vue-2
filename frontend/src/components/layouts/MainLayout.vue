@@ -87,20 +87,40 @@
               <v-divider></v-divider>
 
               <v-list dense nav>
-                <v-list-item
-                  v-for="item in itemsUserIcon"
-                  :key="item.title"
-                  :to="item.url"
-                  link
-                >
-                  <v-list-item-icon>
-                    <v-icon>{{ item.icon }}</v-icon>
-                  </v-list-item-icon>
+<!--                <v-list-item-->
+<!--                  v-for="item in itemsUserIcon"-->
+<!--                  :key="item.title"-->
+<!--                  :to="item.url"-->
+<!--                  link-->
+<!--                >-->
+<!--                  <v-list-item-icon>-->
+<!--                    <v-icon>{{ item.icon }}</v-icon>-->
+<!--                  </v-list-item-icon>-->
 
+<!--                  <v-list-item-content align="left">-->
+<!--                    <v-list-item-title>{{ item.title }}</v-list-item-title>-->
+<!--                  </v-list-item-content>-->
+<!--                </v-list-item>-->
+                <template v-if="GET_USER_INFO_DATA.groups != false">
+                <v-list-item to="/#">
+                  <v-list-item-icon>
+                    <v-icon>mdi-settings</v-icon>
+                  </v-list-item-icon>
                   <v-list-item-content align="left">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title>Администрирование</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
+                </template>
+
+                <v-list-item to="/logout">
+                  <v-list-item-icon>
+                    <v-icon>mdi-logout</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content align="left">
+                    <v-list-item-title>Выход</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+
               </v-list>
             </v-list>
           </v-card>
@@ -136,7 +156,10 @@
 
         <v-divider></v-divider>
 
-        <template v-for="item in items">
+        <template v-if="GET_USER_INFO_DATA.is_staff">
+          <v-subheader>Доступ группы</v-subheader>
+
+          <template v-for="item in items">
           <v-row v-if="item.heading" :key="item.heading">
             <v-col cols="6">
               <v-subheader v-if="item.heading">
@@ -185,6 +208,12 @@
             </v-list-item-content>
           </v-list-item>
         </template>
+
+
+          <v-divider></v-divider>
+        </template>
+
+
       </v-list>
     </v-navigation-drawer>
     <!--    END Sidebar-->
@@ -210,45 +239,35 @@ export default {
     drawer: null,
     linksMenu: [
       { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
-      { title: "Login", url: "/login", icon: "mdi-account" },
-      { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
+      // { title: "Login", url: "/login", icon: "mdi-account" },
+      // { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
       { title: "Ипотека", url: "/mortgagelist"},
       { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
-      { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
-      { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
+      // { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
+      // { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
       { title: "Cars", url: "/cars", icon: "mdi-car-multiple" },
-      { title: "Mods", url: "/mods", icon: "mdi-history" },
-      { title: "Logout", url: "/logout", icon: "mdi-account" }
+      { title: "Mods", url: "/mods", icon: "mdi-history" }
+      // { title: "Logout", url: "/logout", icon: "mdi-account" }
     ],
     itemsUserIcon: [
-      { title: "Click Me 1" },
-      { title: "Click Me 2" },
-      { title: "Click Me 3" },
-      { title: "Click Me 4" },
+      { title: "Администрирование", url: "", icon: "mdi-settings" },
+      // { title: "Click Me 2" },
+      // { title: "Click Me 3" },
+      // { title: "Click Me 4" },
       { title: "Выход", url: "/logout", icon: "mdi-logout" }
     ],
     items: [
-      { icon: "mdi-contacts", text: "Contacts" },
-      { icon: "mdi-history", text: "Frequently contacted" },
-      { icon: "mdi-content-copy", text: "Duplicates" },
-      {
-        icon: "mdi-chevron-up",
-        "icon-alt": "mdi-chevron-down",
-        text: "Labels",
-        model: false,
-        children: [{ icon: "mdi-plus", text: "Create label" }]
-      },
       {
         icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",
         text: "More",
         model: false,
         children: [
-          { text: "Import" },
-          { text: "Export" },
-          { text: "Print" },
-          { text: "Undo changes" },
-          { text: "Other contacts" }
+          { icon: "mdi-plus", text: "Import" },
+          { icon: "mdi-plus", text: "Export" },
+          { icon: "mdi-plus", text: "Print" },
+          { icon: "mdi-plus", text: "Undo changes" },
+          { icon: "mdi-plus", text: "Other contacts" }
         ]
       }
     ]
