@@ -103,7 +103,7 @@
                 <!--                </v-list-item>-->
                 <template v-if="GET_USER_INFO_DATA.groups != false">
                   <v-list-item to="/#">
-                    <v-list-item-icon>
+                    <v-list-item-icon class="mr-2">
                       <v-icon>mdi-settings</v-icon>
                     </v-list-item-icon>
                     <v-list-item-content align="left">
@@ -113,7 +113,7 @@
                 </template>
 
                 <v-list-item to="/logout">
-                  <v-list-item-icon>
+                  <v-list-item-icon class="mr-2">
                     <v-icon>mdi-logout</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content align="left">
@@ -190,6 +190,8 @@
                     v-for="(child, i) in item.children"
                     :key="i"
                     link
+                    :to="child.url"
+                    :exact="child.exact"
                   >
                     <v-list-item-action v-if="child.icon">
                       <v-icon>{{ child.icon }}</v-icon>
@@ -245,10 +247,10 @@ export default {
       { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
       // { title: "Login", url: "/login", icon: "mdi-account" },
       // { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
-      { title: "Ипотека", url: "/mortgagelist" },
+      { title: "Ипотека", url: "/mortgage-search", icon: "mdi-view-list" },
       { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
-      // { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
-      // { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
+      { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
+      { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
       { title: "Cars", url: "/cars", icon: "mdi-car-multiple" },
       { title: "Mods", url: "/mods", icon: "mdi-history" }
       // { title: "Logout", url: "/logout", icon: "mdi-account" }
@@ -267,7 +269,7 @@ export default {
         text: 'Редактирование "Ипотека"',
         model: false,
         children: [
-          { icon: "mdi-plus", text: "Банки" },
+          { icon: "mdi-plus", url: "/mortgage-editbank", text: "Банки" },
           { icon: "mdi-plus", text: "Цель ипотеки" },
           { icon: "mdi-plus", text: "Программы" }
         ]

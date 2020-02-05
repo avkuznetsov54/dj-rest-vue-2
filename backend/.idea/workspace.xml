@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../frontend/src/components/EditMortgageBankComp.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/views/EditMortgageBankPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/views/MortgageSearchPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mortgages/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mortgages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MortgagesListComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MortgagesListComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MortgagesListComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/MortgagesListPage.vue" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mortgages/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            <state relative-caret-position="152">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="31" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -82,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mortgages/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="133">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -91,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mortgages/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="421">
+              <caret line="68" selection-start-line="68" selection-start-column="2" selection-end-line="71" selection-end-column="45" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -141,12 +150,12 @@
         <option value="$PROJECT_DIR$/mortgages/admin.py" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/project/settings.py" />
-        <option value="$PROJECT_DIR$/mortgages/serializers.py" />
-        <option value="$PROJECT_DIR$/mortgages/urls.py" />
-        <option value="$PROJECT_DIR$/mortgages/views.py" />
         <option value="$PROJECT_DIR$/cars/serializers.py" />
         <option value="$PROJECT_DIR$/auth_user/serializers.py" />
         <option value="$PROJECT_DIR$/entrypoint.sh" />
+        <option value="$PROJECT_DIR$/mortgages/serializers.py" />
+        <option value="$PROJECT_DIR$/mortgages/urls.py" />
+        <option value="$PROJECT_DIR$/mortgages/views.py" />
       </list>
     </option>
   </component>
@@ -278,18 +287,18 @@
       <workItem from="1580100233838" duration="143000" />
       <workItem from="1580100399001" duration="15512000" />
       <workItem from="1580175951724" duration="34462000" />
-      <workItem from="1580879470269" duration="1822000" />
+      <workItem from="1580879470269" duration="3713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117783000" />
+    <option name="totallyTimeSpent" value="119674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17338218" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17338218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -303,7 +312,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27755103" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27755103" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -614,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mortgages/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -634,22 +633,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mortgages/urls.py">
+    <entry file="file://$PROJECT_DIR$/mortgages/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="421">
+          <caret line="68" selection-start-line="68" selection-start-column="2" selection-end-line="71" selection-end-column="45" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mortgages/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

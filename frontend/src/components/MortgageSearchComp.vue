@@ -484,7 +484,7 @@
 import { mapState, mapMutations, mapActions } from "vuex";
 
 export default {
-  name: "MortgagesListComp",
+  name: "MortgageSearchComp",
 
   data() {
     return {

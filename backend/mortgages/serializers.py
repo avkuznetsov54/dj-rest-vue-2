@@ -5,13 +5,13 @@ from .models import Banks, MortgagePrograms, TargetCredits
 class TargetCreditsSerializer(serializers.ModelSerializer):
     class Meta:
         model = TargetCredits
-        fields = ('target_name', 'target_desc')
+        fields = ('id', 'target_name', 'target_desc')
 
 
 class BanksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banks
-        fields = ('bank_name', 'bank_logo', 'preference_is_active', 'preference_value', 'preference_comment')
+        fields = ('id', 'bank_name', 'bank_logo', 'preference_is_active', 'preference_value', 'preference_comment')
 
 
 class MortgageProgramsSerializer(serializers.ModelSerializer):

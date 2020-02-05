@@ -41,13 +41,22 @@ const routes = [
     component: () => import("../views/HomePage.vue")
   },
   {
-    path: "/mortgagelist",
-    name: "mortgagelist",
+    path: "/mortgage-search",
+    name: "mortgage-search",
     meta: {
       layout: "main",
       requiresAuth: true
     },
-    component: () => import("../views/MortgagesListPage.vue")
+    component: () => import("../views/MortgageSearchPage.vue")
+  },
+  {
+    path: "/mortgage-editbank",
+    name: "mortgage-editbank",
+    meta: {
+      layout: "main",
+      requiresAuth: true
+    },
+    component: () => import("../views/EditMortgageBankPage.vue")
   },
   {
     path: "/about",

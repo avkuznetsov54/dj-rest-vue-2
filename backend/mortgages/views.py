@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 
 from .models import MortgagePrograms, Banks, TargetCredits
@@ -53,13 +54,25 @@ class MortgageProgramsView(generics.ListAPIView):
         return queryset
 
 
-class BanksView(generics.ListAPIView):
+# class BanksView(generics.ListAPIView):
+#     serializer_class = BanksSerializer
+#     queryset = Banks.objects.all()
+#     permission_classes = (IsAuthenticated,)
+
+
+class BankViewSet(ModelViewSet):
     serializer_class = BanksSerializer
     queryset = Banks.objects.all()
     permission_classes = (IsAuthenticated,)
 
 
-class TargetCreditsView(generics.ListAPIView):
+# class TargetCreditsView(generics.ListAPIView):
+#     serializer_class = TargetCreditsSerializer
+#     queryset = TargetCredits.objects.all()
+#     permission_classes = (IsAuthenticated,)
+
+
+class TargetCreditsViewSet(ModelViewSet):
     serializer_class = TargetCreditsSerializer
     queryset = TargetCredits.objects.all()
     permission_classes = (IsAuthenticated,)
