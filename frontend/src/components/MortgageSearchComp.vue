@@ -9,7 +9,7 @@
                 multiple
                 label="Банк"
                 placeholder="Любой"
-                :items="BANKS_DATA"
+                :items="BANKS_NAME_DATA"
                 v-model="filters.bank_name"
                 dense
               >
@@ -29,7 +29,7 @@
                 multiple
                 label="Цель ипотеки"
                 placeholder="Любая"
-                :items="TARGET_CREDITS_DATA"
+                :items="TARGET_CREDITS_NAME_DATA"
                 v-model="filters.names_target_credits"
                 dense
               >
@@ -186,12 +186,12 @@
                   <v-img
                     :src="mort.bank.bank_logo"
                     max-width="120"
-                    height="50"
+                    max-height="50"
                     contain
                   ></v-img>
                 </div>
                 <div v-if="mort.bank.preference_is_active">
-                  <v-chip small color="cyan" text-color="white">
+                  <v-chip small color="cyan" text-color="white" class="mt-1">
                     <span
                       >Преференция
                       <b>{{ mort.bank.preference_value }}%</b></span
@@ -499,15 +499,15 @@ export default {
   computed: {
     ...mapState("mortgages", [
       "MORTGAGES_DATA",
-      "BANKS_DATA",
-      "TARGET_CREDITS_DATA"
+      "BANKS_NAME_DATA",
+      "TARGET_CREDITS_NAME_DATA"
     ])
   },
   methods: {
     ...mapMutations("mortgages", [
       "SET_UPDATE_MORTGAGES_DATA",
-      "SET_UPDATE_BANKS_DATA",
-      "SET_UPDATE_TARGET_CREDITS_DATA"
+      "SET_UPDATE_BANKS_NAME_DATA",
+      "SET_UPDATE_TARGET_CREDITS_NAME_DATA"
     ]),
     ...mapActions("mortgages", [
       "FETCH_MORTGAGES",

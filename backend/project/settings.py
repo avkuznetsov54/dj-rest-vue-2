@@ -181,7 +181,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # added simplejwt plugin as default authentication class below
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',  # убрать для proda !!!
+        # 'rest_framework.authentication.BasicAuthentication',  # убрать для proda !!!
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     # 'DEFAULT_RENDERER_CLASSES': (
@@ -191,7 +191,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=12),
+    'ACCESS_TOKEN_LIFETIME': timedelta(seconds=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(hours=24),
     # 'ROTATE_REFRESH_TOKENS': True,
     # 'BLACKLIST_AFTER_ROTATION': True,

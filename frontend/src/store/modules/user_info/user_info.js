@@ -1,6 +1,6 @@
 import store from "@/store";
 import { getAPI_user_info } from "@/api/user_info/axios-user_info";
-import router from "../../../router";
+// import router from "../../../router";
 
 const mortgagesModule = {
   namespaced: true,
@@ -22,20 +22,23 @@ const mortgagesModule = {
   },
   actions: {
     FETCH_USER_INFO(context, data) {
-      // console.log(data);
+      let formData = new FormData();
+      formData.append("refresh_token", data);
       return new Promise((resolve, reject) => {
         getAPI_user_info
           .request({
-            url: "api/v1/user-info/",
+            url: "/api/v1/user-info/",
             method: "post",
-            data: { refresh_token: data },
-            headers: { Authorization: `Bearer ${store.state.accessToken}` } // the new access token is attached to the authorization header
+            data: formData,
+            headers: {
+              Authorization: `Bearer ${store.state.accessToken}`
+            } // the new access token is attached to the authorization header
           })
           // proof that your access token is still valid; if not the
           // axios getAPI response interceptor will attempt to get a new  access token from the server. check out ../api/axios-base.js getAPI instance response interceptor
           .then(response => {
             // console.log("GetAPI successfully got the mods");
-            // console.log(response.data);
+            // console.log(response);
             data = response.data[0];
             context.commit("SET_UPDATE_USER_INFO_DATA", data); // store the response data in store
             resolve(response);
@@ -45,8 +48,8 @@ const mortgagesModule = {
             // eslint-disable-next-line no-unused-vars
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
-            console.log("[user_info] refresh_token протух");
-            router.push({ name: "logout" });
+            // console.log("[user_info] accessToken протух");
+            // router.push({ name: "logout" });
             reject(err);
           });
       });

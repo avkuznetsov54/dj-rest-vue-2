@@ -36,6 +36,7 @@ class UserInfoCreateView(generics.ListCreateAPIView):
     #     return User.objects.all()
 
     def post(self, request, *args, **kwargs):
+        # print(request.data.get('refresh_token'))
         # получаем refresh_token с фронта
         if request.data:
             try:
@@ -56,8 +57,8 @@ class UserInfoCreateView(generics.ListCreateAPIView):
             except:
                 # print('неправельные токен')
                 return Response(status=status.HTTP_404_NOT_FOUND)
-        return Response(status=status.HTTP_404_NOT_FOUND)
-        # return Response(status=status.HTTP_200_OK)
+        # return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response(status=status.HTTP_200_OK)
 
     # def post(self, request, *args, **kwargs):
     #     return self.create(request, *args, **kwargs)

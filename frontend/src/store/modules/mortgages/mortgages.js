@@ -1,20 +1,34 @@
 import store from "@/store";
-import { getAPI, getBANKS } from "@/api/mortgages/axios-mortgages";
+import {
+  getAPI,
+  getBANKS,
+  get_TARGET_CREDITS,
+  editBANKS
+} from "@/api/mortgages/axios-mortgages";
 
 const mortgagesModule = {
   namespaced: true,
   state: {
-    BANKS_DATA: null,
+    BANKS_NAME_DATA: null,
+    BANKS_ALL_DATA: null,
     MORTGAGES_DATA: null,
-    TARGET_CREDITS_DATA: null
+    TARGET_CREDITS_NAME_DATA: null,
+    TARGET_CREDITS_ALL_DATA: null
   },
-  getters: {},
+  getters: {
+    GET_BANKS_ALL_DATA: state => {
+      return state.BANKS_ALL_DATA;
+    }
+  },
   mutations: {
-    SET_UPDATE_BANKS_DATA(state, data) {
-      state.BANKS_DATA = data;
+    SET_UPDATE_BANKS_NAME_DATA(state, data) {
+      state.BANKS_NAME_DATA = data;
     },
-    SET_UPDATE_TARGET_CREDITS_DATA(state, data) {
-      state.TARGET_CREDITS_DATA = data;
+    SET_UPDATE_BANKS_ALL_DATA(state, data) {
+      state.BANKS_ALL_DATA = data;
+    },
+    SET_UPDATE_TARGET_CREDITS_NAME_DATA(state, data) {
+      state.TARGET_CREDITS_NAME_DATA = data;
     },
     SET_UPDATE_MORTGAGES_DATA(state, data) {
       state.MORTGAGES_DATA = data;
@@ -46,7 +60,7 @@ const mortgagesModule = {
             // eslint-disable-next-line no-unused-vars
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
-            console.log("[mortgages] Не получилось");
+            // console.log("[mortgages] Не получилось");
             reject(err);
           });
       });
@@ -67,7 +81,8 @@ const mortgagesModule = {
               total.push(item.bank_name);
               return total;
             }, []);
-            context.commit("SET_UPDATE_BANKS_DATA", names_banks); // store the response data in store
+            context.commit("SET_UPDATE_BANKS_NAME_DATA", names_banks); // store the response data in store
+            context.commit("SET_UPDATE_BANKS_ALL_DATA", response.data);
             resolve(response);
           })
           .catch(err => {
@@ -75,14 +90,14 @@ const mortgagesModule = {
             // eslint-disable-next-line no-unused-vars
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
-            console.log("[FETCH_BANKS] Не получилось");
+            // console.log("[FETCH_BANKS] Не получилось");
             reject(err);
           });
       });
     },
     FETCH_TARGET_CREDITS(context) {
       return new Promise((resolve, reject) => {
-        getBANKS
+        get_TARGET_CREDITS
           .get("api/v1/mortgages/target-credits/", {
             headers: {
               Authorization: `Bearer ${store.state.accessToken}`
@@ -97,9 +112,11 @@ const mortgagesModule = {
               return total;
             }, []);
             context.commit(
-              "SET_UPDATE_TARGET_CREDITS_DATA",
+              "SET_UPDATE_TARGET_CREDITS_NAME_DATA",
               names_target_credits
             ); // store the response data in store
+            context.commit("SET_UPDATE_TARGET_CREDITS_ALL_DATA", response.data); // store the response data in store
+
             resolve(response);
           })
           .catch(err => {
@@ -107,7 +124,46 @@ const mortgagesModule = {
             // eslint-disable-next-line no-unused-vars
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
-            console.log("[FETCH_TARGET_CREDITS] Не получилось");
+            // console.log("[FETCH_TARGET_CREDITS] Не получилось");
+            reject(err);
+          });
+      });
+    },
+
+    // eslint-disable-next-line no-unused-vars
+    FETCH_EDIT_BANKS(context, payload) {
+      return new Promise((resolve, reject) => {
+        editBANKS
+          .patch(
+            "api/v1/mortgages/banks/" + payload["id_bank"] + "/",
+            payload["formData"],
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+                Authorization: `Bearer ${store.state.accessToken}`
+              }
+            }
+          ) // proof that your access token is still valid; if not the
+          // axios getAPI response interceptor will attempt to get a new  access token from the server. check out ../api/axios-base.js getAPI instance response interceptor
+          .then(response => {
+            // console.log("GetAPI successfully got the mods");
+            // console.log(response.data);
+            // const names_banks = response.data.reduce((total, item) => {
+            //   total.push(item.bank_name);
+            //   return total;
+            // }, []);
+            // context.commit("SET_UPDATE_BANKS_NAME_DATA", names_banks); // store the response data in store
+            // context.commit("SET_UPDATE_BANKS_ALL_DATA", response.data);
+            // console.log("SUCCESS!!");
+            // console.log(response);
+            resolve(response);
+          })
+          .catch(err => {
+            // refresh token expired or some other error status
+            // eslint-disable-next-line no-unused-vars
+            const er = err; // просто чтоб ошибку в консоли не показывало
+            // console.log(err);
+            // console.log("[FETCH_EDIT_BANKS] Не получилось");
             reject(err);
           });
       });

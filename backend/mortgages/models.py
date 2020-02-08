@@ -3,9 +3,9 @@ from django.db import models
 
 class Banks(models.Model):
     bank_name = models.CharField(max_length=150, db_index=True, unique=True, blank=False, verbose_name='Название Банка')
-    bank_logo = models.ImageField(upload_to='logo_bank/', blank=False)
+    bank_logo = models.ImageField(upload_to='logo_bank/', null=True, blank=True)
     preference_is_active = models.BooleanField(default=False, verbose_name='Преференция, Есть/нет ')
-    preference_value = models.FloatField(db_index=True, null=True, blank=True, verbose_name='Сколько %')
+    preference_value = models.FloatField(null=True, blank=True, verbose_name='Сколько %')
     preference_comment = models.CharField(max_length=255, blank=True, verbose_name='Комментарий к преференции')
 
     def __str__(self):
