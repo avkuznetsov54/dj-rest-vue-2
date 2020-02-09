@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/app.4233c9e8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/EditMortgageBankComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/EditMortgageBankComp.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -351,16 +331,15 @@
       <workItem from="1580100399001" duration="15512000" />
       <workItem from="1580175951724" duration="34462000" />
       <workItem from="1580879470269" duration="5064000" />
-      <workItem from="1580910336659" duration="12369000" />
+      <workItem from="1580910336659" duration="12655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133394000" />
+    <option name="totallyTimeSpent" value="133680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17338218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
