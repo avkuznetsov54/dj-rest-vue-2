@@ -219,7 +219,7 @@ export default {
 
   created() {
     this.FETCH_BANKS()
-    // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars
       .then(response => {
         // console.log("response " + response);
         // this.listBanks = response.data;
@@ -333,19 +333,37 @@ export default {
 
       // Отправляем данные для изменения и ждём ответа
       this.FETCH_EDIT_BANKS(payload)
+        // eslint-disable-next-line no-unused-vars
         .then(response => {
           // console.log("qqqq " + response);
           // записываем изменённые данные в таблицу на странице под нужным индексом элемента
-          Object.assign(this.listBanks[this.editedIndex], response.data);
+          // Object.assign(this.listBanks[this.editedIndex], response.data);
+
+          this.FETCH_BANKS()
+            // eslint-disable-next-line no-unused-vars
+            .then(response => {
+              // console.log("response " + response);
+              // this.listBanks = response.data;
+              this.listBanks = this.GET_BANKS_ALL_DATA;
+            });
         })
         // eslint-disable-next-line no-unused-vars
         .catch(error => {
           // console.log("error " + error);
           this.$store.dispatch("refreshToken").then(() => {
+            // eslint-disable-next-line no-unused-vars
             this.FETCH_EDIT_BANKS(payload).then(response => {
               // console.log("qqqq " + response);
               // записываем изменённые данные в таблицу на странице под нужным индексом элемента
-              Object.assign(this.listBanks[this.editedIndex], response.data);
+              // Object.assign(this.listBanks[this.editedIndex], response.data);
+
+              this.FETCH_BANKS()
+                // eslint-disable-next-line no-unused-vars
+                .then(response => {
+                  // console.log("response " + response);
+                  // this.listBanks = response.data;
+                  this.listBanks = this.GET_BANKS_ALL_DATA;
+                });
             });
           });
         });
