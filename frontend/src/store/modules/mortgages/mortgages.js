@@ -3,7 +3,7 @@ import {
   getAPI,
   getBANKS,
   get_TARGET_CREDITS,
-  editBANKS
+  crudBANKS
 } from "@/api/mortgages/axios-mortgages";
 
 const mortgagesModule = {
@@ -133,7 +133,7 @@ const mortgagesModule = {
     // eslint-disable-next-line no-unused-vars
     FETCH_EDIT_BANKS(context, payload) {
       return new Promise((resolve, reject) => {
-        editBANKS
+        crudBANKS
           .patch(
             "api/v1/mortgages/banks/" + payload["id_bank"] + "/",
             payload["formData"],
@@ -164,6 +164,40 @@ const mortgagesModule = {
             const er = err; // просто чтоб ошибку в консоли не показывало
             // console.log(err);
             // console.log("[FETCH_EDIT_BANKS] Не получилось");
+            reject(err);
+          });
+      });
+    },
+    FETCH_DELETE_BANKS(context, payload) {
+      return new Promise((resolve, reject) => {
+        crudBANKS
+          .delete("api/v1/mortgages/banks/" + payload["id_bank"] + "/", {
+            headers: {
+              Authorization: `Bearer ${store.state.accessToken}`
+            }
+          })
+          .then(response => {
+            resolve(response);
+          })
+          .catch(err => {
+            reject(err);
+          });
+      });
+    },
+    // eslint-disable-next-line no-unused-vars
+    FETCH_CREATE_BANKS(context, payload) {
+      return new Promise((resolve, reject) => {
+        crudBANKS
+          .post("api/v1/mortgages/banks/", payload["formData"], {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${store.state.accessToken}`
+            }
+          })
+          .then(response => {
+            resolve(response);
+          })
+          .catch(err => {
             reject(err);
           });
       });

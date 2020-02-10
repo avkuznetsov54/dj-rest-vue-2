@@ -129,8 +129,36 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
+
+        <v-dialog v-model="dialogDelete" max-width="500px">
+          <v-card>
+            <v-card-title>
+              <span class="headline">Удаление банка</span>
+            </v-card-title>
+
+            <v-card-text>
+              <v-container>
+                <v-row>
+                  Будте внимательны! При удалении банка так же удаляться все
+                  программы по ипотеки в этом банке!
+                </v-row>
+              </v-container>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="blue darken-1" text @click="closeDialogDelete"
+                >Отмена</v-btn
+              >
+              <v-btn color="red darken-1 white--text" @click="deleteBank"
+                >Удалить</v-btn
+              >
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-toolbar>
     </template>
+
     <template v-slot:item.action="{ item }">
       <v-icon class="mr-2" @click="editItem(item)">
         mdi-square-edit-outline
@@ -139,6 +167,7 @@
         mdi-delete
       </v-icon>
     </template>
+
     <template v-slot:no-data>
       <v-btn color="primary" @click="initialize">Обновить</v-btn>
     </template>
@@ -153,6 +182,7 @@ export default {
   name: "EditMortgageBankComp",
   data: () => ({
     dialog: false,
+    dialogDelete: false,
     headers: [
       {
         text: "Логотип",
@@ -236,7 +266,12 @@ export default {
   },
 
   methods: {
-    ...mapActions("mortgages", ["FETCH_BANKS", "FETCH_EDIT_BANKS"]),
+    ...mapActions("mortgages", [
+      "FETCH_BANKS",
+      "FETCH_CREATE_BANKS",
+      "FETCH_EDIT_BANKS",
+      "FETCH_DELETE_BANKS"
+    ]),
     initialize() {
       this.listBanks = this.GET_BANKS_ALL_DATA;
       // console.log("initialize");
@@ -266,10 +301,39 @@ export default {
       }
     },
 
+    // eslint-disable-next-line no-unused-vars
     deleteItem(item) {
-      const index = this.listBanks.indexOf(item);
-      confirm("Are you sure you want to delete this item?") &&
-        this.listBanks.splice(index, 1);
+      this.editedIndex = this.listBanks.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialogDelete = true;
+    },
+    deleteBank() {
+      const payload = new Object();
+      payload["id_bank"] = this.editedItem.id;
+      this.FETCH_DELETE_BANKS(payload)
+        // eslint-disable-next-line no-unused-vars
+        .then(response => {
+          this.FETCH_BANKS()
+            // eslint-disable-next-line no-unused-vars
+            .then(response => {
+              this.listBanks = this.GET_BANKS_ALL_DATA;
+            });
+        })
+        // eslint-disable-next-line no-unused-vars
+        .catch(error => {
+          this.$store.dispatch("refreshToken").then(() => {
+            // eslint-disable-next-line no-unused-vars
+            this.FETCH_DELETE_BANKS(payload).then(response => {
+              this.FETCH_BANKS()
+                // eslint-disable-next-line no-unused-vars
+                .then(response => {
+                  this.listBanks = this.GET_BANKS_ALL_DATA;
+                });
+            });
+          });
+        });
+
+      this.dialogDelete = false;
     },
 
     close() {
@@ -280,22 +344,33 @@ export default {
       }, 300);
     },
 
+    // openDialogDelete() {
+    //   this.dialogDelete = true;
+    // },
+    closeDialogDelete() {
+      this.dialogDelete = false;
+    },
+
     save() {
       // Проверяем если есть индекс то нужно "редактирование"
       if (this.editedIndex > -1) {
         // Object.assign(this.listBanks[this.editedIndex], this.editedItem);
-        this.submitFile();
+        let val = "update";
+        this.submitFile(val);
       } else {
         // если индекс = -1 то нужно создать новый банк
         // this.listBanks.push(this.editedItem);
         // console.log("Добавление нового банка");
         // console.log(this.editedIndex);
+
+        let val = "create";
+        this.submitFile(val);
       }
       // console.log(this.listBanks[this.editedIndex]);
       this.close();
     },
 
-    submitFile() {
+    submitFile(val) {
       //Initialize the form data
       let formData = new FormData();
 
@@ -331,42 +406,80 @@ export default {
       // const id_bank = this.editedItem.id;
       // console.log(payload);
 
-      // Отправляем данные для изменения и ждём ответа
-      this.FETCH_EDIT_BANKS(payload)
-        // eslint-disable-next-line no-unused-vars
-        .then(response => {
-          // console.log("qqqq " + response);
-          // записываем изменённые данные в таблицу на странице под нужным индексом элемента
-          // Object.assign(this.listBanks[this.editedIndex], response.data);
+      if (val === "update") {
+        // Отправляем данные для изменения и ждём ответа
+        this.FETCH_EDIT_BANKS(payload)
+          // eslint-disable-next-line no-unused-vars
+          .then(response => {
+            // console.log("qqqq " + response);
+            // записываем изменённые данные в таблицу на странице под нужным индексом элемента
+            // Object.assign(this.listBanks[this.editedIndex], response.data);
 
-          this.FETCH_BANKS()
-            // eslint-disable-next-line no-unused-vars
-            .then(response => {
-              // console.log("response " + response);
-              // this.listBanks = response.data;
-              this.listBanks = this.GET_BANKS_ALL_DATA;
-            });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch(error => {
-          // console.log("error " + error);
-          this.$store.dispatch("refreshToken").then(() => {
-            // eslint-disable-next-line no-unused-vars
-            this.FETCH_EDIT_BANKS(payload).then(response => {
-              // console.log("qqqq " + response);
-              // записываем изменённые данные в таблицу на странице под нужным индексом элемента
-              // Object.assign(this.listBanks[this.editedIndex], response.data);
+            this.FETCH_BANKS()
+              // eslint-disable-next-line no-unused-vars
+              .then(response => {
+                // console.log("response " + response);
+                // this.listBanks = response.data;
+                this.listBanks = this.GET_BANKS_ALL_DATA;
+              });
+          })
+          // eslint-disable-next-line no-unused-vars
+          .catch(error => {
+            // console.log("error " + error);
+            this.$store.dispatch("refreshToken").then(() => {
+              // eslint-disable-next-line no-unused-vars
+              this.FETCH_EDIT_BANKS(payload).then(response => {
+                // console.log("qqqq " + response);
+                // записываем изменённые данные в таблицу на странице под нужным индексом элемента
+                // Object.assign(this.listBanks[this.editedIndex], response.data);
 
-              this.FETCH_BANKS()
-                // eslint-disable-next-line no-unused-vars
-                .then(response => {
-                  // console.log("response " + response);
-                  // this.listBanks = response.data;
-                  this.listBanks = this.GET_BANKS_ALL_DATA;
-                });
+                this.FETCH_BANKS()
+                  // eslint-disable-next-line no-unused-vars
+                  .then(response => {
+                    // console.log("response " + response);
+                    // this.listBanks = response.data;
+                    this.listBanks = this.GET_BANKS_ALL_DATA;
+                  });
+              });
             });
           });
-        });
+      } else {
+        this.FETCH_CREATE_BANKS(payload)
+          // eslint-disable-next-line no-unused-vars
+          .then(response => {
+            // console.log("qqqq " + response);
+            // записываем изменённые данные в таблицу на странице под нужным индексом элемента
+            // Object.assign(this.listBanks[this.editedIndex], response.data);
+
+            this.FETCH_BANKS()
+              // eslint-disable-next-line no-unused-vars
+              .then(response => {
+                // console.log("response " + response);
+                // this.listBanks = response.data;
+                this.listBanks = this.GET_BANKS_ALL_DATA;
+              });
+          })
+          // eslint-disable-next-line no-unused-vars
+          .catch(error => {
+            // console.log("error " + error);
+            this.$store.dispatch("refreshToken").then(() => {
+              // eslint-disable-next-line no-unused-vars
+              this.FETCH_CREATE_BANKS(payload).then(response => {
+                // console.log("qqqq " + response);
+                // записываем изменённые данные в таблицу на странице под нужным индексом элемента
+                // Object.assign(this.listBanks[this.editedIndex], response.data);
+
+                this.FETCH_BANKS()
+                  // eslint-disable-next-line no-unused-vars
+                  .then(response => {
+                    // console.log("response " + response);
+                    // this.listBanks = response.data;
+                    this.listBanks = this.GET_BANKS_ALL_DATA;
+                  });
+              });
+            });
+          });
+      }
     },
     handleFileUpload() {
       // Если нажали на выбор файла и ни чего не выбрали, то ничего не добавляем в newImageFile
