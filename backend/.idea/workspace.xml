@@ -5,52 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/app.4233c9e8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-24f01dd0.9284d928.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-32a9093f.a5318b3d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-53184230.724574df.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-7c72b488.9c036cdf.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-24f01dd0.60e49e81.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-24f01dd0.60e49e81.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.018d9b2e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.018d9b2e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-32a9093f.65f10b90.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-32a9093f.65f10b90.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-53184230.9982ce02.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-53184230.9982ce02.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-59d4f74c.54ee2ed2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-59d4f74c.54ee2ed2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-7c72b488.e0d623f3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-7c72b488.e0d623f3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c6175bb6.6c7abcf0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c6175bb6.6c7abcf0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e4906ca2.972c2932.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e4906ca2.972c2932.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.75488e34.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.75488e34.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/mortgages/axios-mortgages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/mortgages/axios-mortgages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/EditMortgageBankComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/EditMortgageBankComp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/store/modules/mortgages/mortgages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/store/modules/mortgages/mortgages.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +55,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="422">
@@ -190,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mortgages/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="40" />
+            <state relative-caret-position="171">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -379,12 +334,12 @@
       <workItem from="1580175951724" duration="34462000" />
       <workItem from="1580879470269" duration="5064000" />
       <workItem from="1580910336659" duration="12655000" />
-      <workItem from="1581301773538" duration="1360000" />
+      <workItem from="1581301773538" duration="3403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135040000" />
+    <option name="totallyTimeSpent" value="137083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -764,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
