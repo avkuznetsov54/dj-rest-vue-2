@@ -39,112 +39,117 @@
               >Добавить банк</v-btn
             >
           </template>
-          <v-card>
-            <v-card-title>
-              <span class="headline">{{ formTitle }}</span>
-            </v-card-title>
+          <form @submit.prevent="save">
+            <v-card>
+              <v-card-title>
+                <span class="headline">{{ formTitle }}</span>
+              </v-card-title>
 
-            <v-card-text>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" sm="12" md="12">
-                    <!--                    <v-text-field-->
-                    <!--                      v-model="editedItem.bank_logo"-->
-                    <!--                      label="Логотип"-->
-                    <!--                    ></v-text-field>-->
+              <v-card-text>
+                <v-container>
+                  <v-row>
+                    <v-col cols="12" sm="12" md="12">
+                      <!--                    <v-text-field-->
+                      <!--                      v-model="editedItem.bank_logo"-->
+                      <!--                      label="Логотип"-->
+                      <!--                    ></v-text-field>-->
 
-                    <!--                    <v-file-input-->
-                    <!--                      label="Выбрать логотип"-->
-                    <!--                      show-size-->
-                    <!--                      type="file"-->
-                    <!--                      ref="file"-->
-                    <!--                      v-on:change="handleFileUpload()"-->
-                    <!--                    ></v-file-input>-->
+                      <!--                    <v-file-input-->
+                      <!--                      label="Выбрать логотип"-->
+                      <!--                      show-size-->
+                      <!--                      type="file"-->
+                      <!--                      ref="file"-->
+                      <!--                      v-on:change="handleFileUpload()"-->
+                      <!--                    ></v-file-input>-->
 
-                    <v-btn
-                      color="primary"
-                      class="white--text"
-                      @click="$refs.file.click()"
-                    >
-                      <v-icon left dark>mdi-cloud-upload</v-icon>
-                      Загрузить логотип
-                    </v-btn>
-                    <input
-                      type="file"
-                      ref="file"
-                      style="display:none;"
-                      v-on:change="handleFileUpload()"
-                    />
-                    <template v-if="newImageView">
-                      <p class="font-weight-thin mt-1 mb-0">
-                        Выбран: {{ newImageFile }}
-                      </p>
-                    </template>
-                    <template v-if="currentImageView">
-                      <p class="font-weight-thin mt-1">
-                        На данный момент:
-                        <router-link
-                          class="link_w_u"
-                          tag="a"
-                          :to="currentImageLink"
-                          >{{ currentImageFile }}
-                        </router-link>
-                      </p>
-                    </template>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-text-field
-                      v-model="editedItem.bank_name"
-                      label="Название банка"
-                      :error-messages="errMsgFieldBankName"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="6">
-                    <v-checkbox
-                      v-model="editedItem.preference_is_active"
-                      label="Преференция"
-                      color="primary"
-                    ></v-checkbox>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="6">
-                    <v-text-field
-                      v-model="editedItem.preference_value"
-                      label="Процент преференции"
-                      type="number"
-                      min="0"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-textarea
-                      v-model="editedItem.preference_comment"
-                      label="Комментарий к преференции"
-                      placeholder="Комментарий к преференции"
-                      outlined
-                    ></v-textarea>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col>
-                    <div v-if="errMsgBank">
-                      <div v-for="(errRow, i) in errMsgBank" :key="i">
-                        <div v-for="(err, i) in errRow" :key="i">
-                          <v-alert width="100%" type="error">
-                            {{ err }}
-                          </v-alert>
+                      <v-btn
+                        color="primary"
+                        class="white--text"
+                        @click="$refs.file.click()"
+                      >
+                        <v-icon left dark>mdi-cloud-upload</v-icon>
+                        Загрузить логотип
+                      </v-btn>
+                      <input
+                        type="file"
+                        ref="file"
+                        style="display:none;"
+                        v-on:change="handleFileUpload()"
+                      />
+                      <template v-if="newImageView">
+                        <p class="font-weight-thin mt-1 mb-0">
+                          Выбран: {{ newImageFile }}
+                        </p>
+                      </template>
+                      <template v-if="currentImageView">
+                        <p class="font-weight-thin mt-1">
+                          На данный момент:
+                          <router-link
+                            class="link_w_u"
+                            tag="a"
+                            :to="currentImageLink"
+                            >{{ currentImageFile }}
+                          </router-link>
+                        </p>
+                      </template>
+                    </v-col>
+                    <v-col cols="12" sm="12" md="12">
+                      <v-text-field
+                        v-model="editedItem.bank_name"
+                        label="Название банка"
+                        @blur="$v.editedItem.bank_name.$touch()"
+                        :error-messages="nameErrors"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="6">
+                      <v-checkbox
+                        v-model="editedItem.preference_is_active"
+                        label="Преференция"
+                        color="primary"
+                      ></v-checkbox>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="6">
+                      <v-text-field
+                        v-model="editedItem.preference_value"
+                        label="Процент преференции"
+                        type="number"
+                        min="0"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="12" md="12">
+                      <v-textarea
+                        v-model="editedItem.preference_comment"
+                        label="Комментарий к преференции"
+                        placeholder="Комментарий к преференции"
+                        outlined
+                      ></v-textarea>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <div v-if="errMsgBank">
+                        <div v-for="(errRow, i) in errMsgBank" :key="i">
+                          <div v-for="(err, i) in errRow" :key="i">
+                            <v-alert width="100%" type="error">
+                              {{ err }}
+                            </v-alert>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card-text>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-text>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="close">Отмена</v-btn>
-              <v-btn color="blue darken-1" text @click="save">Сохранить</v-btn>
-            </v-card-actions>
-          </v-card>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue darken-1" text @click="close">Отмена</v-btn>
+                <v-btn color="blue darken-1" text type="submit"
+                  >Сохранить</v-btn
+                >
+              </v-card-actions>
+            </v-card>
+          </form>
         </v-dialog>
 
         <v-dialog v-model="dialogDelete" max-width="500px">
@@ -196,8 +201,16 @@
 import { mapState, mapGetters, mapActions } from "vuex";
 // import { APIUrl } from "@/api/axios-base";
 
+import { validationMixin } from "vuelidate";
+import { required } from "vuelidate/lib/validators";
+
 export default {
   name: "EditMortgageBankComp",
+  mixins: [validationMixin],
+
+  validations: {
+    editedItem: { bank_name: { required } }
+  },
   data: () => ({
     dialog: false,
     dialogDelete: false,
@@ -249,6 +262,15 @@ export default {
     ...mapGetters("mortgages", ["GET_BANKS_ALL_DATA"]),
     formTitle() {
       return this.editedIndex === -1 ? "Новый банк" : "Редактировать банк";
+    },
+    nameErrors() {
+      const errors = [];
+      if (!this.$v.editedItem.bank_name.$dirty) return errors;
+      // !this.$v.name.maxLength &&
+      //   errors.push("Name must be at most 10 characters long");
+      !this.$v.editedItem.bank_name.required &&
+        errors.push("Это поле обязательное.");
+      return errors;
     }
   },
 
@@ -400,9 +422,7 @@ export default {
     },
 
     submitFile(val) {
-
       if (!this.editedItem.bank_name) {
-        this.errMsgFieldBankName = "Поле должно быть заполненно!";
         return true;
       }
 
@@ -453,7 +473,7 @@ export default {
       }
 
       // console.log(typeof this.editedItem.preference_value);
-      console.log(this.editedItem.preference_is_active);
+      // console.log(this.editedItem.preference_is_active);
 
       const payload = new Object();
       payload["id_bank"] = this.editedItem.id;
