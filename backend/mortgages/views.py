@@ -51,8 +51,8 @@ class MortgageProgramsView(generics.ListAPIView):
             # тоже самое что:
             # queryset = queryset.filter(model__icontains="asdf")
 
-        # return queryset.order_by('-rate')
-        return queryset
+        return queryset.order_by('rate').distinct()
+        # return queryset
 
 
 # class BanksView(generics.ListAPIView):

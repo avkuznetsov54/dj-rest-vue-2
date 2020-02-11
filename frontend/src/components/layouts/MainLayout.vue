@@ -270,7 +270,7 @@ export default {
         model: false,
         children: [
           { icon: "mdi-plus", url: "/mortgage-editbank", text: "Банки" },
-          { icon: "mdi-plus", text: "Цель ипотеки" },
+          { icon: "mdi-plus", url: "/mortgage-edittargetcredits", text: "Цель ипотеки" },
           { icon: "mdi-plus", text: "Программы" }
         ]
       }
