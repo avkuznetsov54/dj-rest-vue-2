@@ -15,6 +15,9 @@ const get_TARGET_CREDITS = axios.create({
 const crudBANKS = axios.create({
   baseURL: APIUrl
 });
+const crudTargetCredits = axios.create({
+  baseURL: APIUrl
+});
 
 // [Список ипотечных программ]
 // Если response пришел с ошибкой то обновляем token и заапрашиваем данные снова
@@ -184,4 +187,4 @@ get_TARGET_CREDITS.interceptors.response.use(undefined, function(err) {
 //   }
 // );
 
-export { getAPI, getBANKS, get_TARGET_CREDITS, crudBANKS };
+export { getAPI, getBANKS, get_TARGET_CREDITS, crudBANKS, crudTargetCredits };
