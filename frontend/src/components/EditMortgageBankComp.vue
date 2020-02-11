@@ -551,7 +551,7 @@ export default {
                 // eslint-disable-next-line no-unused-vars
                 .catch(err => {
                   this.errMsgBank = err.response.data;
-                  console.log(err.response.data);
+                  // console.log(err.response.data);
                 });
             });
           });

@@ -4,6 +4,52 @@
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.4233c9e8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-24f01dd0.9284d928.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-32a9093f.a5318b3d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-53184230.724574df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-7c72b488.9c036cdf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.008c9646.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.008c9646.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-24f01dd0.60e49e81.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-24f01dd0.60e49e81.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a30fc.018d9b2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a30fc.018d9b2e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a3584.b61d9f20.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a3584.b61d9f20.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0c22d8.c5b412e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0c22d8.c5b412e5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0ceb9e.805d7b1b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0ceb9e.805d7b1b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-32a9093f.65f10b90.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-32a9093f.65f10b90.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-53184230.9982ce02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-53184230.9982ce02.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-59d4f74c.54ee2ed2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-59d4f74c.54ee2ed2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-7c72b488.e0d623f3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-7c72b488.e0d623f3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-c6175bb6.6c7abcf0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-c6175bb6.6c7abcf0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-e4906ca2.972c2932.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-e4906ca2.972c2932.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.75488e34.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.75488e34.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="517">
-              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="38" />
+              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="38" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -64,16 +110,16 @@
         <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/EditMortgageBankComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="576" column="8" lean-forward="true" selection-start-line="199" selection-end-line="576" selection-end-column="8" />
+            <state relative-caret-position="576">
+              <caret line="554" column="19" lean-forward="true" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#v-toolbar#0;n#template#2;n#v-data-table#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#7345#7389#0" expanded="true" />
@@ -87,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/src/views/EditMortgageBankPage.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -114,7 +160,7 @@
         <entry file="file://$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="643">
-              <caret line="189" column="78" lean-forward="true" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+              <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#5654#5693#0" />
@@ -123,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="48" column="56" lean-forward="true" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+            <state relative-caret-position="439">
+              <caret line="410" column="19" lean-forward="true" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="19" />
               <folding>
                 <element signature="e#4157#4201#0" expanded="true" />
               </folding>
@@ -139,7 +185,7 @@
         <entry file="file://$PROJECT_DIR$/src/views/EditTargetCreditsPage.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -240,14 +286,14 @@
         <option value="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/user_info/user_info.js" />
         <option value="$PROJECT_DIR$/src/api/user_info/axios-user_info.js" />
-        <option value="$PROJECT_DIR$/src/api/axios-base.js" />
-        <option value="$PROJECT_DIR$/src/components/EditMortgageBankComp.vue" />
         <option value="$PROJECT_DIR$/src/views/EditTargetCreditsPage.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js" />
+        <option value="$PROJECT_DIR$/src/api/axios-base.js" />
         <option value="$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue" />
+        <option value="$PROJECT_DIR$/src/components/EditMortgageBankComp.vue" />
       </list>
     </option>
   </component>
@@ -463,12 +509,12 @@
       <workItem from="1580175950872" duration="86691000" />
       <workItem from="1580879494232" duration="11686000" />
       <workItem from="1580910334304" duration="66568000" />
-      <workItem from="1581301703657" duration="29020000" />
+      <workItem from="1581301703657" duration="29381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347429000" />
+    <option name="totallyTimeSpent" value="347790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -488,7 +534,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.18571429" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3510204" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -731,31 +777,24 @@
     <entry file="file://$PROJECT_DIR$/src/views/EditMortgageBankPage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/EditTargetCreditsPage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
-          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="38" />
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="38" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -772,22 +811,10 @@
     <entry file="file://$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
-          <caret line="189" column="78" lean-forward="true" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+          <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#5654#5693#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditMortgageBankComp.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
-          <caret line="576" column="8" lean-forward="true" selection-start-line="199" selection-end-line="576" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#v-toolbar#0;n#template#2;n#v-data-table#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#7345#7389#0" expanded="true" />
-            <element signature="e#15063#15604#0" />
           </folding>
         </state>
       </provider>
@@ -815,12 +842,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="48" column="56" lean-forward="true" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+        <state relative-caret-position="439">
+          <caret line="410" column="19" lean-forward="true" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="19" />
           <folding>
             <element signature="e#4157#4201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditMortgageBankComp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="554" column="19" lean-forward="true" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#v-toolbar#0;n#template#2;n#v-data-table#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#7345#7389#0" expanded="true" />
+            <element signature="e#15063#15604#0" />
           </folding>
         </state>
       </provider>
