@@ -13,7 +13,8 @@ class MortgagePagination(PageNumberPagination):
     page_size = 1000
 
 
-class MortgageProgramsView(generics.ListAPIView):
+# class MortgageProgramsView(generics.ListAPIView):
+class MortgageProgramsViewSet(ModelViewSet):
     serializer_class = MortgageProgramsSerializer
     queryset = MortgagePrograms.objects.all()
     pagination_class = MortgagePagination

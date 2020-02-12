@@ -68,6 +68,15 @@ const routes = [
     component: () => import("../views/EditTargetCreditsPage.vue")
   },
   {
+    path: "/mortgage-editprogram",
+    name: "mortgage-editprogram",
+    meta: {
+      layout: "main",
+      requiresAuth: true
+    },
+    component: () => import("../views/EditMortgageProgramPage.vue")
+  },
+  {
     path: "/about",
     name: "about",
     meta: {

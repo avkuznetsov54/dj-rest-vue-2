@@ -217,12 +217,12 @@ export default {
     headers: [
       {
         text: "Логотип",
-        width: "15%",
+        width: "12%",
         align: "left",
         sortable: false,
         value: "bank_logo"
       },
-      { text: "Название банка", width: "15%", value: "bank_name" },
+      { text: "Название банка", width: "18%", value: "bank_name" },
       { text: "Преференция", width: "10%", value: "preference_is_active" },
       { text: "Процент", width: "10%", value: "preference_value" },
       {

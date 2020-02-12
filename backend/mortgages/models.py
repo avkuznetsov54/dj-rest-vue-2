@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Banks(models.Model):
-    bank_name = models.CharField(max_length=150, db_index=True, unique=True, blank=False, verbose_name='Название Банка')
+    bank_name = models.CharField(max_length=150, unique=True, blank=False, verbose_name='Название Банка')
     bank_logo = models.ImageField(upload_to='logo_bank/', null=True, blank=True)
     preference_is_active = models.BooleanField(default=False, verbose_name='Преференция, Есть/нет ')
     preference_value = models.FloatField(null=True, blank=True, verbose_name='Сколько %')
-    preference_comment = models.CharField(max_length=255, blank=True, verbose_name='Комментарий к преференции')
+    preference_comment = models.TextField(blank=True, verbose_name='Комментарий к преференции')
 
     def __str__(self):
         return self.bank_name
@@ -18,8 +18,8 @@ class Banks(models.Model):
 
 
 class TargetCredits(models.Model):
-    target_name = models.CharField(max_length=150, db_index=True, unique=True, verbose_name='Название цели программы')
-    target_desc = models.CharField(max_length=255, blank=True, verbose_name='Описание')
+    target_name = models.CharField(max_length=150, unique=True, verbose_name='Название цели программы')
+    target_desc = models.TextField(blank=True, verbose_name='Описание')
 
     def __str__(self):
         return self.target_name
@@ -33,7 +33,7 @@ class TargetCredits(models.Model):
 class MortgagePrograms(models.Model):
     programs_bank = models.ForeignKey(Banks, on_delete=models.CASCADE, verbose_name='Название Банка', blank=False)
     programs_target = models.ManyToManyField(TargetCredits, verbose_name='Цель программы', blank=False)
-    programs_name = models.CharField(max_length=150, db_index=True, verbose_name='Название ипотечной программы')
+    programs_name = models.CharField(max_length=150, db_index=True, blank=False, verbose_name='Название ипотечной программы')
     rate = models.FloatField(db_index=True, blank=False, verbose_name='Ставка')
     rate_salary = models.FloatField(db_index=True, null=True, blank=True, verbose_name='Ставка, для зарплатников')
     first_payment = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='Первоначальный взнос')
@@ -43,6 +43,11 @@ class MortgagePrograms(models.Model):
     max_time_credit = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='Максимальный срок кредита, лет')
     min_borrower_age = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='Минимальный возраст заёмщика')
     max_borrower_age = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='Максимальный возраст заёмщика')
+
+    work_experience = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='Стаж на последнем месте')
+    mandatory_documents = models.TextField(blank=True, verbose_name='Обязательные документы')
+    proof_of_income_document = models.TextField(blank=True, verbose_name='Документ подтверждение дохода')
+    time_for_bank_decision = models.CharField(max_length=255, blank=True, verbose_name='Время на решение банка')
 
     understatement_is_active = models.BooleanField(default=False, verbose_name='Занижение, Есть/нет')
     understatement_comment = models.CharField(max_length=255, blank=True, verbose_name='Комментарий к занижению')
@@ -73,7 +78,7 @@ class MortgagePrograms(models.Model):
     storeys = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Этажность')
     housing_wear = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Износ жилья')
     req_tech_docs = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Требования к техническим документам')
-    add_info = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Дополнительная информация')
+    add_info = models.TextField(db_index=True, blank=True, verbose_name='Дополнительная информация')
 
     def __str__(self):
         return self.programs_name

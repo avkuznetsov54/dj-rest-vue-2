@@ -4,7 +4,8 @@ import {
   getBANKS,
   get_TARGET_CREDITS,
   crudBANKS,
-  crudTargetCredits
+  crudTargetCredits,
+  crudMortgageProgramm
 } from "@/api/mortgages/axios-mortgages";
 
 const mortgagesModule = {
@@ -22,6 +23,9 @@ const mortgagesModule = {
     },
     GET_TARGET_CREDITS_ALL_DATA: state => {
       return state.TARGET_CREDITS_ALL_DATA;
+    },
+    GET_MORTGAGES_DATA: state => {
+      return state.MORTGAGES_DATA;
     }
   },
   mutations: {
@@ -209,6 +213,7 @@ const mortgagesModule = {
           });
       });
     },
+
     FETCH_EDIT_TARGET_CREDITS(context, payload) {
       return new Promise((resolve, reject) => {
         crudTargetCredits
@@ -260,7 +265,62 @@ const mortgagesModule = {
         crudTargetCredits
           .post("api/v1/mortgages/target-credits/", payload["formData"], {
             headers: {
-              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${store.state.accessToken}`
+            }
+          })
+          .then(response => {
+            resolve(response);
+          })
+          .catch(err => {
+            reject(err);
+          });
+      });
+    },
+
+    FETCH_EDIT_MORTGAGES(context, payload) {
+      return new Promise((resolve, reject) => {
+        crudMortgageProgramm
+          .patch(
+            "api/v1/mortgages/all/" + payload["id_programs_name"] + "/",
+            payload["formData"],
+            {
+              headers: {
+                Authorization: `Bearer ${store.state.accessToken}`
+              }
+            }
+          )
+          .then(response => {
+            resolve(response);
+          })
+          .catch(err => {
+            // refresh token expired or some other error status
+            // eslint-disable-next-line no-unused-vars
+            const er = err; // просто чтоб ошибку в консоли не показывало
+            reject(err);
+          });
+      });
+    },
+    FETCH_DELETE_MORTGAGES(context, payload) {
+      return new Promise((resolve, reject) => {
+        crudMortgageProgramm
+          .delete("api/v1/mortgages/all/" + payload["id_programs_name"] + "/", {
+            headers: {
+              Authorization: `Bearer ${store.state.accessToken}`
+            }
+          })
+          .then(response => {
+            resolve(response);
+          })
+          .catch(err => {
+            reject(err);
+          });
+      });
+    },
+    FETCH_CREATE_MORTGAGES(context, payload) {
+      return new Promise((resolve, reject) => {
+        crudMortgageProgramm
+          .post("api/v1/mortgages/all/", payload["formData"], {
+            headers: {
               Authorization: `Bearer ${store.state.accessToken}`
             }
           })

@@ -180,8 +180,8 @@
       >
         <v-expansion-panel-header class="py-0">
           <v-container class="py-0" fill-height fluid>
-            <v-row align="center" justify="center">
-              <v-col cols="4" sm="2" md="1" lg="2">
+            <v-row align="center">
+              <v-col cols="6" sm="3" md="2" lg="2">
                 <div>
                   <v-img
                     :src="mort.bank.bank_logo"
@@ -199,7 +199,7 @@
                   </v-chip>
                 </div>
               </v-col>
-              <v-col cols="8" sm="6" md="3" lg="2">
+              <v-col cols="6" sm="3" md="3" lg="2">
                 <div class="mt-2">
                   <span class="grey--text text--darken-1 body-2"
                     >«{{ mort.bank.bank_name }}»
@@ -211,7 +211,7 @@
                   </span>
                 </div>
               </v-col>
-              <v-col cols="4" sm="6" md="2" lg="2">
+              <v-col cols="6" sm="3" md="2" lg="2">
                 <div>
                   <span
                     class="grey--text text--darken-3 headline font-weight-black"
@@ -234,7 +234,7 @@
                 </div>
                 <div></div>
               </v-col>
-              <v-col cols="12" sm="6" md="4" lg="4" class="text--secondary">
+              <v-col cols="6" sm="6" md="3" lg="3" class="text--secondary">
                 <div>
                   <span
                     class="grey--text text--darken-3 subtitle-1 font-weight-black"
@@ -243,25 +243,24 @@
                   </span>
                 </div>
                 <div>
-                  <span class="text--secondary body-2"
-                    >на срок от {{ mort.min_time_credit }} до
+                  <span class="text--secondary caption"
+                    >На срок от {{ mort.min_time_credit }} до
                     {{ mort.max_time_credit }} лет
                   </span>
                 </div>
               </v-col>
-              <v-col cols="6" sm="6" md="3" lg="2" class="text--secondary">
+              <v-col cols="12" sm="6" md="2" lg="2" class="text--secondary">
                 <div>
-                  <span class="text--secondary"
-                    >возраст от {{ mort.min_borrower_age }} до
+                  <span class="text--secondary caption"
+                    >Возраст от {{ mort.min_borrower_age }} до
                     {{ mort.max_borrower_age }} лет
                   </span>
                 </div>
-                <!--                <div>-->
-                <!--                  <span class="text&#45;&#45;secondary"-->
-                <!--                    >на срок от {{ mort.min_time_credit }} до-->
-                <!--                    {{ mort.max_time_credit }} лет</span-->
-                <!--                  >-->
-                <!--                </div>-->
+                <div>
+                  <span class="text--secondary caption"
+                    >Стаж от {{ mort.work_experience }} месяцев
+                  </span>
+                </div>
               </v-col>
             </v-row>
           </v-container>
@@ -275,10 +274,10 @@
               <v-col cols="12" sm="6" md="4" lg="4" align="left">
                 <v-list-item>
                   <v-list-item-content class="grey--text text--darken-1">
-                    <v-list-item-title
-                      class="mb-3 body-1 font-weight-bold grey--text text--darken-3"
-                      >Условия ипотеки
-                    </v-list-item-title>
+                    <!--                    <v-list-item-title-->
+                    <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                    <!--                      >Условия ипотеки-->
+                    <!--                    </v-list-item-title>-->
                     <span class="caption"
                       >Цель:
                       <span v-for="(item, index) in mort.targets" :key="index">
@@ -286,27 +285,27 @@
                         }}{{ mort.targets.length !== index + 1 ? "," : "" }}
                       </span>
                     </span>
-                    <span class="caption"
-                      >Программа: «{{ mort.programs_name }}»
-                    </span>
-                    <span class="caption"
-                      >Первоначальный взнос: {{ mort.first_payment }}%
-                    </span>
-                    <span class="caption">Ставка: {{ mort.rate }}% </span>
-                    <span class="caption"
-                      >Ставка для зарплатников:
-                      {{
-                        !mort.rate_salary ? "-" : mort.rate_salary + "%"
-                      }}</span
-                    >
-                    <span class="caption"
-                      >Сумма: {{ mort.min_sum_credit | numCredit | toRUB }} -
-                      {{ mort.max_sum_credit | numCredit | toRUB }}
-                    </span>
-                    <span class="caption"
-                      >Срок: от {{ mort.min_time_credit }} до
-                      {{ mort.max_time_credit }} лет
-                    </span>
+                    <!--                    <span class="caption"-->
+                    <!--                      >Программа: «{{ mort.programs_name }}»-->
+                    <!--                    </span>-->
+                    <!--                    <span class="caption"-->
+                    <!--                      >Первоначальный взнос: {{ mort.first_payment }}%-->
+                    <!--                    </span>-->
+                    <!--                    <span class="caption">Ставка: {{ mort.rate }}% </span>-->
+                    <!--                    <span class="caption"-->
+                    <!--                      >Ставка для зарплатников:-->
+                    <!--                      {{-->
+                    <!--                        !mort.rate_salary ? "-" : mort.rate_salary + "%"-->
+                    <!--                      }}</span-->
+                    <!--                    >-->
+                    <!--                    <span class="caption"-->
+                    <!--                      >Сумма: {{ mort.min_sum_credit | numCredit | toRUB }} - -->
+                    <!--                      {{ mort.max_sum_credit | numCredit | toRUB }}-->
+                    <!--                    </span>-->
+                    <!--                    <span class="caption"-->
+                    <!--                      >Срок: от {{ mort.min_time_credit }} до-->
+                    <!--                      {{ mort.max_time_credit }} лет-->
+                    <!--                    </span>-->
                     <span class="caption">
                       Занижение:
                       {{ mort.understatement_is_active ? "Да" : "Нет"
@@ -346,6 +345,14 @@
                           : ""
                       }}
                     </span>
+                    <span class="caption"
+                      >Стаж на последнем месте от:
+                      {{ mort.work_experience }} месяцев
+                    </span>
+                    <span class="caption"
+                      >Время на решение банка:
+                      {{ mort.time_for_bank_decision }}
+                    </span>
                   </v-list-item-content>
                 </v-list-item>
               </v-col>
@@ -354,10 +361,10 @@
                   <v-list-item-content
                     class="caption grey--text text--darken-1"
                   >
-                    <v-list-item-title
-                      class="mb-3 body-1 font-weight-bold grey--text text--darken-3"
-                      >Условия ипотеки
-                    </v-list-item-title>
+                    <!--                    <v-list-item-title-->
+                    <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                    <!--                      >Условия ипотеки-->
+                    <!--                    </v-list-item-title>-->
 
                     <span class="caption">
                       Комната:
@@ -445,30 +452,31 @@
                   </v-list-item-content>
                 </v-list-item>
               </v-col>
-
-
               <v-col cols="12" sm="6" md="4" lg="4" align="left">
                 <v-list-item>
                   <v-list-item-content class="grey--text text--darken-1">
-                    <v-list-item-title
-                      class="mb-3 body-1 font-weight-bold grey--text text--darken-3"
-                      >Условия ипотеки</v-list-item-title
-                    >
-                    <span class="caption"
-                      >Программа: «{{ mort.programs_name }}»
-                    </span>
-                    <span class="caption"
-                      >Первоначальный взнос: {{ mort.first_payment }}%
-                    </span>
-                    <span class="caption">Ставка: {{ mort.rate }}%</span>
-                    <span class="caption"
-                      >Сумма: {{ mort.min_sum_credit | numCredit | toRUB }} -
-                      {{ mort.max_sum_credit | numCredit | toRUB }}
-                    </span>
-                    <span class="caption"
-                      >Срок: от {{ mort.min_time_credit }} до
-                      {{ mort.max_time_credit }} лет
-                    </span>
+                    <!--                    <v-list-item-title-->
+                    <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                    <!--                      >Условия ипотеки</v-list-item-title-->
+                    <!--                    >-->
+                    <p class="caption mb-1">
+                      Обязательные документы:
+                      <span class="grey--text text--darken-3">
+                        {{ mort.mandatory_documents }}
+                      </span>
+                    </p>
+                    <p class="caption mb-1">
+                      Документ подтверждение дохода:
+                      <span class="grey--text text--darken-3">
+                        {{ mort.proof_of_income_document }}
+                      </span>
+                    </p>
+                    <p class="caption mb-1">
+                      Дополнительная информация:
+                      <span class="grey--text text--darken-3">
+                        {{ mort.add_info }}
+                      </span>
+                    </p>
                   </v-list-item-content>
                 </v-list-item>
               </v-col>

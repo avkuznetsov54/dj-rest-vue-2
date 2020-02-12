@@ -23,7 +23,8 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MortgagePrograms
-        fields = ('programs_name',
+        fields = ('id',
+                  'programs_name',
                   'bank',
                   'targets',
                   'rate',
@@ -35,6 +36,10 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
                   'max_time_credit',
                   'min_borrower_age',
                   'max_borrower_age',
+                  'work_experience',
+                  'mandatory_documents',
+                  'proof_of_income_document',
+                  'time_for_bank_decision',
                   'understatement_is_active',
                   'understatement_comment',
                   'co_borrowers',
@@ -55,7 +60,8 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
                   'overlap',
                   'storeys',
                   'housing_wear',
-                  'req_tech_docs'
+                  'req_tech_docs',
+                  'add_info'
                   )
 
     # def get_programs_bank(self, obj):
