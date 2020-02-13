@@ -6,7 +6,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 
 from .models import MortgagePrograms, Banks, TargetCredits
-from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer
+from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer, MortgageProgSer
 
 
 class MortgagePagination(PageNumberPagination):
@@ -19,6 +19,12 @@ class MortgageProgramsViewSet(ModelViewSet):
     queryset = MortgagePrograms.objects.all()
     pagination_class = MortgagePagination
     permission_classes = (IsAuthenticated, )
+
+    # очищаем поле programs_target (many2many) перед тем как перезаписать
+    def update(self, request, *args, **kwargs):
+        mort = self.get_object()
+        mort.programs_target.clear()
+        return super().update(request, *args, **kwargs)
 
     def filter_queryset(self, queryset):
         for k, v in self.request.query_params.items():
@@ -48,6 +54,17 @@ class MortgageProgramsViewSet(ModelViewSet):
             if k == 'first_payment':
                 k = k + '__lte'
                 params.update({k: v})
+            if k == 'borrower_age':
+                k1 = 'min_borrower_age' + '__lte'
+                params.update({k1: v})
+                k2 = 'max_borrower_age' + '__gte'
+                params.update({k2: v})
+            if k == 'work_experience':
+                k = k + '__lte'
+                params.update({k: v})
+            if k == 'understatement_is_active':
+                if v == 'true':
+                    params.update({k: True})
             queryset = queryset.filter(**params)
             # тоже самое что:
             # queryset = queryset.filter(model__icontains="asdf")
@@ -78,3 +95,8 @@ class TargetCreditsViewSet(ModelViewSet):
     serializer_class = TargetCreditsSerializer
     queryset = TargetCredits.objects.all()
     permission_classes = (IsAuthenticated,)
+
+
+class MortgageProgViewSet(ModelViewSet):
+    serializer_class = MortgageProgSer
+    queryset = MortgagePrograms.objects.all()

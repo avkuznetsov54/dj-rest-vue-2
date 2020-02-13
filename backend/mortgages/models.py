@@ -32,7 +32,7 @@ class TargetCredits(models.Model):
 
 class MortgagePrograms(models.Model):
     programs_bank = models.ForeignKey(Banks, on_delete=models.CASCADE, verbose_name='Название Банка', blank=False)
-    programs_target = models.ManyToManyField(TargetCredits, verbose_name='Цель программы', blank=False)
+    programs_target = models.ManyToManyField(TargetCredits, verbose_name='Цель программы', blank=True)
     programs_name = models.CharField(max_length=150, db_index=True, blank=False, verbose_name='Название ипотечной программы')
     rate = models.FloatField(db_index=True, blank=False, verbose_name='Ставка')
     rate_salary = models.FloatField(db_index=True, null=True, blank=True, verbose_name='Ставка, для зарплатников')

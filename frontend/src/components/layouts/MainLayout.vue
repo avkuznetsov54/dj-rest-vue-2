@@ -78,9 +78,9 @@
                   <v-list-item-title class="title">
                     {{ GET_USER_INFO_DATA.username }}
                   </v-list-item-title>
-                  <v-list-item-subtitle>
-                    subtext
-                  </v-list-item-subtitle>
+<!--                  <v-list-item-subtitle>-->
+<!--                    subtext-->
+<!--                  </v-list-item-subtitle>-->
                 </v-list-item-content>
               </v-list-item>
 
@@ -101,16 +101,17 @@
                 <!--                    <v-list-item-title>{{ item.title }}</v-list-item-title>-->
                 <!--                  </v-list-item-content>-->
                 <!--                </v-list-item>-->
-                <template v-if="GET_USER_INFO_DATA.groups != false">
-                  <v-list-item to="/#">
-                    <v-list-item-icon class="mr-2">
-                      <v-icon>mdi-settings</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content align="left">
-                      <v-list-item-title>Администрирование</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </template>
+
+<!--                <template v-if="GET_USER_INFO_DATA.groups != false">-->
+<!--                  <v-list-item to="/#">-->
+<!--                    <v-list-item-icon class="mr-2">-->
+<!--                      <v-icon>mdi-settings</v-icon>-->
+<!--                    </v-list-item-icon>-->
+<!--                    <v-list-item-content align="left">-->
+<!--                      <v-list-item-title>Администрирование</v-list-item-title>-->
+<!--                    </v-list-item-content>-->
+<!--                  </v-list-item>-->
+<!--                </template>-->
 
                 <v-list-item to="/logout">
                   <v-list-item-icon class="mr-2">
@@ -256,11 +257,11 @@ export default {
       // { title: "Logout", url: "/logout", icon: "mdi-account" }
     ],
     itemsUserIcon: [
-      { title: "Администрирование", url: "", icon: "mdi-settings" },
+      // { title: "Администрирование", url: "", icon: "mdi-settings" },
       // { title: "Click Me 2" },
       // { title: "Click Me 3" },
       // { title: "Click Me 4" },
-      { title: "Выход", url: "/logout", icon: "mdi-logout" }
+      // { title: "Выход", url: "/logout", icon: "mdi-logout" }
     ],
     itemsMortgage: [
       {

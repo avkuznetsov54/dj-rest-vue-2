@@ -19,6 +19,17 @@
         contain
       ></v-img>
     </template>
+    <template v-slot:item.rate="{ item }">
+      <span> {{ item.rate }}% </span>
+    </template>
+    <template v-slot:item.rate_salary="{ item }">
+      <span v-if="item.rate_salary !== null"> {{ item.rate_salary }}% </span>
+    </template>
+    <template v-slot:item.first_payment="{ item }">
+      <span v-if="item.first_payment !== null">
+        {{ item.first_payment }}%
+      </span>
+    </template>
 
     <template v-slot:top>
       <v-toolbar flat color="white">
@@ -32,7 +43,7 @@
           clearable
         ></v-text-field>
         <v-spacer></v-spacer>
-        <v-dialog v-model="dialog" max-width="800px">
+        <v-dialog persistent v-model="dialog" max-width="1000px">
           <template v-slot:activator="{ on }">
             <v-btn
               color="primary"
@@ -52,17 +63,19 @@
               <v-card-text>
                 <v-container>
                   <v-row>
-                    <v-col cols="12" sm="12" md="6">
+                    <v-col cols="12" sm="12" md="4">
                       <v-select
                         label="Банк"
                         placeholder="Любой"
-                        :items="BANKS_NAME_DATA"
-                        v-model="editedItem.bank.bank_name"
+                        :items="GET_BANKS_ALL_DATA"
+                        item-text="bank_name"
+                        item-value="id"
+                        v-model="editedItem.programs_bank"
                       >
                       </v-select>
                     </v-col>
 
-                    <v-col cols="12" sm="12" md="6">
+                    <v-col cols="12" sm="12" md="4">
                       <v-text-field
                         v-model="editedItem.programs_name"
                         label="Название программы"
@@ -71,25 +84,48 @@
                       ></v-text-field>
                     </v-col>
 
-                    <v-col cols="12" sm="12" md="12">
-                      <v-textarea
+                    <v-col cols="12" sm="4" md="2">
+                      <v-text-field
                         v-model="editedItem.rate"
                         label="Ставка"
                         placeholder="Ставка"
-                        outlined
-                      ></v-textarea>
+                      ></v-text-field>
+                    </v-col>
+
+                    <v-col cols="12" sm="12" md="4">
+                      <v-select
+                        multiple
+                        label="Цель кредита"
+                        placeholder="Любой"
+                        :items="GET_TARGET_CREDITS_ALL_DATA"
+                        item-text="target_name"
+                        item-value="id"
+                        v-model="editedItem.programs_target"
+                      >
+                        <template v-slot:selection="{ item, index }">
+                          <!--                  <span v-if="index === 0">-->
+                          <!--                    <span>{{ item }} </span>-->
+                          <!--                  </span>-->
+                          <span
+                            v-if="index === 0"
+                            class="ml-1 grey--text caption"
+                            >Выбранно
+                            {{ editedItem.programs_target.length }} шт.</span
+                          >
+                        </template>
+                      </v-select>
                     </v-col>
                   </v-row>
                   <v-row>
                     <v-col>
                       <div v-if="errMsgBank">
-                        <div v-for="(errRow, i) in errMsgBank" :key="i">
-                          <div v-for="(err, i) in errRow" :key="i">
-                            <v-alert width="100%" type="error">
-                              {{ err }}
-                            </v-alert>
-                          </div>
-                        </div>
+                        <!--                        <div v-for="(errRow, i) in errMsgBank" :key="i">-->
+                        <!--                          <div v-for="(err, i) in errRow" :key="i">-->
+                        <v-alert width="100%" type="error">
+                          {{ errMsgBank }}
+                        </v-alert>
+                        <!--                          </div>-->
+                        <!--                        </div>-->
                       </div>
                     </v-col>
                   </v-row>
@@ -172,7 +208,6 @@ export default {
     search: "",
     headers: [
       {
-        text: "Логотип",
         width: "12%",
         align: "left",
         sortable: false,
@@ -187,36 +222,36 @@ export default {
       { text: "Название программы", width: "30%", value: "programs_name" },
       {
         text: "Ставка",
-        width: "40%",
+        width: "10%",
         value: "rate"
+      },
+      {
+        text: "Ставка зарплатникам",
+        width: "10%",
+        value: "rate_salary"
+      },
+      {
+        text: "ПВ",
+        width: "10%",
+        value: "first_payment"
       },
       { text: "Действия", width: "10%", value: "action", sortable: false }
     ],
     listProgram: [],
     editedIndex: -1,
-    editedItem: {
-      programs_bank: null,
-      programs_name: null,
-      bank: {
-        bank_name: null
-      },
-      rate: null
-    },
-    defaultItem: {
-      programs_bank: null,
-      programs_name: null,
-      bank: {
-        bank_name: null
-      },
-      rate: null
-    },
+    editedItem: {},
+    defaultItem: {},
     errMsgFieldBankName: null,
     errMsgBank: null
   }),
 
   computed: {
     ...mapState("mortgages", ["BANKS_NAME_DATA", "MORTGAGES_DATA"]),
-    ...mapGetters("mortgages", ["GET_MORTGAGES_DATA"]),
+    ...mapGetters("mortgages", [
+      "GET_BANKS_ALL_DATA",
+      "GET_TARGET_CREDITS_ALL_DATA",
+      "GET_MORTGAGES_DATA"
+    ]),
     formTitle() {
       return this.editedIndex === -1
         ? "Новая программа"
@@ -243,6 +278,7 @@ export default {
 
   created() {
     this.FETCH_BANKS();
+    this.FETCH_TARGET_CREDITS();
     this.FETCH_MORTGAGES()
       // eslint-disable-next-line no-unused-vars
       .then(response => {
@@ -263,6 +299,7 @@ export default {
   methods: {
     ...mapActions("mortgages", [
       "FETCH_BANKS",
+      "FETCH_TARGET_CREDITS",
       "FETCH_MORTGAGES",
       "FETCH_EDIT_MORTGAGES",
       "FETCH_DELETE_MORTGAGES",
@@ -275,7 +312,7 @@ export default {
     },
 
     editItem(item) {
-      console.log(item);
+      // console.log(item);
       this.editedIndex = this.listProgram.indexOf(item);
       // console.log("2 => " + this.editedIndex);
       this.editedItem = Object.assign({}, item);
@@ -376,16 +413,18 @@ export default {
       }
 
       //Initialize the form data
-      let formData = new FormData();
+      // let formData = new FormData();
+      // formData.append("programs_bank", this.editedItem.programs_bank);
+      // formData.append("programs_name", this.editedItem.programs_name);
+      // formData.append("programs_target", this.editedItem.programs_target);
 
-      formData.append("bank.bank_name", this.editedItem.bank.bank_name);
-
-      formData.append("target_name", this.editedItem.programs_name);
-
-      formData.append("target_desc", this.editedItem.rate);
+      let formData = new Object();
+      formData["programs_bank"] = this.editedItem.programs_bank;
+      formData["programs_name"] = this.editedItem.programs_name;
+      formData["programs_target"] = this.editedItem.programs_target;
 
       // console.log(typeof this.editedItem.preference_value);
-      // console.log(this.editedItem.preference_is_active);
+      console.log(this.editedItem.programs_target);
 
       const payload = new Object();
       payload["id_programs_name"] = this.editedItem.id;
@@ -409,7 +448,7 @@ export default {
           })
           // eslint-disable-next-line no-unused-vars
           .catch(error => {
-            // console.log("error " + error);
+            console.log(error.config);
             this.$store.dispatch("refreshToken").then(() => {
               this.FETCH_EDIT_MORTGAGES(payload)
                 // eslint-disable-next-line no-unused-vars

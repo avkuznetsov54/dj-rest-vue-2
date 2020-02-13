@@ -28,7 +28,7 @@
         <v-toolbar-title>Банки</v-toolbar-title>
         <!--        <v-divider class="mx-4" inset vertical></v-divider>-->
         <v-spacer></v-spacer>
-        <v-dialog v-model="dialog" max-width="500px">
+        <v-dialog persistent v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on }">
             <v-btn
               color="primary"
@@ -112,8 +112,7 @@
                       <v-text-field
                         v-model="editedItem.preference_value"
                         label="Процент преференции"
-                        type="number"
-                        min="0"
+                        :rules="[numberRule]"
                       ></v-text-field>
                     </v-col>
                     <v-col cols="12" sm="12" md="12">
@@ -212,6 +211,11 @@ export default {
     editedItem: { bank_name: { required } }
   },
   data: () => ({
+    numberRule: v => {
+      if (v === "") return true;
+      if (!isNaN(parseFloat(v)) && v >= 0) return true;
+      return "Введите число.";
+    },
     dialog: false,
     dialogDelete: false,
     headers: [

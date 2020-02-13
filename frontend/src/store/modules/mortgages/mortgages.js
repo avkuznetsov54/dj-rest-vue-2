@@ -224,6 +224,7 @@ const mortgagesModule = {
             payload["formData"],
             {
               headers: {
+                "Content-Type": "application/json",
                 Authorization: `Bearer ${store.state.accessToken}`
               }
             }

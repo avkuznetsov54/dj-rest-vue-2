@@ -13,7 +13,7 @@
         <v-toolbar-title>Цели кредита</v-toolbar-title>
         <!--        <v-divider class="mx-4" inset vertical></v-divider>-->
         <v-spacer></v-spacer>
-        <v-dialog v-model="dialog" max-width="500px">
+        <v-dialog persistent v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on }">
             <v-btn
               color="primary"

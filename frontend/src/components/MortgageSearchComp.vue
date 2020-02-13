@@ -73,6 +73,18 @@
 
             <v-col cols="12" md="1">
               <v-text-field
+                v-model="filters.time_credit"
+                type="number"
+                label="Срок, лет"
+                placeholder="Любой"
+                min="0"
+                dense
+              ></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row v-if="visibleSearch">
+            <v-col cols="12" md="1">
+              <v-text-field
                 v-model="filters.rate"
                 type="number"
                 label="Ставка"
@@ -81,54 +93,34 @@
                 dense
               ></v-text-field>
             </v-col>
-
-            <v-col cols="12" md="1">
+            <v-col cols="12" md="2">
               <v-text-field
-                v-model="filters.time_credit"
                 type="number"
-                label="Срок"
+                v-model="filters.work_experience"
+                label="Стаж на последнем месте, мес."
                 placeholder="Любой"
                 min="0"
                 dense
               ></v-text-field>
             </v-col>
-          </v-row>
-          <v-row v-if="visibleSearch">
             <v-col cols="12" md="2">
               <v-text-field
                 type="number"
-                label="Парам, руб"
-                placeholder="Любая"
+                v-model="filters.borrower_age"
+                label="Возрасть заёмщика"
+                placeholder="Любой"
                 min="0"
                 dense
               ></v-text-field>
             </v-col>
+
             <v-col cols="12" md="2">
-              <v-text-field
-                type="number"
-                label="Парам, руб"
-                placeholder="Любая"
-                min="0"
+              <v-checkbox
                 dense
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-text-field
-                type="number"
-                label="Парам, руб"
-                placeholder="Любая"
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-text-field
-                type="number"
-                label="Парам, руб"
-                placeholder="Любая"
-                min="0"
-                dense
-              ></v-text-field>
+                v-model="filters.understatement_is_active"
+                class="mx-2"
+                label="Занижение"
+              ></v-checkbox>
             </v-col>
           </v-row>
           <v-row>
