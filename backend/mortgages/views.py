@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions, DjangoObjectPermissions
 
+from mortgages.permissions import IsMortgageEditorOrAuthenticatedReadOnly
 from .models import MortgagePrograms, Banks, TargetCredits
 from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer, MortgageProgSer
 
@@ -18,7 +19,8 @@ class MortgageProgramsViewSet(ModelViewSet):
     serializer_class = MortgageProgramsSerializer
     queryset = MortgagePrograms.objects.all()
     pagination_class = MortgagePagination
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
 
     # очищаем поле programs_target (many2many) перед тем как перезаписать
     def update(self, request, *args, **kwargs):

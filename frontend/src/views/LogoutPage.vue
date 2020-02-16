@@ -19,7 +19,6 @@ export default {
       this.destroy_CARS_DATA();
       this.$router.push({ name: "login" });
     });
-
   }
 
   // created() {
