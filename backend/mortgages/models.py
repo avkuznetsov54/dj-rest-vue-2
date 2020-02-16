@@ -31,6 +31,7 @@ class TargetCredits(models.Model):
 
 
 class MortgagePrograms(models.Model):
+    is_visible = models.BooleanField(default=False, verbose_name='Отображать, Да/нет')
     programs_bank = models.ForeignKey(Banks, on_delete=models.CASCADE, verbose_name='Название Банка', blank=False)
     programs_target = models.ManyToManyField(TargetCredits, verbose_name='Цель программы', blank=True)
     programs_name = models.CharField(max_length=150, db_index=True, blank=False, verbose_name='Название ипотечной программы')

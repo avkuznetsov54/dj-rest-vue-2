@@ -18,8 +18,8 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
     # programs_bank = serializers.SerializerMethodField()
 
     # включаем данные из связанных моделей
-    bank = BanksSerializer(source='programs_bank')
-    targets = TargetCreditsSerializer(source='programs_target', many=True)
+    bank = BanksSerializer(source='programs_bank', read_only=True)
+    targets = TargetCreditsSerializer(source='programs_target', many=True, read_only=True)
 
     # programs_target_id = serializers.PrimaryKeyRelatedField(many=True,
     #                                                         read_only=False,
@@ -29,6 +29,7 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
     class Meta:
         model = MortgagePrograms
         fields = ('id',
+                  'is_visible',
                   'programs_bank',
                   'programs_target',
                   'programs_name',
