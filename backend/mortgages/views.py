@@ -14,19 +14,19 @@ class MortgagePagination(PageNumberPagination):
     page_size = 1000
 
 
-# class MortgageProgramsView(generics.ListAPIView):
-class MortgageProgramsViewSet(ModelViewSet):
+class MortgageProgramsView(generics.ListAPIView):
+# class MortgageProgramsViewSet(ModelViewSet):
     serializer_class = MortgageProgramsSerializer
     queryset = MortgagePrograms.objects.all()
     pagination_class = MortgagePagination
-    # permission_classes = (IsAuthenticated, )
-    permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
+    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
 
-    # очищаем поле programs_target (many2many) перед тем как перезаписать
-    def update(self, request, *args, **kwargs):
-        mort = self.get_object()
-        mort.programs_target.clear()
-        return super().update(request, *args, **kwargs)
+    # # очищаем поле programs_target (many2many) перед тем как перезаписать
+    # def update(self, request, *args, **kwargs):
+    #     mort = self.get_object()
+    #     mort.programs_target.clear()
+    #     return super().update(request, *args, **kwargs)
 
     def filter_queryset(self, queryset):
         for k, v in self.request.query_params.items():
@@ -75,6 +75,20 @@ class MortgageProgramsViewSet(ModelViewSet):
         # return queryset
 
 
+class CRUDMortgageProgramsViewSet(ModelViewSet):
+    serializer_class = MortgageProgramsSerializer
+    queryset = MortgagePrograms.objects.all()
+    # pagination_class = MortgagePagination
+    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
+
+    # очищаем поле programs_target (many2many) перед тем как перезаписать
+    def update(self, request, *args, **kwargs):
+        mort = self.get_object()
+        mort.programs_target.clear()
+        return super().update(request, *args, **kwargs)
+
+
 # class BanksView(generics.ListAPIView):
 #     serializer_class = BanksSerializer
 #     queryset = Banks.objects.all()
@@ -97,8 +111,3 @@ class TargetCreditsViewSet(ModelViewSet):
     serializer_class = TargetCreditsSerializer
     queryset = TargetCredits.objects.all()
     permission_classes = (IsAuthenticated,)
-
-
-class MortgageProgViewSet(ModelViewSet):
-    serializer_class = MortgageProgSer
-    queryset = MortgagePrograms.objects.all()

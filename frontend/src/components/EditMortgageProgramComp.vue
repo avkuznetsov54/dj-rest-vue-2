@@ -550,6 +550,7 @@ export default {
       "GET_TARGET_CREDITS_ALL_DATA",
       "GET_MORTGAGES_DATA"
     ]),
+    ...mapGetters("user_info", ["GET_USER_INFO_DATA"]),
     formTitle() {
       return this.editedIndex === -1
         ? "Новая программа"
@@ -577,7 +578,7 @@ export default {
   created() {
     this.FETCH_BANKS();
     this.FETCH_TARGET_CREDITS();
-    this.FETCH_MORTGAGES()
+    this.FETCH_MORTGAGES_CRUD()
       // eslint-disable-next-line no-unused-vars
       .then(response => {
         // console.log("response " + response);
@@ -586,7 +587,7 @@ export default {
       })
       .catch(() => {
         this.$store.dispatch("refreshToken").then(() => {
-          this.FETCH_MORTGAGES().then(() => {
+          this.FETCH_MORTGAGES_CRUD().then(() => {
             this.listProgram = this.GET_MORTGAGES_DATA;
           });
         });
@@ -598,7 +599,7 @@ export default {
     ...mapActions("mortgages", [
       "FETCH_BANKS",
       "FETCH_TARGET_CREDITS",
-      "FETCH_MORTGAGES",
+      "FETCH_MORTGAGES_CRUD",
       "FETCH_EDIT_MORTGAGES",
       "FETCH_DELETE_MORTGAGES",
       "FETCH_CREATE_MORTGAGES"
@@ -662,7 +663,7 @@ export default {
       this.FETCH_DELETE_MORTGAGES(payload)
         // eslint-disable-next-line no-unused-vars
         .then(response => {
-          this.FETCH_MORTGAGES()
+          this.FETCH_MORTGAGES_CRUD()
             // eslint-disable-next-line no-unused-vars
             .then(response => {
               this.listProgram = this.GET_MORTGAGES_DATA;
@@ -673,7 +674,7 @@ export default {
           this.$store.dispatch("refreshToken").then(() => {
             // eslint-disable-next-line no-unused-vars
             this.FETCH_DELETE_MORTGAGES(payload).then(response => {
-              this.FETCH_MORTGAGES()
+              this.FETCH_MORTGAGES_CRUD()
                 // eslint-disable-next-line no-unused-vars
                 .then(response => {
                   this.listProgram = this.GET_MORTGAGES_DATA;
@@ -749,7 +750,7 @@ export default {
         this.FETCH_EDIT_MORTGAGES(payload)
           // eslint-disable-next-line no-unused-vars
           .then(response => {
-            this.FETCH_MORTGAGES()
+            this.FETCH_MORTGAGES_CRUD()
               // eslint-disable-next-line no-unused-vars
               .then(response => {
                 // console.log("response " + response);
@@ -769,7 +770,7 @@ export default {
                   // записываем изменённые данные в таблицу на странице под нужным индексом элемента
                   // Object.assign(this.listProgram[this.editedIndex], response.data);
 
-                  this.FETCH_MORTGAGES()
+                  this.FETCH_MORTGAGES_CRUD()
                     // eslint-disable-next-line no-unused-vars
                     .then(response => {
                       // console.log("response " + response);
@@ -787,7 +788,7 @@ export default {
         this.FETCH_CREATE_MORTGAGES(payload)
           // eslint-disable-next-line no-unused-vars
           .then(response => {
-            this.FETCH_MORTGAGES()
+            this.FETCH_MORTGAGES_CRUD()
               // eslint-disable-next-line no-unused-vars
               .then(response => {
                 // console.log("response " + response);
@@ -803,7 +804,7 @@ export default {
               this.FETCH_CREATE_MORTGAGES(payload)
                 // eslint-disable-next-line no-unused-vars
                 .then(response => {
-                  this.FETCH_MORTGAGES()
+                  this.FETCH_MORTGAGES_CRUD()
                     // eslint-disable-next-line no-unused-vars
                     .then(response => {
                       // console.log("response " + response);

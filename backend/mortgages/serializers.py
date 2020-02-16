@@ -76,7 +76,6 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
     #     return obj.programs_bank.bank_name
 
     def update(self, instance, validated_data):
-
         # переписываем метод, чтоб заработал метод patch с many2many field
         new_programs_target = validated_data.pop('programs_target')
         # чтоб записались остальные поля помимо many2many

@@ -278,11 +278,38 @@ const mortgagesModule = {
       });
     },
 
+    FETCH_MORTGAGES_CRUD(context, params) {
+      // console.log(url);
+      return new Promise((resolve, reject) => {
+        getAPI
+          .get("api/v1/mortgages/crud/", {
+            headers: {
+              Authorization: `Bearer ${store.state.accessToken}`
+            },
+            params: params
+          }) // proof that your access token is still valid; if not the
+          // axios getAPI response interceptor will attempt to get a new  access token from the server. check out ../api/axios-base.js getAPI instance response interceptor
+          .then(response => {
+            // console.log("GetAPI successfully got the mods");
+            // console.log(response);
+            context.commit("SET_UPDATE_MORTGAGES_DATA", response.data); // store the response data in store
+            resolve(response);
+          })
+          .catch(err => {
+            // refresh token expired or some other error status
+            // eslint-disable-next-line no-unused-vars
+            // const er = err; // просто чтоб ошибку в консоли не показывало
+            // console.log(err);
+            // console.log("[mortgages] Не получилось");
+            reject(err);
+          });
+      });
+    },
     FETCH_EDIT_MORTGAGES(context, payload) {
       return new Promise((resolve, reject) => {
         crudMortgageProgramm
           .patch(
-            "api/v1/mortgages/all/" + payload["id_programs_name"] + "/",
+            "api/v1/mortgages/crud/" + payload["id_programs_name"] + "/",
             payload["formData"],
             {
               headers: {
@@ -304,7 +331,7 @@ const mortgagesModule = {
     FETCH_DELETE_MORTGAGES(context, payload) {
       return new Promise((resolve, reject) => {
         crudMortgageProgramm
-          .delete("api/v1/mortgages/all/" + payload["id_programs_name"] + "/", {
+          .delete("api/v1/mortgages/crud/" + payload["id_programs_name"] + "/", {
             headers: {
               Authorization: `Bearer ${store.state.accessToken}`
             }
@@ -320,7 +347,7 @@ const mortgagesModule = {
     FETCH_CREATE_MORTGAGES(context, payload) {
       return new Promise((resolve, reject) => {
         crudMortgageProgramm
-          .post("api/v1/mortgages/all/", payload["formData"], {
+          .post("api/v1/mortgages/crud/", payload["formData"], {
             headers: {
               Authorization: `Bearer ${store.state.accessToken}`
             }
