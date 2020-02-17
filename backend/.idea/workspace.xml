@@ -4,7 +4,6 @@
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/EditMortgageProgramComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/EditMortgageProgramComp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mortgages/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="81" column="12" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="12" />
+            <state relative-caret-position="396">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -365,12 +364,12 @@
       <workItem from="1581659935325" duration="342000" />
       <workItem from="1581663584100" duration="320000" />
       <workItem from="1581665398750" duration="598000" />
-      <workItem from="1581670763807" duration="18605000" />
+      <workItem from="1581670763807" duration="19096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195207000" />
+    <option name="totallyTimeSpent" value="195698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -764,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="81" column="12" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="12" />
+        <state relative-caret-position="396">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>

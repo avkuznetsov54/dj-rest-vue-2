@@ -63,12 +63,12 @@
 
             <v-col cols="12" md="2">
               <v-text-field
-                v-model="filters.first_payment"
-                type="number"
-                label="Первоначальный взнос, %"
+                v-model="num_first_payment"
+                label="Первоначальный взнос, руб"
                 placeholder="Любой"
                 min="0"
                 dense
+                :suffix="procent_first_payment"
               ></v-text-field>
             </v-col>
 
@@ -503,7 +503,9 @@ export default {
       selectTargets: ["Foo", "Bar", "Fizz", "Buzz"],
       panel: [],
       showFullMortgage: true,
-      visibleSearch: false
+      visibleSearch: false,
+      num_first_payment: "",
+      procent_first_payment: ""
     };
   },
   computed: {
@@ -543,6 +545,8 @@ export default {
     },
     clearFilter() {
       this.filters = [];
+      this.num_first_payment = "";
+      this.procent_first_payment = "";
       this.FETCH_MORTGAGES();
       return this.filters;
     },
@@ -559,6 +563,29 @@ export default {
       // console.log(this.BANKS_DATA);
       if (!this.showFullMortgage) {
         this.none();
+      }
+    },
+    thousandSeparator(newValue) {
+      let v = newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return v;
+    },
+    watchValue() {
+      if (
+        this.num_first_payment !== "" &&
+        this.filters.property_value !== undefined
+      ) {
+        this.filters.first_payment = Math.floor(
+          (Number(this.num_first_payment.replace(/\s+/g, "")) * 100) /
+            Number(this.filters.property_value.replace(/\s+/g, ""))
+        );
+        let pr =
+          (Number(this.num_first_payment.replace(/\s+/g, "")) * 100) /
+          Number(this.filters.property_value.replace(/\s+/g, ""));
+        if (pr >= 0 && pr <= 100) {
+          this.procent_first_payment = pr.toFixed(2) + "%";
+        } else {
+          this.procent_first_payment = "";
+        }
       }
     }
   },
@@ -580,11 +607,15 @@ export default {
     "filters.property_value": {
       handler: function(newValue) {
         if (newValue === "" || newValue === undefined) return true;
-        // console.log(newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-        let v = newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        this.filters.property_value = v;
+        this.filters.property_value = this.thousandSeparator(newValue);
+        this.watchValue();
       },
       deep: true
+    },
+    num_first_payment: function(newValue) {
+      if (newValue === "" || newValue === undefined) return true;
+      this.num_first_payment = this.thousandSeparator(newValue);
+      this.watchValue();
     }
   }
 };
