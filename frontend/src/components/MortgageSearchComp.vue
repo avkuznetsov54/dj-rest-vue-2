@@ -51,8 +51,7 @@
 
             <v-col cols="12" md="2">
               <v-text-field
-                v-model.number="filters.property_value"
-                type="number"
+                v-model="filters.property_value"
                 label="Стоимость недвижимости, руб"
                 placeholder="Любая"
                 min="0"
@@ -573,6 +572,17 @@ export default {
     },
     toRUB(value) {
       return `${value.toLocaleString()} ₽`;
+    }
+  },
+  watch: {
+    "filters.property_value": {
+      handler: function(newValue) {
+        if (newValue === "" || newValue === undefined) return true;
+        // console.log(newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        let v = newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        this.filters.property_value = v;
+      },
+      deep: true
     }
   }
 };

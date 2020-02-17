@@ -9,6 +9,7 @@ from mortgages.permissions import IsMortgageEditorOrAuthenticatedReadOnly
 from .models import MortgagePrograms, Banks, TargetCredits
 from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCreditsSerializer, MortgageProgSer
 
+import re
 
 class MortgagePagination(PageNumberPagination):
     page_size = 1000
@@ -46,6 +47,7 @@ class MortgageProgramsView(generics.ListAPIView):
                 v = v.split(',')
                 params.update({k: v})
             if k == 'property_value':
+                v = re.sub("\D", "", v)
                 k1 = 'min_sum_credit' + '__lte'
                 params.update({k1: v})
                 k2 = 'max_sum_credit' + '__gte'

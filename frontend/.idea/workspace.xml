@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/mortgages/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/permissions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/mortgages/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/mortgages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,11 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="422" column="35" selection-start-line="422" selection-start-column="35" selection-end-line="422" selection-end-column="35" />
-              <folding>
-                <element signature="n#v-expansion-panel-header#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="628">
+              <caret line="579" column="53" selection-start-line="579" selection-start-column="53" selection-end-line="579" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -175,7 +168,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error in refreshToken Task</find>
       <find>title</find>
       <find>value</find>
       <find>panel2</find>
@@ -205,6 +197,7 @@
       <find>programs_target_id</find>
       <find>FETCH_MORTGAGES</find>
       <find>GET_USER_INFO_DATA</find>
+      <find>numCredit</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -263,10 +256,10 @@
         <option value="$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue" />
         <option value="$PROJECT_DIR$/src/components/EditMortgageBankComp.vue" />
         <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
-        <option value="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" />
         <option value="$PROJECT_DIR$/src/views/LogoutPage.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js" />
         <option value="$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue" />
+        <option value="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" />
       </list>
     </option>
   </component>
@@ -523,12 +516,12 @@
       <workItem from="1581659935881" duration="1433000" />
       <workItem from="1581663584875" duration="1072000" />
       <workItem from="1581665399258" duration="1182000" />
-      <workItem from="1581670764068" duration="11055000" />
+      <workItem from="1581670764068" duration="18339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401360000" />
+    <option name="totallyTimeSpent" value="408644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -911,11 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="422" column="35" selection-start-line="422" selection-start-column="35" selection-end-line="422" selection-end-column="35" />
-          <folding>
-            <element signature="n#v-expansion-panel-header#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="628">
+          <caret line="579" column="53" selection-start-line="579" selection-start-column="53" selection-end-line="579" selection-end-column="53" />
         </state>
       </provider>
     </entry>
