@@ -12,6 +12,7 @@
                 :items="BANKS_NAME_DATA"
                 v-model="filters.bank_name"
                 dense
+                clearable
               >
                 <template v-slot:selection="{ item, index }">
                   <!--                  <span v-if="index === 0">-->
@@ -32,6 +33,7 @@
                 :items="TARGET_CREDITS_NAME_DATA"
                 v-model="filters.names_target_credits"
                 dense
+                clearable
               >
                 <template v-slot:selection="{ item, index }">
                   <!--                  <span v-if="index === 0">-->

@@ -53,7 +53,7 @@
 
                     <v-card-text>
                       <v-container>
-                        <v-row>
+                        <v-row class="mb-7">
                           <v-col cols="12" sm="12" md="5">
                             <v-text-field
                               v-model="editedItem.programs_name"
@@ -122,7 +122,7 @@
                             </v-select>
                           </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row class="mb-7">
                           <v-col cols="12" sm="4" md="3">
                             <v-text-field
                               v-model.number="editedItem.min_sum_credit"
@@ -172,6 +172,263 @@
                             ></v-text-field>
                           </v-col>
                         </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="3">
+                            <v-text-field
+                              v-model.number="editedItem.work_experience"
+                              label="Стаж на последнем месте"
+                              placeholder=" "
+                              suffix="мес."
+                              :rules="[numberRule]"
+                            ></v-text-field>
+                            <v-text-field
+                              v-model="editedItem.time_for_bank_decision"
+                              label="Время на решение банка"
+                              placeholder="от 2 до 5 дней"
+                            ></v-text-field>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="5">
+                            <v-textarea
+                              v-model="editedItem.mandatory_documents"
+                              label="Обязательные документы"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="4">
+                            <v-textarea
+                              v-model="editedItem.proof_of_income_document"
+                              label="Документ подтверждение дохода"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="4">
+                            <v-checkbox
+                              v-model="editedItem.understatement_is_active"
+                              label="Занижение, Есть/нет"
+                              color="primary"
+                            ></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="8">
+                            <v-textarea
+                              v-model="editedItem.understatement_comment"
+                              label="Комментарий к занижению"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="4">
+                            <v-textarea
+                              v-model="editedItem.co_borrowers"
+                              label="Созаемщики"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="4">
+                            <v-textarea
+                              v-model="editedItem.commission"
+                              label="Коммисия"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="4">
+                            <v-textarea
+                              v-model="editedItem.seller_registration"
+                              label="Регистрация продавца"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="4">
+                            <v-select
+                              v-model="editedItem.express_issue"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Экспресс выдача"
+                              dense
+                            ></v-select>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="6">
+                            <v-select
+                              v-model="editedItem.inclusion_children"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Включение детей в число собственников"
+                              dense
+                            ></v-select>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="3">
+                            <v-select
+                              v-model="editedItem.room"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Комната"
+                              dense
+                            ></v-select>
+                            <v-textarea
+                              v-model="editedItem.room_comment"
+                              label="Комментарий к Комната"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-select
+                              v-model="editedItem.share"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Доля"
+                              dense
+                            ></v-select>
+                            <v-textarea
+                              v-model="editedItem.share_comment"
+                              label="Комментарий к Доля"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-select
+                              v-model="editedItem.private_house"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Частный дом"
+                              dense
+                            ></v-select>
+                            <v-textarea
+                              v-model="editedItem.private_comment"
+                              label="Комментарий к Частный дом"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-select
+                              v-model="editedItem.apartments"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Апартаменты"
+                              dense
+                            ></v-select>
+                            <v-textarea
+                              v-model="editedItem.apartments_comment"
+                              label="Комментарий к Апартаменты"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="4">
+                            <v-select
+                              v-model="editedItem.redevelopment"
+                              :items="itemsYesNo"
+                              item-text="text"
+                              item-value="value"
+                              label="Перепланировка"
+                              dense
+                            ></v-select>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="8">
+                            <v-textarea
+                              v-model="editedItem.redevelopment_comment"
+                              label="Комментарий к Перепланировка"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row class="mb-7">
+                          <v-col cols="12" sm="4" md="3">
+                            <v-textarea
+                              v-model="editedItem.overlap"
+                              label="Перекрытия"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-textarea
+                              v-model="editedItem.storeys"
+                              label="Этажность"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-textarea
+                              v-model="editedItem.housing_wear"
+                              label="Износ жилья"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3">
+                            <v-textarea
+                              v-model="editedItem.req_tech_docs"
+                              label="Требования к тех. документам"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="12" sm="12" md="12">
+                            <v-textarea
+                              v-model="editedItem.add_info"
+                              label="Дополнительная информация"
+                              placeholder=" "
+                              auto-grow
+                              rows="1"
+                              dense
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
+
                         <v-row>
                           <v-col>
                             <div v-if="errMsgBank">
@@ -540,7 +797,12 @@ export default {
     editedItem: {},
     defaultItem: {},
     errMsgFieldBankName: null,
-    errMsgBank: null
+    errMsgBank: null,
+    itemsYesNo: [
+      { text: "-", value: "" },
+      { text: "Да", value: "yes" },
+      { text: "Нет", value: "no" }
+    ]
   }),
 
   computed: {
@@ -735,6 +997,46 @@ export default {
       formData["rate_salary"] = this.editedItem.rate_salary;
       formData["first_payment"] = this.editedItem.first_payment;
       formData["programs_target"] = this.editedItem.programs_target;
+      formData["min_sum_credit"] = this.editedItem.min_sum_credit;
+      formData["max_sum_credit"] = this.editedItem.max_sum_credit;
+      formData["min_time_credit"] = this.editedItem.min_time_credit;
+      formData["max_time_credit"] = this.editedItem.max_time_credit;
+      formData["min_borrower_age"] = this.editedItem.min_borrower_age;
+      formData["max_borrower_age"] = this.editedItem.max_borrower_age;
+      formData["work_experience"] = this.editedItem.work_experience;
+      formData[
+        "time_for_bank_decision"
+      ] = this.editedItem.time_for_bank_decision;
+      formData["mandatory_documents"] = this.editedItem.mandatory_documents;
+      formData[
+        "proof_of_income_document"
+      ] = this.editedItem.proof_of_income_document;
+      formData[
+        "understatement_is_active"
+      ] = this.editedItem.understatement_is_active;
+      formData[
+        "understatement_comment"
+      ] = this.editedItem.understatement_comment;
+      formData["co_borrowers"] = this.editedItem.co_borrowers;
+      formData["commission"] = this.editedItem.commission;
+      formData["seller_registration"] = this.editedItem.seller_registration;
+      formData["express_issue"] = this.editedItem.express_issue;
+      formData["inclusion_children"] = this.editedItem.inclusion_children;
+      formData["room"] = this.editedItem.room;
+      formData["room_comment"] = this.editedItem.room_comment;
+      formData["share"] = this.editedItem.share;
+      formData["share_comment"] = this.editedItem.share_comment;
+      formData["private_house"] = this.editedItem.private_house;
+      formData["private_comment"] = this.editedItem.private_comment;
+      formData["apartments"] = this.editedItem.apartments;
+      formData["apartments_comment"] = this.editedItem.apartments_comment;
+      formData["redevelopment"] = this.editedItem.redevelopment;
+      formData["redevelopment_comment"] = this.editedItem.redevelopment_comment;
+      formData["overlap"] = this.editedItem.overlap;
+      formData["storeys"] = this.editedItem.storeys;
+      formData["housing_wear"] = this.editedItem.housing_wear;
+      formData["req_tech_docs"] = this.editedItem.req_tech_docs;
+      formData["add_info"] = this.editedItem.add_info;
 
       // console.log(typeof this.editedItem.preference_value);
       console.log(formData);
