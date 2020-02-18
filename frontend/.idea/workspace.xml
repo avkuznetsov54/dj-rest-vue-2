@@ -4,6 +4,7 @@
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,8 +167,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+            <state relative-caret-position="229">
+              <caret line="573" column="18" selection-start-line="573" selection-start-column="4" selection-end-line="573" selection-end-column="18" />
+              <folding>
+                <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#1;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#2;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#0;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -532,12 +541,12 @@
       <workItem from="1581659935881" duration="1433000" />
       <workItem from="1581663584875" duration="1072000" />
       <workItem from="1581665399258" duration="1182000" />
-      <workItem from="1581670764068" duration="36185000" />
+      <workItem from="1581670764068" duration="44290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426490000" />
+    <option name="totallyTimeSpent" value="434595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -948,8 +957,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+        <state relative-caret-position="229">
+          <caret line="573" column="18" selection-start-line="573" selection-start-column="4" selection-end-line="573" selection-end-column="18" />
+          <folding>
+            <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#1;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#2;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#0;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#div#0;n#template#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

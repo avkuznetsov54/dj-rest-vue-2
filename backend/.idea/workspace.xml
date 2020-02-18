@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" afterDir="false" />
     </list>
@@ -114,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mortgages/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="459">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -123,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mortgages/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+            <state relative-caret-position="754">
+              <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -364,12 +365,12 @@
       <workItem from="1581659935325" duration="342000" />
       <workItem from="1581663584100" duration="320000" />
       <workItem from="1581665398750" duration="598000" />
-      <workItem from="1581670763807" duration="19096000" />
+      <workItem from="1581670763807" duration="20715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195698000" />
+    <option name="totallyTimeSpent" value="197317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -753,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+        <state relative-caret-position="754">
+          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -763,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+        <state relative-caret-position="459">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>

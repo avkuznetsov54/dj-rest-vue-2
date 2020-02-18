@@ -460,6 +460,12 @@
                       <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
                       <!--                      >Условия ипотеки</v-list-item-title-->
                       <!--                    >-->
+                      <template v-if="monthlyPayment(mort)">
+                        <div>
+                          {{ monthlyPayment(mort) | numCredit | toRUB }}/мес.
+                        </div>
+                      </template>
+
                       <p class="caption mb-1">
                         Обязательные документы:
                         <span class="grey--text text--darken-3">
@@ -565,11 +571,39 @@ export default {
         this.none();
       }
     },
+    monthlyPayment(mort) {
+      // https://mortgage-calculator.ru/%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0-%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%B0-%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B8
+      if (
+        this.num_first_payment !== "" &&
+        this.filters.property_value !== undefined &&
+        this.filters.property_value !== "" &&
+        this.filters.time_credit !== undefined &&
+        this.filters.time_credit !== "" &&
+        this.filters.time_credit >= mort.min_time_credit &&
+        this.filters.time_credit <= mort.max_time_credit
+      ) {
+        // console.log(this.filters.time_credit);
+        let monthly_procent = mort.rate / 100 / 12;
+        let tmp = Math.pow(1 + monthly_procent, this.filters.time_credit * 12);
+        let monthlyPay =
+          (Number(this.filters.property_value.replace(/\s+/g, "")) -
+            Number(this.num_first_payment.replace(/\s+/g, ""))) *
+          monthly_procent *
+          (tmp / (tmp - 1));
+        return monthlyPay.toFixed(2);
+      } else if (
+        this.num_first_payment === "" ||
+        this.filters.property_value === ""
+      ) {
+        return false;
+      }
+    },
     thousandSeparator(newValue) {
       let v = newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
       return v;
     },
     watchValue() {
+      // console.log(this.filters.property_value);
       if (
         this.num_first_payment !== "" &&
         this.filters.property_value !== undefined
@@ -586,6 +620,8 @@ export default {
         } else {
           this.procent_first_payment = "";
         }
+      } else {
+        this.procent_first_payment = "";
       }
     }
   },
@@ -606,14 +642,22 @@ export default {
   watch: {
     "filters.property_value": {
       handler: function(newValue) {
-        if (newValue === "" || newValue === undefined) return true;
+        if (newValue === "" || newValue === undefined) {
+          this.filters.first_payment = "";
+          this.procent_first_payment = "";
+          return true;
+        }
         this.filters.property_value = this.thousandSeparator(newValue);
         this.watchValue();
       },
       deep: true
     },
     num_first_payment: function(newValue) {
-      if (newValue === "" || newValue === undefined) return true;
+      if (newValue === "" || newValue === undefined) {
+        this.filters.first_payment = "";
+        this.procent_first_payment = "";
+        return true;
+      }
       this.num_first_payment = this.thousandSeparator(newValue);
       this.watchValue();
     }
@@ -626,6 +670,10 @@ export default {
 .no-transition {
   transition: none !important;
 }
+.v-item-group,
+.v-expansion-panel-header,
+.v-expansion-panel::before,
+.v-expansion-panel-header:before,
 .expand-transition-leave-active,
 .expand-transition-enter-active {
   transition: none !important;

@@ -63,6 +63,11 @@ class MortgageProgramsView(generics.ListAPIView):
                 params.update({k1: v})
                 k2 = 'max_borrower_age' + '__gte'
                 params.update({k2: v})
+            if k == 'time_credit':
+                k1 = 'min_time_credit' + '__lte'
+                params.update({k1: v})
+                k2 = 'max_time_credit' + '__gte'
+                params.update({k2: v})
             if k == 'work_experience':
                 k = k + '__lte'
                 params.update({k: v})
