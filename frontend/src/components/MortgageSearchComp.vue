@@ -165,334 +165,356 @@
       <v-btn v-else @click="none">Свернуть</v-btn>
     </div>
 
-    <v-expansion-panels v-model="panel" multiple>
-      <v-expansion-panel
-        class="no-transition"
-        v-for="(mort, i) in MORTGAGES_DATA"
-        :key="i"
-      >
-        <template v-if="mort.is_visible">
-          <v-expansion-panel-header class="py-0">
-            <v-container class="py-0" fill-height fluid>
-              <v-row align="center">
-                <v-col cols="6" sm="3" md="2" lg="2">
-                  <div>
-                    <v-img
-                      :src="mort.bank.bank_logo"
-                      max-width="120"
-                      max-height="50"
-                      contain
-                    ></v-img>
-                  </div>
-                  <div v-if="mort.bank.preference_is_active">
-                    <v-chip small color="cyan" text-color="white" class="mt-1">
-                      <span
-                        >Преференция
-                        <b>{{ mort.bank.preference_value }}%</b></span
-                      >
-                    </v-chip>
-                  </div>
-                </v-col>
-                <v-col cols="6" sm="3" md="3" lg="2">
-                  <div class="mt-2">
-                    <span class="grey--text text--darken-1 body-2"
-                      >«{{ mort.bank.bank_name }}»
-                    </span>
-                  </div>
-                  <div>
-                    <span class="grey--text text--darken-3 body-2"
-                      >«{{ mort.programs_name }}»
-                    </span>
-                  </div>
-                </v-col>
-                <v-col cols="6" sm="3" md="2" lg="2">
-                  <div>
-                    <span
-                      class="grey--text text--darken-3 headline font-weight-black"
-                      >{{ mort.rate }}%
-                    </span>
-                    <span class="text--secondary nowrap"
-                      >{{ mort.first_payment }}% ПВ
-                    </span>
-                  </div>
-                  <div class="mt-1" v-if="mort.rate_salary">
-                    <v-chip
-                      small
-                      color="grey lighten-4"
-                      text-color="grey darken-1"
-                    >
-                      <span
-                        ><b>{{ mort.rate_salary }}%</b> зарплатникам</span
-                      >
-                    </v-chip>
-                  </div>
-                  <div></div>
-                </v-col>
-                <v-col cols="6" sm="6" md="3" lg="3" class="text--secondary">
-                  <div>
-                    <span
-                      class="grey--text text--darken-3 subtitle-1 font-weight-black"
-                      >{{ mort.min_sum_credit | numCredit | toRUB }} -
-                      {{ mort.max_sum_credit | numCredit | toRUB }}
-                    </span>
-                  </div>
-                  <div>
-                    <span class="text--secondary caption"
-                      >На срок от {{ mort.min_time_credit }} до
-                      {{ mort.max_time_credit }} лет
-                    </span>
-                  </div>
-                </v-col>
-                <v-col cols="12" sm="6" md="2" lg="2" class="text--secondary">
-                  <div>
-                    <span class="text--secondary caption"
-                      >Возраст от {{ mort.min_borrower_age }} до
-                      {{ mort.max_borrower_age }} лет
-                    </span>
-                  </div>
-                  <div>
-                    <span class="text--secondary caption"
-                      >Стаж от {{ mort.work_experience }} месяцев
-                    </span>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-expansion-panel-header>
-
-          <v-expansion-panel-content>
-            <v-divider></v-divider>
-
-            <div class="py-0" fill-height fluid>
-              <v-row align="start" justify="center">
-                <v-col cols="12" sm="6" md="4" lg="4" align="left">
-                  <v-list-item>
-                    <v-list-item-content class="grey--text text--darken-1">
-                      <!--                    <v-list-item-title-->
-                      <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
-                      <!--                      >Условия ипотеки-->
-                      <!--                    </v-list-item-title>-->
-                      <span class="caption"
-                        >Цель:
-                        <span
-                          v-for="(item, index) in mort.targets"
-                          :key="index"
-                        >
-                          {{ item.target_name
-                          }}{{ mort.targets.length !== index + 1 ? "," : "" }}
-                        </span>
-                      </span>
-                      <!--                    <span class="caption"-->
-                      <!--                      >Программа: «{{ mort.programs_name }}»-->
-                      <!--                    </span>-->
-                      <!--                    <span class="caption"-->
-                      <!--                      >Первоначальный взнос: {{ mort.first_payment }}%-->
-                      <!--                    </span>-->
-                      <!--                    <span class="caption">Ставка: {{ mort.rate }}% </span>-->
-                      <!--                    <span class="caption"-->
-                      <!--                      >Ставка для зарплатников:-->
-                      <!--                      {{-->
-                      <!--                        !mort.rate_salary ? "-" : mort.rate_salary + "%"-->
-                      <!--                      }}</span-->
-                      <!--                    >-->
-                      <!--                    <span class="caption"-->
-                      <!--                      >Сумма: {{ mort.min_sum_credit | numCredit | toRUB }} - -->
-                      <!--                      {{ mort.max_sum_credit | numCredit | toRUB }}-->
-                      <!--                    </span>-->
-                      <!--                    <span class="caption"-->
-                      <!--                      >Срок: от {{ mort.min_time_credit }} до-->
-                      <!--                      {{ mort.max_time_credit }} лет-->
-                      <!--                    </span>-->
-                      <span class="caption">
-                        Занижение:
-                        {{ mort.understatement_is_active ? "Да" : "Нет"
-                        }}{{
-                          mort.understatement_comment
-                            ? ", " + mort.understatement_comment
-                            : ""
-                        }}
-                      </span>
-                      <span class="caption"
-                        >Созаёмщики: {{ mort.co_borrowers }}
-                      </span>
-                      <span class="caption"
-                        >Коммисия: {{ mort.commission }}
-                      </span>
-                      <span class="caption"
-                        >Регистрация продавца:
-                        {{ mort.seller_registration }}
-                      </span>
-                      <span class="caption"
-                        >Экспресс выдача:
-                        {{
-                          mort.express_issue == "yes"
-                            ? "Да"
-                            : mort.express_issue == "no"
-                            ? "Нет"
-                            : ""
-                        }}
-                      </span>
-                      <span class="caption"
-                        >Включение детей в число собственников:
-                        {{
-                          mort.inclusion_children == "yes"
-                            ? "Да"
-                            : mort.inclusion_children == "no"
-                            ? "Нет"
-                            : ""
-                        }}
-                      </span>
-                      <span class="caption"
-                        >Стаж на последнем месте от:
-                        {{ mort.work_experience }} месяцев
-                      </span>
-                      <span class="caption"
-                        >Время на решение банка:
-                        {{ mort.time_for_bank_decision }}
-                      </span>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" lg="4" align="left">
-                  <v-list-item>
-                    <v-list-item-content
-                      class="caption grey--text text--darken-1"
-                    >
-                      <!--                    <v-list-item-title-->
-                      <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
-                      <!--                      >Условия ипотеки-->
-                      <!--                    </v-list-item-title>-->
-
-                      <span class="caption">
-                        Комната:
-                        {{
-                          mort.room == "yes"
-                            ? "Да"
-                            : mort.room == "no"
-                            ? "Нет"
-                            : ""
-                        }}{{
-                          mort.room_comment ? ", " + mort.room_comment : ""
-                        }}
-                      </span>
-                      <span class="caption">
-                        Доля:
-                        {{
-                          mort.share == "yes"
-                            ? "Да"
-                            : mort.share == "no"
-                            ? "Нет"
-                            : ""
-                        }}{{
-                          mort.share_comment ? ", " + mort.share_comment : ""
-                        }}
-                      </span>
-                      <span class="caption">
-                        Частный дом:
-                        {{
-                          mort.private_house == "yes"
-                            ? "Да"
-                            : mort.private_house == "no"
-                            ? "Нет"
-                            : ""
-                        }}{{
-                          mort.private_comment
-                            ? ", " + mort.private_comment
-                            : ""
-                        }}
-                      </span>
-                      <span class="caption">
-                        Апартаменты:
-                        {{
-                          mort.apartments == "yes"
-                            ? "Да"
-                            : mort.apartments == "no"
-                            ? "Нет"
-                            : ""
-                        }}{{
-                          mort.apartments_comment
-                            ? ", " + mort.apartments_comment
-                            : ""
-                        }}
-                      </span>
-                      <span class="caption">
-                        Перепланировка:
-                        {{
-                          mort.redevelopment == "yes"
-                            ? "Да"
-                            : mort.redevelopment == "no"
-                            ? "Нет"
-                            : ""
-                        }}{{
-                          mort.redevelopment_comment
-                            ? ", " + mort.redevelopment_comment
-                            : ""
-                        }}
-                      </span>
-                      <p class="caption mb-1">
-                        Перекрытия:<span class="grey--text text--darken-3">
-                          {{ mort.overlap }}
-                        </span>
-                      </p>
-                      <p class="caption mb-1">
-                        Этажность:<span class="grey--text text--darken-3">
-                          {{ mort.storeys }}
-                        </span>
-                      </p>
-                      <p class="caption mb-1">
-                        Износ жилья:<span class="grey--text text--darken-3">
-                          {{ mort.housing_wear }}
-                        </span>
-                      </p>
-                      <p class="caption mb-1">
-                        Технические документы:
-                        <span class="grey--text text--darken-3">
-                          {{ mort.req_tech_docs }}
-                        </span>
-                      </p>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-col>
-                <v-col cols="12" sm="6" md="4" lg="4" align="left">
-                  <v-list-item>
-                    <v-list-item-content class="grey--text text--darken-1">
-                      <!--                    <v-list-item-title-->
-                      <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
-                      <!--                      >Условия ипотеки</v-list-item-title-->
-                      <!--                    >-->
-                      <template v-if="monthlyPayment(mort)">
-                        <div>
-                          {{ monthlyPayment(mort) | numCredit | toRUB }}/мес.
-                        </div>
-                      </template>
-
-                      <p class="caption mb-1">
-                        Обязательные документы:
-                        <span class="grey--text text--darken-3">
-                          {{ mort.mandatory_documents }}
-                        </span>
-                      </p>
-                      <p class="caption mb-1">
-                        Документ подтверждение дохода:
-                        <span class="grey--text text--darken-3">
-                          {{ mort.proof_of_income_document }}
-                        </span>
-                      </p>
-                      <p class="caption mb-1">
-                        Дополнительная информация:
-                        <span class="grey--text text--darken-3">
-                          {{ mort.add_info }}
-                        </span>
-                      </p>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-col>
-              </v-row>
+    <template v-if="progressСircular">
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12">
+            <div class="text-center">
+              <v-progress-circular
+                :size="50"
+                color="primary"
+                indeterminate
+              ></v-progress-circular>
             </div>
-          </v-expansion-panel-content>
-        </template>
-      </v-expansion-panel>
-    </v-expansion-panels>
+          </v-col>
+        </v-row>
+      </v-container>
+    </template>
+    <template v-else>
+      <v-expansion-panels v-model="panel" multiple>
+        <v-expansion-panel
+          class="no-transition"
+          v-for="(mort, i) in MORTGAGES_DATA"
+          :key="i"
+        >
+          <template v-if="mort.is_visible">
+            <v-expansion-panel-header class="py-0">
+              <v-container class="py-0" fill-height fluid>
+                <v-row align="center">
+                  <v-col cols="6" sm="3" md="2" lg="2">
+                    <div>
+                      <v-img
+                        :src="mort.bank.bank_logo"
+                        max-width="120"
+                        max-height="50"
+                        contain
+                      ></v-img>
+                    </div>
+                    <div v-if="mort.bank.preference_is_active">
+                      <v-chip
+                        small
+                        color="cyan"
+                        text-color="white"
+                        class="mt-1"
+                      >
+                        <span
+                          >Преференция
+                          <b>{{ mort.bank.preference_value }}%</b></span
+                        >
+                      </v-chip>
+                    </div>
+                  </v-col>
+                  <v-col cols="6" sm="3" md="3" lg="2">
+                    <div class="mt-2">
+                      <span class="grey--text text--darken-1 body-2"
+                        >«{{ mort.bank.bank_name }}»
+                      </span>
+                    </div>
+                    <div>
+                      <span class="grey--text text--darken-3 body-2"
+                        >«{{ mort.programs_name }}»
+                      </span>
+                    </div>
+                  </v-col>
+                  <v-col cols="6" sm="3" md="2" lg="2">
+                    <div>
+                      <span
+                        class="grey--text text--darken-3 headline font-weight-black"
+                        >{{ mort.rate }}%
+                      </span>
+                      <span class="text--secondary nowrap"
+                        >{{ mort.first_payment }}% ПВ
+                      </span>
+                    </div>
+                    <div class="mt-1" v-if="mort.rate_salary">
+                      <v-chip
+                        small
+                        color="grey lighten-4"
+                        text-color="grey darken-1"
+                      >
+                        <span
+                          ><b>{{ mort.rate_salary }}%</b> зарплатникам</span
+                        >
+                      </v-chip>
+                    </div>
+                    <div></div>
+                  </v-col>
+                  <v-col cols="6" sm="6" md="3" lg="3" class="text--secondary">
+                    <div>
+                      <span
+                        class="grey--text text--darken-3 subtitle-1 font-weight-black"
+                        >{{ mort.min_sum_credit | numCredit | toRUB }} -
+                        {{ mort.max_sum_credit | numCredit | toRUB }}
+                      </span>
+                    </div>
+                    <div>
+                      <span class="text--secondary caption"
+                        >На срок от {{ mort.min_time_credit }} до
+                        {{ mort.max_time_credit }} лет
+                      </span>
+                    </div>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="2" lg="2" class="text--secondary">
+                    <div>
+                      <span class="text--secondary caption"
+                        >Возраст от {{ mort.min_borrower_age }} до
+                        {{ mort.max_borrower_age }} лет
+                      </span>
+                    </div>
+                    <div>
+                      <span class="text--secondary caption"
+                        >Стаж от {{ mort.work_experience }} месяцев
+                      </span>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-expansion-panel-header>
+
+            <v-expansion-panel-content>
+              <v-divider></v-divider>
+
+              <div class="py-0" fill-height fluid>
+                <v-row align="start" justify="center">
+                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                    <v-list-item>
+                      <v-list-item-content class="grey--text text--darken-1">
+                        <!--                    <v-list-item-title-->
+                        <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                        <!--                      >Условия ипотеки-->
+                        <!--                    </v-list-item-title>-->
+                        <span class="caption"
+                          >Цель:
+                          <span
+                            v-for="(item, index) in mort.targets"
+                            :key="index"
+                          >
+                            {{ item.target_name
+                            }}{{ mort.targets.length !== index + 1 ? "," : "" }}
+                          </span>
+                        </span>
+                        <!--                    <span class="caption"-->
+                        <!--                      >Программа: «{{ mort.programs_name }}»-->
+                        <!--                    </span>-->
+                        <!--                    <span class="caption"-->
+                        <!--                      >Первоначальный взнос: {{ mort.first_payment }}%-->
+                        <!--                    </span>-->
+                        <!--                    <span class="caption">Ставка: {{ mort.rate }}% </span>-->
+                        <!--                    <span class="caption"-->
+                        <!--                      >Ставка для зарплатников:-->
+                        <!--                      {{-->
+                        <!--                        !mort.rate_salary ? "-" : mort.rate_salary + "%"-->
+                        <!--                      }}</span-->
+                        <!--                    >-->
+                        <!--                    <span class="caption"-->
+                        <!--                      >Сумма: {{ mort.min_sum_credit | numCredit | toRUB }} - -->
+                        <!--                      {{ mort.max_sum_credit | numCredit | toRUB }}-->
+                        <!--                    </span>-->
+                        <!--                    <span class="caption"-->
+                        <!--                      >Срок: от {{ mort.min_time_credit }} до-->
+                        <!--                      {{ mort.max_time_credit }} лет-->
+                        <!--                    </span>-->
+                        <span class="caption">
+                          Занижение:
+                          {{ mort.understatement_is_active ? "Да" : "Нет"
+                          }}{{
+                            mort.understatement_comment
+                              ? ", " + mort.understatement_comment
+                              : ""
+                          }}
+                        </span>
+                        <span class="caption"
+                          >Созаёмщики: {{ mort.co_borrowers }}
+                        </span>
+                        <span class="caption"
+                          >Коммисия: {{ mort.commission }}
+                        </span>
+                        <span class="caption"
+                          >Регистрация продавца:
+                          {{ mort.seller_registration }}
+                        </span>
+                        <span class="caption"
+                          >Экспресс выдача:
+                          {{
+                            mort.express_issue == "yes"
+                              ? "Да"
+                              : mort.express_issue == "no"
+                              ? "Нет"
+                              : ""
+                          }}
+                        </span>
+                        <span class="caption"
+                          >Включение детей в число собственников:
+                          {{
+                            mort.inclusion_children == "yes"
+                              ? "Да"
+                              : mort.inclusion_children == "no"
+                              ? "Нет"
+                              : ""
+                          }}
+                        </span>
+                        <span class="caption"
+                          >Стаж на последнем месте от:
+                          {{ mort.work_experience }} месяцев
+                        </span>
+                        <span class="caption"
+                          >Время на решение банка:
+                          {{ mort.time_for_bank_decision }}
+                        </span>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                    <v-list-item>
+                      <v-list-item-content
+                        class="caption grey--text text--darken-1"
+                      >
+                        <!--                    <v-list-item-title-->
+                        <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                        <!--                      >Условия ипотеки-->
+                        <!--                    </v-list-item-title>-->
+
+                        <span class="caption">
+                          Комната:
+                          {{
+                            mort.room == "yes"
+                              ? "Да"
+                              : mort.room == "no"
+                              ? "Нет"
+                              : ""
+                          }}{{
+                            mort.room_comment ? ", " + mort.room_comment : ""
+                          }}
+                        </span>
+                        <span class="caption">
+                          Доля:
+                          {{
+                            mort.share == "yes"
+                              ? "Да"
+                              : mort.share == "no"
+                              ? "Нет"
+                              : ""
+                          }}{{
+                            mort.share_comment ? ", " + mort.share_comment : ""
+                          }}
+                        </span>
+                        <span class="caption">
+                          Частный дом:
+                          {{
+                            mort.private_house == "yes"
+                              ? "Да"
+                              : mort.private_house == "no"
+                              ? "Нет"
+                              : ""
+                          }}{{
+                            mort.private_comment
+                              ? ", " + mort.private_comment
+                              : ""
+                          }}
+                        </span>
+                        <span class="caption">
+                          Апартаменты:
+                          {{
+                            mort.apartments == "yes"
+                              ? "Да"
+                              : mort.apartments == "no"
+                              ? "Нет"
+                              : ""
+                          }}{{
+                            mort.apartments_comment
+                              ? ", " + mort.apartments_comment
+                              : ""
+                          }}
+                        </span>
+                        <span class="caption">
+                          Перепланировка:
+                          {{
+                            mort.redevelopment == "yes"
+                              ? "Да"
+                              : mort.redevelopment == "no"
+                              ? "Нет"
+                              : ""
+                          }}{{
+                            mort.redevelopment_comment
+                              ? ", " + mort.redevelopment_comment
+                              : ""
+                          }}
+                        </span>
+                        <p class="caption mb-1">
+                          Перекрытия:<span class="grey--text text--darken-3">
+                            {{ mort.overlap }}
+                          </span>
+                        </p>
+                        <p class="caption mb-1">
+                          Этажность:<span class="grey--text text--darken-3">
+                            {{ mort.storeys }}
+                          </span>
+                        </p>
+                        <p class="caption mb-1">
+                          Износ жилья:<span class="grey--text text--darken-3">
+                            {{ mort.housing_wear }}
+                          </span>
+                        </p>
+                        <p class="caption mb-1">
+                          Технические документы:
+                          <span class="grey--text text--darken-3">
+                            {{ mort.req_tech_docs }}
+                          </span>
+                        </p>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                    <v-list-item>
+                      <v-list-item-content class="grey--text text--darken-1">
+                        <!--                    <v-list-item-title-->
+                        <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
+                        <!--                      >Условия ипотеки</v-list-item-title-->
+                        <!--                    >-->
+                        <template v-if="monthlyPayment(mort)">
+                          <div>
+                            {{ monthlyPayment(mort) | numCredit | toRUB }}/мес.
+                          </div>
+                        </template>
+
+                        <p class="caption mb-1">
+                          Обязательные документы:
+                          <span class="grey--text text--darken-3">
+                            {{ mort.mandatory_documents }}
+                          </span>
+                        </p>
+                        <p class="caption mb-1">
+                          Документ подтверждение дохода:
+                          <span class="grey--text text--darken-3">
+                            {{ mort.proof_of_income_document }}
+                          </span>
+                        </p>
+                        <p class="caption mb-1">
+                          Дополнительная информация:
+                          <span class="grey--text text--darken-3">
+                            {{ mort.add_info }}
+                          </span>
+                        </p>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-expansion-panel-content>
+          </template>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </template>
   </div>
 </template>
 
@@ -504,6 +526,7 @@ export default {
 
   data() {
     return {
+      progressСircular: false,
       url: "api/v1/mortgages/all/",
       filters: [],
       selectTargets: ["Foo", "Bar", "Fizz", "Buzz"],
@@ -553,7 +576,14 @@ export default {
       this.filters = [];
       this.num_first_payment = "";
       this.procent_first_payment = "";
-      this.FETCH_MORTGAGES();
+      this.progressСircular = true;
+      this.FETCH_MORTGAGES()
+        .then(() => {
+          this.progressСircular = false;
+        })
+        .catch(() => {
+          this.progressСircular = false;
+        });
       return this.filters;
     },
     filterMortgages() {
@@ -565,7 +595,14 @@ export default {
         // console.log(this.filters[item]);
       }
       // this.fetchMortgages(this.url, params);
-      this.FETCH_MORTGAGES(params);
+      this.progressСircular = true;
+      this.FETCH_MORTGAGES(params)
+        .then(() => {
+          this.progressСircular = false;
+        })
+        .catch(() => {
+          this.progressСircular = false;
+        });
       // console.log(this.BANKS_DATA);
       if (!this.showFullMortgage) {
         this.none();
