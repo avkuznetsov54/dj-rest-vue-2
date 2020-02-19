@@ -53,7 +53,7 @@ class MortgagePrograms(models.Model):
     understatement_is_active = models.BooleanField(default=False, verbose_name='Занижение, Есть/нет')
     understatement_comment = models.CharField(max_length=255, blank=True, verbose_name='Комментарий к занижению')
     co_borrowers = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Созаемщики')
-    commission = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Коммисия')
+    commission = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Комиссия')
     seller_registration = models.CharField(max_length=255, db_index=True, blank=True, verbose_name='Регистрация продавца')
 
     ANSWER_CHOICES = (

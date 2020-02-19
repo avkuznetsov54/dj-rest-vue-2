@@ -2,6 +2,7 @@
   <div>
     <v-card>
       <v-form v-on:submit.prevent="filterMortgages">
+        <!--      <v-form v-on:change="filterMortgages">-->
         <v-container fluid>
           <v-row>
             <v-col cols="12" md="2">
@@ -24,7 +25,6 @@
                 </template>
               </v-select>
             </v-col>
-
             <v-col cols="12" md="2">
               <v-select
                 multiple
@@ -46,12 +46,7 @@
                 </template>
               </v-select>
             </v-col>
-
-            <!--        <v-col cols="12" md="2">-->
-            <!--          <v-text-field label="Банк" placeholder="Любой"></v-text-field>-->
-            <!--        </v-col>-->
-
-            <v-col cols="12" md="2">
+            <v-col cols="12" md="3">
               <v-text-field
                 v-model="filters.property_value"
                 label="Стоимость недвижимости, руб"
@@ -60,7 +55,6 @@
                 dense
               ></v-text-field>
             </v-col>
-
             <v-col cols="12" md="2">
               <v-text-field
                 v-model="num_first_payment"
@@ -71,7 +65,6 @@
                 :suffix="procent_first_payment"
               ></v-text-field>
             </v-col>
-
             <v-col cols="12" md="1">
               <v-text-field
                 v-model="filters.time_credit"
@@ -90,6 +83,7 @@
                 type="number"
                 label="Ставка"
                 placeholder="Любая"
+                suffix="%"
                 min="0"
                 dense
               ></v-text-field>
@@ -98,8 +92,9 @@
               <v-text-field
                 type="number"
                 v-model="filters.work_experience"
-                label="Стаж на последнем месте, мес."
+                label="Стаж на последнем месте"
                 placeholder="Любой"
+                suffix="мес."
                 min="0"
                 dense
               ></v-text-field>
@@ -110,6 +105,7 @@
                 v-model="filters.borrower_age"
                 label="Возрасть заёмщика"
                 placeholder="Любой"
+                suffix="лет"
                 min="0"
                 dense
               ></v-text-field>
@@ -285,8 +281,8 @@
               <v-divider></v-divider>
 
               <div class="py-0" fill-height fluid>
-                <v-row align="start" justify="center">
-                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                <v-row align="start" justify="center" no-gutters>
+                  <v-col cols="12" sm="6" md="3" lg="3" align="left">
                     <v-list-item>
                       <v-list-item-content class="grey--text text--darken-1">
                         <!--                    <v-list-item-title-->
@@ -337,7 +333,7 @@
                           >Созаёмщики: {{ mort.co_borrowers }}
                         </span>
                         <span class="caption"
-                          >Коммисия: {{ mort.commission }}
+                          >Комиссия: {{ mort.commission }}
                         </span>
                         <span class="caption"
                           >Регистрация продавца:
@@ -374,7 +370,7 @@
                       </v-list-item-content>
                     </v-list-item>
                   </v-col>
-                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                  <v-col cols="12" sm="6" md="3" lg="3" align="left">
                     <v-list-item>
                       <v-list-item-content
                         class="caption grey--text text--darken-1"
@@ -474,18 +470,14 @@
                       </v-list-item-content>
                     </v-list-item>
                   </v-col>
-                  <v-col cols="12" sm="6" md="4" lg="4" align="left">
+                  <v-col cols="12" sm="6" md="3" lg="3" align="left">
                     <v-list-item>
                       <v-list-item-content class="grey--text text--darken-1">
-                        <!--                    <v-list-item-title-->
-                        <!--                      class="mb-3 body-1 font-weight-bold grey&#45;&#45;text text&#45;&#45;darken-3"-->
-                        <!--                      >Условия ипотеки</v-list-item-title-->
-                        <!--                    >-->
-                        <template v-if="monthlyPayment(mort)">
-                          <div>
-                            {{ monthlyPayment(mort) | numCredit | toRUB }}/мес.
-                          </div>
-                        </template>
+                        <!--                        <template v-if="monthlyPayment(mort)">-->
+                        <!--                          <div>-->
+                        <!--                            {{ monthlyPayment(mort) | numCredit | toRUB }}/мес.-->
+                        <!--                          </div>-->
+                        <!--                        </template>-->
 
                         <p class="caption mb-1">
                           Обязательные документы:
@@ -505,6 +497,64 @@
                             {{ mort.add_info }}
                           </span>
                         </p>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="3" lg="3" align="left">
+                    <v-list-item>
+                      <v-list-item-content class="grey--text text--darken-1">
+                        <template v-if="monthlyPayment(mort)">
+                          <div>
+                            <div
+                              v-for="(pay, k, i) in monthlyPayment(mort)"
+                              :key="i"
+                            >
+                              <template v-if="k === 'monthly_pay'">
+                                <span>Ежемесячный платеж</span>
+                                <p
+                                  class="grey--text text--darken-1 headline font-weight-black"
+                                >
+                                  {{ pay | numCredit | toRUB }}/мес.
+                                </p>
+                              </template>
+                              <template
+                                v-if="k === 'preference_pay' && pay !== 'NaN'"
+                              >
+                                <span>С преференцией</span>
+                                <p
+                                  class="grey--text text--darken-1 headline font-weight-black"
+                                >
+                                  {{ pay | numCredit | toRUB }}/мес.
+                                </p>
+                              </template>
+                              <template
+                                v-if="k === 'salary_pay' && pay !== 'NaN'"
+                              >
+                                <span>Для зарплатников</span>
+                                <p
+                                  class="grey--text text--darken-1 headline font-weight-black"
+                                >
+                                  {{ pay | numCredit | toRUB }}/мес.
+                                </p>
+                              </template>
+                            </div>
+                          </div>
+                        </template>
+                        <template v-else>
+                          <v-alert text color="grey lighten-1">
+                            <v-list-item-content>
+                              <p class="body-2">
+                                Для расчёта ежемесечного платежа введите
+                                подходящие для этой программы значения.
+                              </p>
+                              <p class="caption mb-1">
+                                - Стоимость недвижимости
+                              </p>
+                              <p class="caption mb-1">- Первоначальный взнос</p>
+                              <p class="caption mb-1">- Срок</p>
+                            </v-list-item-content>
+                          </v-alert>
+                        </template>
                       </v-list-item-content>
                     </v-list-item>
                   </v-col>
@@ -534,7 +584,8 @@ export default {
       showFullMortgage: true,
       visibleSearch: false,
       num_first_payment: "",
-      procent_first_payment: ""
+      procent_first_payment: "",
+      progMonthlyPayment: ""
     };
   },
   computed: {
@@ -608,26 +659,56 @@ export default {
         this.none();
       }
     },
+    funcMontPay(rate, pref = 0) {
+      let monthly_procent = (rate - pref) / 100 / 12;
+      let tmp = Math.pow(1 + monthly_procent, this.filters.time_credit * 12);
+      let monthlyPay =
+        (Number(this.filters.property_value.replace(/\s+/g, "")) -
+          Number(this.num_first_payment.replace(/\s+/g, ""))) *
+        monthly_procent *
+        (tmp / (tmp - 1));
+      return monthlyPay;
+    },
     monthlyPayment(mort) {
+      // console.log(mort);
       // https://mortgage-calculator.ru/%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0-%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%B0-%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B8
       if (
         this.num_first_payment !== "" &&
+        Number(this.num_first_payment.replace(/\s+/g, "")) <=
+          Number(this.filters.property_value.replace(/\s+/g, "")) &&
+        this.filters.first_payment >= mort.first_payment &&
         this.filters.property_value !== undefined &&
         this.filters.property_value !== "" &&
+        Number(this.filters.property_value.replace(/\s+/g, "")) >=
+          mort.min_sum_credit &&
+        Number(this.filters.property_value.replace(/\s+/g, "")) <=
+          mort.max_sum_credit &&
         this.filters.time_credit !== undefined &&
         this.filters.time_credit !== "" &&
         this.filters.time_credit >= mort.min_time_credit &&
         this.filters.time_credit <= mort.max_time_credit
       ) {
         // console.log(this.filters.time_credit);
-        let monthly_procent = mort.rate / 100 / 12;
-        let tmp = Math.pow(1 + monthly_procent, this.filters.time_credit * 12);
-        let monthlyPay =
-          (Number(this.filters.property_value.replace(/\s+/g, "")) -
-            Number(this.num_first_payment.replace(/\s+/g, ""))) *
-          monthly_procent *
-          (tmp / (tmp - 1));
-        return monthlyPay.toFixed(2);
+        // let monthly_procent = mort.rate / 100 / 12;
+        // let tmp = Math.pow(1 + monthly_procent, this.filters.time_credit * 12);
+        // let monthlyPay =
+        //   (Number(this.filters.property_value.replace(/\s+/g, "")) -
+        //     Number(this.num_first_payment.replace(/\s+/g, ""))) *
+        //   monthly_procent *
+        //   (tmp / (tmp - 1));
+
+        let data = new Object();
+        data["monthly_pay"] = this.funcMontPay(mort.rate).toFixed(2);
+        if (mort.bank.preference_value !== null) {
+          data["preference_pay"] = this.funcMontPay(
+            mort.rate,
+            mort.bank.preference_value
+          ).toFixed(2);
+        }
+        data["salary_pay"] = this.funcMontPay(mort.rate_salary).toFixed(2);
+        // console.log(data);
+        return data;
+        // return monthlyPay.toFixed(2);
       } else if (
         this.num_first_payment === "" ||
         this.filters.property_value === ""
@@ -698,6 +779,15 @@ export default {
       this.num_first_payment = this.thousandSeparator(newValue);
       this.watchValue();
     }
+    // "filters.time_credit": {
+    //   // eslint-disable-next-line no-unused-vars
+    //   handler: function(v) {
+    //     // console.log(v);
+    //     this.filterMortgages();
+    //     // return this.clearAlertBox();
+    //   },
+    //   deep: true
+    // }
   }
 };
 </script>

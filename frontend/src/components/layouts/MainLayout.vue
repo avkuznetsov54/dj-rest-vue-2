@@ -251,9 +251,9 @@ export default {
       { title: "Ипотека", url: "/mortgage-search", icon: "mdi-view-list" },
       { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
       { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
-      { title: "Помощь", url: "/help", icon: "mdi-help-circle" },
-      { title: "Cars", url: "/cars", icon: "mdi-car-multiple" },
-      { title: "Mods", url: "/mods", icon: "mdi-history" }
+      { title: "Помощь", url: "/help", icon: "mdi-help-circle" }
+      // { title: "Cars", url: "/cars", icon: "mdi-car-multiple" },
+      // { title: "Mods", url: "/mods", icon: "mdi-history" }
       // { title: "Logout", url: "/logout", icon: "mdi-account" }
     ],
     itemsUserIcon: [

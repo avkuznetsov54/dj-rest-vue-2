@@ -238,7 +238,7 @@
                           <v-col cols="12" sm="4" md="4">
                             <v-textarea
                               v-model="editedItem.commission"
-                              label="Коммисия"
+                              label="Комиссия"
                               placeholder=" "
                               auto-grow
                               rows="1"

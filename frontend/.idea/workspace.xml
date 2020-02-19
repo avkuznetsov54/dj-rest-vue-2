@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/mortgages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/layouts/MainLayout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="58" />
+            <state relative-caret-position="4807">
+              <caret line="253" column="64" selection-start-line="253" selection-start-column="64" selection-end-line="253" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -38,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
+            <state relative-caret-position="798">
               <caret line="49" column="16" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="16" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -50,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
+            <state relative-caret-position="1311">
               <caret line="70" column="32" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="32" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -71,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="294" column="37" lean-forward="true" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="37" />
+            <state relative-caret-position="1501">
+              <caret line="294" column="37" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="37" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <element signature="e#1281#2444#0" />
@@ -84,8 +88,6 @@
                 <element signature="e#8078#8862#0" />
                 <element signature="e#8914#9421#0" />
                 <element signature="e#9473#9893#0" />
-                <element signature="e#9939#10637#0" />
-                <element signature="e#10684#11113#0" />
               </folding>
             </state>
           </provider>
@@ -94,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/modules/user_info/user_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="916">
+            <state relative-caret-position="950">
               <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -106,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/user_info/axios-user_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="209">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="55" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -115,27 +117,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-              <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
-              <caret line="174" column="42" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
-              <caret line="226" column="42" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
-              <caret line="258" column="42" selection-start-line="258" selection-start-column="42" selection-end-line="258" selection-end-column="42" />
-              <caret line="280" column="42" selection-start-line="280" selection-start-column="42" selection-end-line="280" selection-end-column="42" />
-              <caret line="354" column="42" selection-start-line="354" selection-start-column="42" selection-end-line="354" selection-end-column="42" />
-              <caret line="376" column="42" selection-start-line="376" selection-start-column="42" selection-end-line="376" selection-end-column="42" />
-              <caret line="208" column="42" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+            <state relative-caret-position="334">
+              <caret line="240" column="43" selection-start-line="240" selection-start-column="43" selection-end-line="240" selection-end-column="43" />
               <folding>
                 <element signature="n#v-card-title#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#v-col#4;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#v-col#5;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#template#0;n#v-select#0;n#v-col#5;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#0;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#1;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
@@ -143,9 +134,6 @@
                 <element signature="n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#0;n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#3;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="n#v-col#1;n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#0;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-col#1;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
@@ -156,24 +144,23 @@
                 <element signature="n#v-col#1;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#8;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
                 <element signature="n#v-row#9;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-                <element signature="e#23263#23307#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="576" column="34" lean-forward="true" selection-start-line="576" selection-start-column="34" selection-end-line="576" selection-end-column="34" />
+            <state relative-caret-position="334">
+              <caret line="335" column="58" lean-forward="true" selection-start-line="335" selection-start-column="58" selection-end-line="335" selection-end-column="58" />
               <folding>
                 <element signature="n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#v-row#1;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#v-row#2;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#template#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-expansion-panel-header#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#2;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#template#0;n#v-list-item-content#0;n#v-list-item#0;n#v-col#3;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -191,8 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>title</find>
-      <find>value</find>
       <find>panel2</find>
       <find>зарп</find>
       <find>all</find>
@@ -219,8 +204,10 @@
       <find>programs_target</find>
       <find>programs_target_id</find>
       <find>FETCH_MORTGAGES</find>
-      <find>GET_USER_INFO_DATA</find>
       <find>numCredit</find>
+      <find>GET_USER_INFO_DATA</find>
+      <find>procent_first_payment</find>
+      <find>Коммисия</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -275,14 +262,14 @@
         <option value="$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js" />
         <option value="$PROJECT_DIR$/src/views/EditMortgageProgramPage.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" />
         <option value="$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue" />
         <option value="$PROJECT_DIR$/src/components/EditMortgageBankComp.vue" />
         <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
         <option value="$PROJECT_DIR$/src/views/LogoutPage.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js" />
-        <option value="$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue" />
+        <option value="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" />
         <option value="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" />
+        <option value="$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue" />
       </list>
     </option>
   </component>
@@ -296,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -412,6 +398,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,12 +526,13 @@
       <workItem from="1581659935881" duration="1433000" />
       <workItem from="1581663584875" duration="1072000" />
       <workItem from="1581665399258" duration="1182000" />
-      <workItem from="1581670764068" duration="45545000" />
+      <workItem from="1581670764068" duration="50481000" />
+      <workItem from="1582080300144" duration="8560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435850000" />
+    <option name="totallyTimeSpent" value="449346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -796,47 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="294" column="37" lean-forward="true" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#1281#2444#0" />
-            <element signature="e#2471#3810#0" />
-            <element signature="e#3846#5330#0" />
-            <element signature="e#5419#7027#0" />
-            <element signature="e#7070#7481#0" />
-            <element signature="e#7571#8027#0" />
-            <element signature="e#8078#8862#0" />
-            <element signature="e#8914#9421#0" />
-            <element signature="e#9473#9893#0" />
-            <element signature="e#9939#10637#0" />
-            <element signature="e#10684#11113#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/mods/axios-mods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -844,40 +791,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/user_info/user_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/user_info/axios-user_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/LogoutPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layouts/MainLayout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -908,26 +821,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layouts/MainLayout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4807">
+          <caret line="253" column="64" selection-start-line="253" selection-start-column="64" selection-end-line="253" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/LogoutPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="294" column="37" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1281#2444#0" />
+            <element signature="e#2471#3810#0" />
+            <element signature="e#3846#5330#0" />
+            <element signature="e#5419#7027#0" />
+            <element signature="e#7070#7481#0" />
+            <element signature="e#7571#8027#0" />
+            <element signature="e#8078#8862#0" />
+            <element signature="e#8914#9421#0" />
+            <element signature="e#9473#9893#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/modules/user_info/user_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/user_info/axios-user_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="335" column="58" lean-forward="true" selection-start-line="335" selection-start-column="58" selection-end-line="335" selection-end-column="58" />
+          <folding>
+            <element signature="n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-expansion-panel-header#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#2;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#v-list-item-content#0;n#v-list-item#0;n#v-col#3;n#v-row#0;n#div#0;n#v-expansion-panel-content#0;n#template#0;n#v-expansion-panel#0;n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
-          <caret line="174" column="42" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
-          <caret line="226" column="42" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
-          <caret line="258" column="42" selection-start-line="258" selection-start-column="42" selection-end-line="258" selection-end-column="42" />
-          <caret line="280" column="42" selection-start-line="280" selection-start-column="42" selection-end-line="280" selection-end-column="42" />
-          <caret line="354" column="42" selection-start-line="354" selection-start-column="42" selection-end-line="354" selection-end-column="42" />
-          <caret line="376" column="42" selection-start-line="376" selection-start-column="42" selection-end-line="376" selection-end-column="42" />
-          <caret line="208" column="42" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+        <state relative-caret-position="334">
+          <caret line="240" column="43" selection-start-line="240" selection-start-column="43" selection-end-line="240" selection-end-column="43" />
           <folding>
             <element signature="n#v-card-title#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#4;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#5;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#template#0;n#v-select#0;n#v-col#5;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#0;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#1;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
@@ -935,9 +925,6 @@
             <element signature="n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#0;n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#3;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#0;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-col#1;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
@@ -948,22 +935,6 @@
             <element signature="n#v-col#1;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#8;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
             <element signature="n#v-row#9;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="e#23263#23307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MortgageSearchComp.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="576" column="34" lean-forward="true" selection-start-line="576" selection-start-column="34" selection-end-line="576" selection-end-column="34" />
-          <folding>
-            <element signature="n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#1;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#2;n#v-container#0;n#v-form#0;n#v-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#v-expansion-panels#0;n#template#1;n#div#0;n#template#0;n#!!top" />
           </folding>
         </state>
       </provider>
