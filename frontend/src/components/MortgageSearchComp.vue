@@ -1,154 +1,189 @@
 <template>
   <div>
     <v-card>
-      <v-form v-on:submit.prevent="filterMortgages">
-        <!--      <v-form v-on:change="filterMortgages">-->
-        <v-container fluid>
-          <v-row>
-            <v-col cols="12" md="2">
-              <v-select
-                multiple
-                label="Банк"
-                placeholder="Любой"
-                :items="BANKS_NAME_DATA"
-                v-model="filters.bank_name"
-                dense
-                clearable
-              >
-                <template v-slot:selection="{ item, index }">
-                  <!--                  <span v-if="index === 0">-->
-                  <!--                    <span>{{ item }} </span>-->
-                  <!--                  </span>-->
-                  <span v-if="index === 0" class="ml-1 grey--text caption"
-                    >Выбранно {{ filters.bank_name.length }} шт.</span
-                  >
-                </template>
-              </v-select>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-select
-                multiple
-                label="Цель ипотеки"
-                placeholder="Любая"
-                :items="TARGET_CREDITS_NAME_DATA"
-                v-model="filters.names_target_credits"
-                dense
-                clearable
-              >
-                <template v-slot:selection="{ item, index }">
-                  <!--                  <span v-if="index === 0">-->
-                  <!--                    <span>{{ item }} </span>-->
-                  <!--                  </span>-->
-                  <span v-if="index === 0" class="ml-1 grey--text caption"
-                    >Выбранно
-                    {{ filters.names_target_credits.length }} шт.</span
-                  >
-                </template>
-              </v-select>
-            </v-col>
-            <v-col cols="12" md="3">
-              <v-text-field
-                v-model="filters.property_value"
-                label="Стоимость недвижимости, руб"
-                placeholder="Любая"
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-text-field
-                v-model="num_first_payment"
-                label="Первоначальный взнос, руб"
-                placeholder="Любой"
-                min="0"
-                dense
-                :suffix="procent_first_payment"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="1">
-              <v-text-field
-                v-model="filters.time_credit"
-                type="number"
-                label="Срок, лет"
-                placeholder="Любой"
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row v-if="visibleSearch">
-            <v-col cols="12" md="1">
-              <v-text-field
-                v-model="filters.rate"
-                type="number"
-                label="Ставка"
-                placeholder="Любая"
-                suffix="%"
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-text-field
-                type="number"
-                v-model="filters.work_experience"
-                label="Стаж на последнем месте"
-                placeholder="Любой"
-                suffix="мес."
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-text-field
-                type="number"
-                v-model="filters.borrower_age"
-                label="Возрасть заёмщика"
-                placeholder="Любой"
-                suffix="лет"
-                min="0"
-                dense
-              ></v-text-field>
-            </v-col>
+      <v-card-text>
+        <v-form v-on:submit.prevent="filterMortgages">
+          <!--      <v-form v-on:change="filterMortgages">-->
+          <v-container fluid>
+            <v-row>
+              <v-col cols="12" md="2">
+                <v-select
+                  multiple
+                  label="Банк"
+                  placeholder="Любой"
+                  :items="BANKS_NAME_DATA"
+                  v-model="filters.bank_name"
+                  dense
+                  clearable
+                >
+                  <template v-slot:selection="{ item, index }">
+                    <!--                  <span v-if="index === 0">-->
+                    <!--                    <span>{{ item }} </span>-->
+                    <!--                  </span>-->
+                    <span v-if="index === 0" class="ml-1 grey--text caption"
+                      >Выбранно {{ filters.bank_name.length }} шт.</span
+                    >
+                  </template>
+                </v-select>
+              </v-col>
+              <v-col cols="12" md="2">
+                <v-select
+                  multiple
+                  label="Цель ипотеки"
+                  placeholder="Любая"
+                  :items="TARGET_CREDITS_NAME_DATA"
+                  v-model="filters.names_target_credits"
+                  dense
+                  clearable
+                >
+                  <template v-slot:selection="{ item, index }">
+                    <!--                  <span v-if="index === 0">-->
+                    <!--                    <span>{{ item }} </span>-->
+                    <!--                  </span>-->
+                    <span v-if="index === 0" class="ml-1 grey--text caption"
+                      >Выбранно
+                      {{ filters.names_target_credits.length }} шт.</span
+                    >
+                  </template>
+                </v-select>
+              </v-col>
+              <v-col cols="12" md="3">
+                <v-text-field
+                  v-model="filters.property_value"
+                  label="Стоимость недвижимости, руб"
+                  placeholder="Любая"
+                  min="0"
+                  dense
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="2">
+                <v-text-field
+                  v-model="num_first_payment"
+                  label="Первоначальный взнос, руб"
+                  placeholder="Любой"
+                  min="0"
+                  dense
+                  :suffix="procent_first_payment"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="1">
+                <v-text-field
+                  v-model="filters.time_credit"
+                  type="number"
+                  label="Срок, лет"
+                  placeholder="Любой"
+                  min="0"
+                  dense
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <template v-if="visibleSearch">
+              <v-row>
+                <v-col cols="12" md="2">
+                  <v-text-field
+                    v-model="filters.rate"
+                    type="number"
+                    label="Ставка"
+                    placeholder="Любая"
+                    suffix="%"
+                    min="0"
+                    dense
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="2">
+                  <v-text-field
+                    type="number"
+                    v-model="filters.work_experience"
+                    label="Стаж на последнем месте"
+                    placeholder="Любой"
+                    suffix="мес."
+                    min="0"
+                    dense
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="2">
+                  <v-text-field
+                    type="number"
+                    v-model="filters.borrower_age"
+                    label="Возрасть заёмщика"
+                    placeholder="Любой"
+                    suffix="лет"
+                    min="0"
+                    dense
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" md="2">
+                  <v-checkbox
+                    dense
+                    v-model="filters.is_rate_salary"
+                    value="yes"
+                    class="mx-2"
+                    label="Программы для зарплатников"
+                  ></v-checkbox>
+                </v-col>
 
-            <v-col cols="12" md="2">
-              <v-checkbox
-                dense
-                v-model="filters.understatement_is_active"
-                class="mx-2"
-                label="Занижение"
-              ></v-checkbox>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-spacer></v-spacer>
-            <v-col cols="12" sm="6" md="5">
-              <v-btn
-                color="primary"
-                class="mx-1 float-right"
-                @click="toggleSearch"
-                ><v-icon>
-                  {{ visibleSearch ? "mdi-chevron-up" : "mdi-chevron-down" }}
-                </v-icon>
-              </v-btn>
+                <v-col cols="12" md="2">
+                  <v-checkbox
+                    dense
+                    v-model="filters.understatement_is_active"
+                    class="mx-2"
+                    label="Занижение"
+                  ></v-checkbox>
+                </v-col>
 
-              <v-btn
-                color="primary"
-                class="mx-1 float-right"
-                @click="clearFilter()"
-                ><v-icon>mdi-cached</v-icon>
-              </v-btn>
-              <v-btn
-                color="primary"
-                class="mx-1 float-right"
-                type="submit"
-                width="150"
-                >Найти
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-form>
+                <v-col cols="12" md="2">
+                  <v-checkbox
+                    dense
+                    v-model="filters.express_issue"
+                    class="mx-2"
+                    value="yes"
+                    label="Экспресс выдача"
+                  ></v-checkbox>
+                </v-col>
+
+                <v-col cols="12" md="3">
+                  <v-checkbox
+                    dense
+                    v-model="filters.inclusion_children"
+                    class="mx-2"
+                    value="yes"
+                    label="Включение детей в число собственников"
+                  ></v-checkbox>
+                </v-col>
+              </v-row>
+            </template>
+            <v-row>
+              <v-spacer></v-spacer>
+              <v-col cols="12" sm="6" md="5">
+                <v-btn
+                  color="primary"
+                  class="mx-1 float-right"
+                  @click="toggleSearch"
+                  ><v-icon>
+                    {{ visibleSearch ? "mdi-chevron-up" : "mdi-chevron-down" }}
+                  </v-icon>
+                </v-btn>
+
+                <v-btn
+                  color="primary"
+                  class="mx-1 float-right"
+                  @click="clearFilter()"
+                  ><v-icon>mdi-cached</v-icon>
+                </v-btn>
+                <v-btn
+                  color="primary"
+                  class="mx-1 float-right"
+                  type="submit"
+                  width="150"
+                  >Найти
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-form>
+      </v-card-text>
     </v-card>
 
     <v-spacer class="my-4"></v-spacer>
@@ -640,7 +675,7 @@ export default {
     filterMortgages() {
       const params = new URLSearchParams();
       for (let item in this.filters) {
-        if (this.filters[item] !== "") {
+        if (this.filters[item] !== "" && this.filters[item] !== null) {
           params.append(item, this.filters[item]);
         }
         // console.log(this.filters[item]);

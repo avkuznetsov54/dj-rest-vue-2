@@ -55,6 +55,12 @@ class MortgageProgramsView(generics.ListAPIView):
             if k == 'rate':
                 k = k + '__lte'
                 params.update({k: v})
+            if k == 'is_rate_salary':
+                k1 = 'rate_salary' + '__gte'
+                if v == 'yes':
+                    v1 = 0
+                    params.update({k1: v1})
+                    print(k1, v1)
             if k == 'first_payment':
                 k = k + '__lte'
                 params.update({k: v})
@@ -74,6 +80,11 @@ class MortgageProgramsView(generics.ListAPIView):
             if k == 'understatement_is_active':
                 if v == 'true':
                     params.update({k: True})
+            if k == 'express_issue':
+                params.update({k: v})
+            if k == 'inclusion_children':
+                if v != 'null':
+                    params.update({k: v})
             queryset = queryset.filter(**params)
             # тоже самое что:
             # queryset = queryset.filter(model__icontains="asdf")

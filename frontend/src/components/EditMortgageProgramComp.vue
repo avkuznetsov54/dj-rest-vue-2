@@ -983,18 +983,18 @@ export default {
         return true;
       }
 
-      //Initialize the form data
-      // let formData = new FormData();
-      // formData.append("programs_bank", this.editedItem.programs_bank);
-      // formData.append("programs_name", this.editedItem.programs_name);
-      // formData.append("programs_target", this.editedItem.programs_target);
-
       let formData = new Object();
       formData["is_visible"] = this.editedItem.is_visible;
       formData["programs_bank"] = this.editedItem.programs_bank;
       formData["programs_name"] = this.editedItem.programs_name;
       formData["rate"] = this.editedItem.rate;
-      formData["rate_salary"] = this.editedItem.rate_salary;
+
+      if (this.editedItem.rate_salary === "") {
+        formData["rate_salary"] = null;
+      } else {
+        formData["rate_salary"] = this.editedItem.rate_salary;
+      }
+
       formData["first_payment"] = this.editedItem.first_payment;
       formData["programs_target"] = this.editedItem.programs_target;
       formData["min_sum_credit"] = this.editedItem.min_sum_credit;
