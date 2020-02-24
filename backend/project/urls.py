@@ -25,6 +25,8 @@ urlpatterns = [
 
     path('api/v1/cars/', include('cars.urls')),
     path('api/v1/mortgages/', include('mortgages.urls')),
+
+    path('silk/', include('silk.urls', namespace='silk')),
 ]
 
 urlpatterns += static(

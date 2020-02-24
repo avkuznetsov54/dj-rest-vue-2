@@ -66,7 +66,7 @@
                   :suffix="procent_first_payment"
                 ></v-text-field>
               </v-col>
-              <v-col cols="12" md="1">
+              <v-col cols="12" md="2">
                 <v-text-field
                   v-model="filters.time_credit"
                   type="number"
@@ -156,29 +156,22 @@
             </template>
             <v-row>
               <v-spacer></v-spacer>
-              <v-col cols="12" sm="6" md="5">
-                <v-btn
-                  color="primary"
-                  class="mx-1 float-right"
-                  @click="toggleSearch"
-                  ><v-icon>
-                    {{ visibleSearch ? "mdi-chevron-up" : "mdi-chevron-down" }}
-                  </v-icon>
-                </v-btn>
-
-                <v-btn
-                  color="primary"
-                  class="mx-1 float-right"
-                  @click="clearFilter()"
-                  ><v-icon>mdi-cached</v-icon>
-                </v-btn>
-                <v-btn
-                  color="primary"
-                  class="mx-1 float-right"
-                  type="submit"
-                  width="150"
-                  >Найти
-                </v-btn>
+              <v-col cols="12" sm="6" md="4">
+                <div class="float-right">
+                  <v-btn color="primary" class="mx-1" type="submit" width="100"
+                    >Найти
+                  </v-btn>
+                  <v-btn color="primary" class="mx-1" @click="clearFilter()"
+                    ><v-icon>mdi-cached</v-icon>
+                  </v-btn>
+                  <v-btn color="primary" class="mx-1" @click="toggleSearch"
+                    ><v-icon>
+                      {{
+                        visibleSearch ? "mdi-chevron-up" : "mdi-chevron-down"
+                      }}
+                    </v-icon>
+                  </v-btn>
+                </div>
               </v-col>
             </v-row>
           </v-container>
@@ -702,24 +695,26 @@ export default {
           Number(this.num_first_payment.replace(/\s+/g, ""))) *
         monthly_procent *
         (tmp / (tmp - 1));
+
       return monthlyPay;
     },
     monthlyPayment(mort) {
       // console.log(mort);
       // https://mortgage-calculator.ru/%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0-%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%B0-%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B8
       if (
+        // проверка на "!== undefined" должна стоять выше чем ".replace", а то будет ошибка !!!
+        this.filters.property_value !== undefined &&
+        this.filters.time_credit !== undefined &&
         this.num_first_payment !== "" &&
+        this.filters.property_value !== "" &&
+        this.filters.time_credit !== "" &&
         Number(this.num_first_payment.replace(/\s+/g, "")) <=
           Number(this.filters.property_value.replace(/\s+/g, "")) &&
         this.filters.first_payment >= mort.first_payment &&
-        this.filters.property_value !== undefined &&
-        this.filters.property_value !== "" &&
         Number(this.filters.property_value.replace(/\s+/g, "")) >=
           mort.min_sum_credit &&
         Number(this.filters.property_value.replace(/\s+/g, "")) <=
           mort.max_sum_credit &&
-        this.filters.time_credit !== undefined &&
-        this.filters.time_credit !== "" &&
         this.filters.time_credit >= mort.min_time_credit &&
         this.filters.time_credit <= mort.max_time_credit
       ) {
@@ -753,13 +748,14 @@ export default {
     },
     thousandSeparator(newValue) {
       let v = newValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      // console.log("thousandSeparator => " + v);
       return v;
     },
     watchValue() {
       // console.log(this.filters.property_value);
       if (
-        this.num_first_payment !== "" &&
-        this.filters.property_value !== undefined
+        this.filters.property_value !== undefined &&
+        this.num_first_payment !== ""
       ) {
         this.filters.first_payment = Math.floor(
           (Number(this.num_first_payment.replace(/\s+/g, "")) * 100) /
@@ -775,6 +771,7 @@ export default {
         }
       } else {
         this.procent_first_payment = "";
+        // console.log("watchValue => ");
       }
     }
   },
@@ -812,6 +809,8 @@ export default {
         return true;
       }
       this.num_first_payment = this.thousandSeparator(newValue);
+      // console.log("watch => " + this.num_first_payment);
+      // console.log(Number(this.filters.property_value));
       this.watchValue();
     }
     // "filters.time_credit": {

@@ -299,7 +299,7 @@ const mortgagesModule = {
             // refresh token expired or some other error status
             // eslint-disable-next-line no-unused-vars
             // const er = err; // просто чтоб ошибку в консоли не показывало
-            // console.log(err);
+            // console.log(err.status);
             // console.log("[mortgages] Не получилось");
             reject(err);
           });

@@ -76,7 +76,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content align="left">
                   <v-list-item-title class="title">
-                    {{ GET_USER_INFO_DATA.username }}
+                    <div>{{ GET_USER_INFO_DATA.username }}</div>
+                    <div>{{ nameUser }}</div>
                   </v-list-item-title>
 <!--                  <v-list-item-subtitle>-->
 <!--                    subtext-->
@@ -279,7 +280,8 @@ export default {
           { icon: "mdi-plus", url: "/mortgage-editprogram", text: "Программы" }
         ]
       }
-    ]
+    ],
+    nameUser: ""
   }),
   computed: {
     ...mapState("user_info", ["USER_INFO_DATA"]),
@@ -289,7 +291,13 @@ export default {
     ...mapActions("user_info", ["FETCH_USER_INFO"]),
     get_user_info() {
       const refresh_token = localStorage.getItem("refresh_token");
-      this.FETCH_USER_INFO(refresh_token);
+      // eslint-disable-next-line no-unused-vars
+      this.FETCH_USER_INFO(refresh_token).then(response => {
+        // console.log(response.data[0].userprofile.full_name);
+        // this.nameUser = response.data[0].userprofile.full_name;
+        console.log(this.GET_USER_INFO_DATA.userprofile.full_name);
+        this.nameUser = this.GET_USER_INFO_DATA.userprofile.full_name;
+      });
     }
   },
   created() {

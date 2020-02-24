@@ -11,6 +11,7 @@ from .serializers import MortgageProgramsSerializer, BanksSerializer, TargetCred
 
 import re
 
+
 class MortgagePagination(PageNumberPagination):
     page_size = 1000
 
@@ -18,7 +19,7 @@ class MortgagePagination(PageNumberPagination):
 class MortgageProgramsView(generics.ListAPIView):
 # class MortgageProgramsViewSet(ModelViewSet):
     serializer_class = MortgageProgramsSerializer
-    queryset = MortgagePrograms.objects.all()
+    queryset = MortgagePrograms.objects.all().select_related('programs_bank').prefetch_related('programs_target')
     pagination_class = MortgagePagination
     permission_classes = (IsAuthenticated, )
     # permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
@@ -95,7 +96,7 @@ class MortgageProgramsView(generics.ListAPIView):
 
 class CRUDMortgageProgramsViewSet(ModelViewSet):
     serializer_class = MortgageProgramsSerializer
-    queryset = MortgagePrograms.objects.all()
+    queryset = MortgagePrograms.objects.all().select_related('programs_bank').prefetch_related('programs_target')
     # pagination_class = MortgagePagination
     # permission_classes = (IsAuthenticated, )
     permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly, )
@@ -116,7 +117,7 @@ class CRUDMortgageProgramsViewSet(ModelViewSet):
 class BankViewSet(ModelViewSet):
     serializer_class = BanksSerializer
     queryset = Banks.objects.all()
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly,)
 
 
 # class TargetCreditsView(generics.ListAPIView):
@@ -128,4 +129,4 @@ class BankViewSet(ModelViewSet):
 class TargetCreditsViewSet(ModelViewSet):
     serializer_class = TargetCreditsSerializer
     queryset = TargetCredits.objects.all()
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsMortgageEditorOrAuthenticatedReadOnly,)

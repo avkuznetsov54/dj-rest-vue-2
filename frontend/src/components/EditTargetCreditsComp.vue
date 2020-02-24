@@ -54,13 +54,13 @@
                   <v-row>
                     <v-col>
                       <div v-if="errMsgBank">
-                        <div v-for="(errRow, i) in errMsgBank" :key="i">
-                          <div v-for="(err, i) in errRow" :key="i">
+<!--                        <div v-for="(errRow, i) in errMsgBank" :key="i">-->
+<!--                          <div v-for="(err, i) in errRow" :key="i">-->
                             <v-alert width="100%" type="error">
-                              {{ err }}
+                              {{ errMsgBank }}
                             </v-alert>
-                          </div>
-                        </div>
+<!--                          </div>-->
+<!--                        </div>-->
                       </div>
                     </v-col>
                   </v-row>

@@ -40,19 +40,22 @@ class UserInfoCreateView(generics.ListCreateAPIView):
         # получаем refresh_token с фронта
         if request.data:
             try:
-                # print(request.GET)
-                refresh_token = request.data.get('refresh_token')
-                # определяем QuerySet
-                refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
-                # вытаскиваем user
-                # print(refresh_token_in_db.get().user)
-                # вытаскиваем все values
-                # print(refresh_token_in_db.values())
-                # ищем в модели User
-                queryset = User.objects.filter(username=refresh_token_in_db.get().user)
+                # print(request.user)
+                # refresh_token = request.data.get('refresh_token')
+                # # определяем QuerySet
+                # refresh_token_in_db = OutstandingToken.objects.filter(token=refresh_token)
+                # # вытаскиваем user
+                # # print(refresh_token_in_db.get().user)
+                # # вытаскиваем все values
+                # # print(refresh_token_in_db.values())
+                # # ищем в модели User
+                # queryset = User.objects.filter(username=refresh_token_in_db.get().user)
+                # serializer = UserSerializer(queryset, many=True)
+                # # print(Response(serializer.data))
+                # # возвращаем объект username
+
+                queryset = User.objects.filter(username=request.user)
                 serializer = UserSerializer(queryset, many=True)
-                # print(Response(serializer.data))
-                # возвращаем объект username
                 return Response(serializer.data)
             except:
                 # print('неправельные токен')
@@ -68,11 +71,12 @@ class MyUserView(generics.RetrieveAPIView):
     """Вытаскиваем всех юзеров"""
     permission_classes = (IsAuthenticated, )
 
-    def get_queryset(self):
-        return User.objects.all()
+    # def get_queryset(self):
+    #     return User.objects.all()
 
     def get(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
+        # queryset = self.get_queryset()
+        queryset = User.objects.all()
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)
 

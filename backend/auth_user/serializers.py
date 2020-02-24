@@ -3,7 +3,7 @@ from django.utils import timezone
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from .models import Mods
+from .models import Mods, UserProfile
 
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import update_last_login
@@ -58,7 +58,7 @@ class CustomJWTSerializer(TokenObtainPairSerializer):
         # Возвращаем на фронт username и groups
         data['username'] = self.user.username
         data['groups'] = self.user.groups.values_list('name', flat=True)
-
+        # print(dir(self.user))
         return data
 
 
@@ -81,12 +81,34 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ('name',)
 
 
+class UserProfileSerializer(serializers.ModelSerializer):
+    office = serializers.SerializerMethodField()
+
+    class Meta:
+        model = UserProfile
+        fields = ('full_name', 'phone_number', 'subdivision', 'office', 'job_position', )
+
+    def get_office(self, obj):
+        return obj.office.name
+
+
 class UserSerializer(serializers.ModelSerializer):
     groups = GroupSerializer(many=True)
+    userprofile = UserProfileSerializer()
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'is_staff', 'groups')
+        fields = ('username', 'email', 'is_staff', 'groups', 'userprofile', )
+        # fields = '__all__'
+
+    # https://stackoverflow.com/questions/47691718/django-creating-a-custom-user-with-the-django-rest-framework
+    # def create(self, validated_data, instance=None):
+    #     profile_data = validated_data.pop('userprofile')
+    #     user = User.objects.create(**validated_data)
+    #     user.set_password(validated_data['password'])
+    #     user.save()
+    #     UserProfile.objects.update_or_create(user=user, **profile_data)
+    #     return user
 
 
 class ModSerializer(serializers.ModelSerializer):
