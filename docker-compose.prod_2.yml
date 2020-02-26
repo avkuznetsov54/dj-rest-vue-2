@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:
+
+  backend:
+    build: ./backend
+    container_name: backend
+#    command: python manage.py runserver 0.0.0.0:8000
+#    command: gunicorn -c gunicorn.py project.wsgi
+    command: gunicorn project.wsgi:application -w 4 --bind 0.0.0.0:80
+    volumes:
+      - ./backend/:/usr/src/app/
+      - ./backend/static/:/usr/src/app/static/
+      - ./backend/media/:/usr/src/app/media/
+    ports:
+      - 5000:80
+    env_file:
+      - ./.env.prod_2
+    networks:
+      - nginx_network
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    container_name: nginx
+    ports:
+      - 80:80
+      - 8000:80
+    volumes:
+      - ./nginx/conf.d/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./backend/static/:/dist/static/
+      - ./backend/media/:/dist/media/
+#      - ./logs/nginx-access.log:/var/log/nginx/access.log
+#      - ./logs/nginx-error.log:/var/log/nginx/error.log
+    links:
+      - backend
+    env_file:
+      - ./.env.prod_2
+    depends_on:
+      - backend
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
+
+#volumes:
+#  pgdata:
+#  static_volume:
+#  media_volume:

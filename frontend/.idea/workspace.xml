@@ -4,11 +4,60 @@
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mortgages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/gunicorn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/gunicorn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/mortgages/axios-mortgages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MortgageSearchComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.4233c9e8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-3eaa6f49.267feb7a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-53184230.724574df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-af591f4e.8a574f4d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-ba4967b0.9284d928.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-cc731854.9c036cdf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-dd3c4c96.36eaf6f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.9a136d66.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.9a136d66.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a30fc.018d9b2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a30fc.018d9b2e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a3584.b61d9f20.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0a3584.b61d9f20.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0c22d8.c5b412e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0c22d8.c5b412e5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0ceb9e.805d7b1b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0ceb9e.805d7b1b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-3eaa6f49.291372c8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-3eaa6f49.291372c8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-53184230.9982ce02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-53184230.9982ce02.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-59d4f74c.54ee2ed2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-59d4f74c.54ee2ed2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-af591f4e.5339d01b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-af591f4e.5339d01b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-ba4967b0.2e588cde.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-ba4967b0.2e588cde.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-c6175bb6.6c7abcf0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-c6175bb6.6c7abcf0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-cc731854.f04888af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-cc731854.f04888af.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-dd3c4c96.6bbf0285.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-dd3c4c96.6bbf0285.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-e4906ca2.972c2932.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-e4906ca2.972c2932.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.75488e34.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.75488e34.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/LoginForm.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="722">
-              <caret line="119" column="57" lean-forward="true" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
+              <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
               <folding>
                 <element signature="e#2288#2332#0" expanded="true" />
               </folding>
@@ -48,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -68,11 +117,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/layouts/MainLayout.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
               <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="906">
+              <caret line="881" column="25" lean-forward="true" selection-start-line="881" selection-start-column="25" selection-end-line="881" selection-end-column="25" />
+              <folding>
+                <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#0;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#2;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#0;n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#3;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#0;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#2;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#3;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#0;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-col#1;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#8;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+                <element signature="n#v-row#9;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,12 +252,10 @@
         <option value="$PROJECT_DIR$/src/views/MortgageSearchPage.vue" />
         <option value="$PROJECT_DIR$/src/views/EditMortgageBankPage.vue" />
         <option value="$PROJECT_DIR$/src/views/EditTargetCreditsPage.vue" />
-        <option value="$PROJECT_DIR$/src/api/axios-base.js" />
         <option value="$PROJECT_DIR$/src/views/EditMortgageProgramPage.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
         <option value="$PROJECT_DIR$/src/views/LogoutPage.vue" />
-        <option value="$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/mortgages/mortgages.js" />
         <option value="$PROJECT_DIR$/src/components/EditTargetCreditsComp.vue" />
         <option value="$PROJECT_DIR$/src/components/EditMortgageBankComp.vue" />
@@ -181,6 +267,8 @@
         <option value="$PROJECT_DIR$/src/components/LoginForm.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/MainLayout.vue" />
+        <option value="$PROJECT_DIR$/src/api/axios-base.js" />
+        <option value="$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue" />
       </list>
     </option>
   </component>
@@ -440,12 +528,12 @@
       <workItem from="1581670764068" duration="50481000" />
       <workItem from="1582080300144" duration="12134000" />
       <workItem from="1582166715678" duration="17901000" />
-      <workItem from="1582681755306" duration="247000" />
+      <workItem from="1582681755306" duration="560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471068000" />
+    <option name="totallyTimeSpent" value="471381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -635,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/mods/axios-mods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -672,34 +753,6 @@
           <caret line="198" column="47" lean-forward="true" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
           <folding>
             <element signature="e#3213#3257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="433" column="49" selection-start-line="433" selection-start-column="39" selection-end-line="433" selection-end-column="49" />
-          <folding>
-            <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#0;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#2;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#0;n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#3;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#0;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#2;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#3;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#0;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#8;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
-            <element signature="n#v-row#9;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -818,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/LoginForm.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
-          <caret line="119" column="57" lean-forward="true" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
+          <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
           <folding>
             <element signature="e#2288#2332#0" expanded="true" />
           </folding>
@@ -828,7 +881,7 @@
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -849,6 +902,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditMortgageProgramComp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="881" column="25" lean-forward="true" selection-start-line="881" selection-start-column="25" selection-end-line="881" selection-end-column="25" />
+          <folding>
+            <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#0;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#2;n#v-row#1;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#0;n#v-row#2;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#3;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#4;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#0;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#2;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#3;n#v-row#6;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#0;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-col#1;n#v-row#7;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#8;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+            <element signature="n#v-row#9;n#v-container#0;n#v-card-text#0;n#v-card#0;n#form#0;n#v-dialog#0;n#div#0;n#v-col#2;n#v-row#0;n#v-container#0;n#v-card-title#0;n#v-card#0;n#template#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

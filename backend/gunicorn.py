@@ -10,7 +10,7 @@ def max_workers():
 name = 'Project_name'
 # bind = '0.0.0.0:8000'
 max_requests = 1000
-worker_class = 'gevent'
+# worker_class = 'gevent'
 workers = max_workers()
 reload = True
 deamon = True

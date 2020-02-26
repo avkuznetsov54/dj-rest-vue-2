@@ -2,15 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mortgages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gunicorn.py" beforeDir="false" afterPath="$PROJECT_DIR$/gunicorn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/mortgages/axios-mortgages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/mortgages/axios-mortgages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MortgageSearchComp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/app.4233c9e8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-3eaa6f49.267feb7a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-53184230.724574df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-af591f4e.8a574f4d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-ba4967b0.9284d928.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-cc731854.9c036cdf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-dd3c4c96.36eaf6f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.9a136d66.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.9a136d66.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.018d9b2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.018d9b2e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0c22d8.c5b412e5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-3eaa6f49.291372c8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-3eaa6f49.291372c8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-53184230.9982ce02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-53184230.9982ce02.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-59d4f74c.54ee2ed2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-59d4f74c.54ee2ed2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-af591f4e.5339d01b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-af591f4e.5339d01b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-ba4967b0.2e588cde.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-ba4967b0.2e588cde.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c6175bb6.6c7abcf0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c6175bb6.6c7abcf0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-cc731854.f04888af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-cc731854.f04888af.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-dd3c4c96.6bbf0285.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-dd3c4c96.6bbf0285.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e4906ca2.972c2932.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e4906ca2.972c2932.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.75488e34.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.75488e34.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="407">
-              <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
               </folding>
@@ -394,16 +440,15 @@
       <workItem from="1581670763807" duration="21514000" />
       <workItem from="1582080299273" duration="3935000" />
       <workItem from="1582166687350" duration="23411000" />
-      <workItem from="1582681755822" duration="319000" />
+      <workItem from="1582681755822" duration="448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225781000" />
+    <option name="totallyTimeSpent" value="225910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17338218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -803,7 +848,7 @@
     <entry file="file://$PROJECT_DIR$/project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
-          <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
           </folding>

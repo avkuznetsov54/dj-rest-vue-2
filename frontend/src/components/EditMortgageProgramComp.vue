@@ -878,7 +878,7 @@ export default {
       // console.log("2 => " + this.editedIndex);
       this.editedItem = Object.assign({}, item);
       // console.log("3 => " + this.editedIndex);
-      console.log(this.editedItem);
+      // console.log(this.editedItem);
       this.dialog = true;
 
       // // проверка на какую кнопку нажали "редактировать" или "добавить"
@@ -1039,7 +1039,7 @@ export default {
       formData["add_info"] = this.editedItem.add_info;
 
       // console.log(typeof this.editedItem.preference_value);
-      console.log(formData);
+      // console.log(formData);
 
       const payload = new Object();
       payload["id_programs_name"] = this.editedItem.id;
@@ -1063,7 +1063,7 @@ export default {
           })
           // eslint-disable-next-line no-unused-vars
           .catch(error => {
-            console.log(error.config);
+            // console.log(error.config);
             this.$store.dispatch("refreshToken").then(() => {
               this.FETCH_EDIT_MORTGAGES(payload)
                 // eslint-disable-next-line no-unused-vars
