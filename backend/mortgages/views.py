@@ -61,7 +61,7 @@ class MortgageProgramsView(generics.ListAPIView):
                 if v == 'yes':
                     v1 = 0
                     params.update({k1: v1})
-                    print(k1, v1)
+                    # print(k1, v1)
             if k == 'first_payment':
                 k = k + '__lte'
                 params.update({k: v})

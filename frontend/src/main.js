@@ -23,7 +23,7 @@ router.beforeEach((to, from, next) => {
   // this comes to play if the user is logged in and tries to access the login/register page
   else if (to.matched.some(record => record.meta.requiresLogged)) {
     if (store.getters.loggedIn) {
-      next({ name: "home" });
+      next({ name: "mortgage-search" });
     } else {
       next();
     }

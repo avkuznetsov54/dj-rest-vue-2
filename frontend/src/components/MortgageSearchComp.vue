@@ -776,9 +776,19 @@ export default {
     }
   },
   created() {
-    this.FETCH_MORTGAGES();
-    this.FETCH_BANKS();
-    this.FETCH_TARGET_CREDITS();
+    this.FETCH_MORTGAGES()
+      .then(() => {
+        this.FETCH_BANKS();
+        this.FETCH_TARGET_CREDITS();
+      })
+      .catch(() => {
+        this.$store.dispatch("refreshToken").then(() => {
+          this.FETCH_MORTGAGES().then(() => {
+            this.FETCH_BANKS();
+            this.FETCH_TARGET_CREDITS();
+          });
+        });
+      });
   },
   mounted() {},
   filters: {

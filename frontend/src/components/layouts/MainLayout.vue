@@ -77,11 +77,13 @@
                 <v-list-item-content align="left">
                   <v-list-item-title class="title">
                     <div>{{ GET_USER_INFO_DATA.username }}</div>
-                    <div>{{ nameUser }}</div>
+                    <!--                    <template v-if="nameUser">-->
+                    <!--                      <span>{{ nameUser }}</span>-->
+                    <!--                    </template>-->
                   </v-list-item-title>
-<!--                  <v-list-item-subtitle>-->
-<!--                    subtext-->
-<!--                  </v-list-item-subtitle>-->
+                  <!--                  <v-list-item-subtitle>-->
+                  <!--                    subtext-->
+                  <!--                  </v-list-item-subtitle>-->
                 </v-list-item-content>
               </v-list-item>
 
@@ -103,16 +105,16 @@
                 <!--                  </v-list-item-content>-->
                 <!--                </v-list-item>-->
 
-<!--                <template v-if="GET_USER_INFO_DATA.groups != false">-->
-<!--                  <v-list-item to="/#">-->
-<!--                    <v-list-item-icon class="mr-2">-->
-<!--                      <v-icon>mdi-settings</v-icon>-->
-<!--                    </v-list-item-icon>-->
-<!--                    <v-list-item-content align="left">-->
-<!--                      <v-list-item-title>Администрирование</v-list-item-title>-->
-<!--                    </v-list-item-content>-->
-<!--                  </v-list-item>-->
-<!--                </template>-->
+                <!--                <template v-if="GET_USER_INFO_DATA.groups != false">-->
+                <!--                  <v-list-item to="/#">-->
+                <!--                    <v-list-item-icon class="mr-2">-->
+                <!--                      <v-icon>mdi-settings</v-icon>-->
+                <!--                    </v-list-item-icon>-->
+                <!--                    <v-list-item-content align="left">-->
+                <!--                      <v-list-item-title>Администрирование</v-list-item-title>-->
+                <!--                    </v-list-item-content>-->
+                <!--                  </v-list-item>-->
+                <!--                </template>-->
 
                 <v-list-item to="/logout">
                   <v-list-item-icon class="mr-2">
@@ -244,15 +246,15 @@ export default {
   name: "main-layout",
   data: () => ({
     right: null,
-    drawer: null,
+    drawer: false,
     linksMenu: [
-      { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
+      // { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
       // { title: "Login", url: "/login", icon: "mdi-account" },
       // { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
       { title: "Ипотека", url: "/mortgage-search", icon: "mdi-view-list" },
-      { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
-      { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
-      { title: "Помощь", url: "/help", icon: "mdi-help-circle" }
+      // { title: "Контакты", url: "/contacts", icon: "mdi-contacts" },
+      // { title: "About", url: "/about", icon: "mdi-vector-polyline-minus" },
+      // { title: "Помощь", url: "/help", icon: "mdi-help-circle" }
       // { title: "Cars", url: "/cars", icon: "mdi-car-multiple" },
       // { title: "Mods", url: "/mods", icon: "mdi-history" }
       // { title: "Logout", url: "/logout", icon: "mdi-account" }
@@ -280,8 +282,8 @@ export default {
           { icon: "mdi-plus", url: "/mortgage-editprogram", text: "Программы" }
         ]
       }
-    ],
-    nameUser: ""
+    ]
+    // nameUser: ""
   }),
   computed: {
     ...mapState("user_info", ["USER_INFO_DATA"]),
@@ -292,12 +294,23 @@ export default {
     get_user_info() {
       const refresh_token = localStorage.getItem("refresh_token");
       // eslint-disable-next-line no-unused-vars
-      this.FETCH_USER_INFO(refresh_token).then(response => {
-        // console.log(response.data[0].userprofile.full_name);
-        // this.nameUser = response.data[0].userprofile.full_name;
-        console.log(this.GET_USER_INFO_DATA.userprofile.full_name);
-        this.nameUser = this.GET_USER_INFO_DATA.userprofile.full_name;
-      });
+      this.FETCH_USER_INFO(refresh_token);
+      // .then(() => {
+      //   // console.log(this.GET_USER_INFO_DATA.userprofile.full_name);
+      //   if (this.GET_USER_INFO_DATA.userprofile.full_name !== null) {
+      //     this.nameUser = this.GET_USER_INFO_DATA.userprofile.full_name;
+      //   }
+      // })
+      // .catch(() => {
+      //   this.$store.dispatch("refreshToken").then(() => {
+      //     this.FETCH_USER_INFO(refresh_token).then(() => {
+      //       // console.log(this.GET_USER_INFO_DATA.userprofile.full_name);
+      //       if (this.GET_USER_INFO_DATA.userprofile.full_name !== null) {
+      //         this.nameUser = this.GET_USER_INFO_DATA.userprofile.full_name;
+      //       }
+      //     });
+      //   });
+      // });
     }
   },
   created() {
