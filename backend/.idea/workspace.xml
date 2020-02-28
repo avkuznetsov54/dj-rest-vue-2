@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydata.json" beforeDir="false" afterPath="$PROJECT_DIR$/mydata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/css/app.4233c9e8.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-3f7fcb7a.d6d719d6.css" beforeDir="false" />
@@ -23,8 +19,8 @@
       <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.1bfb0927.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.1bfb0927.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.120117b8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.120117b8.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-1a4db9c0.26af45ba.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-1a4db9c0.26af45ba.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.2fdfff5b.js" beforeDir="false" />
@@ -411,12 +407,12 @@
       <workItem from="1582080299273" duration="3935000" />
       <workItem from="1582166687350" duration="23411000" />
       <workItem from="1582681755822" duration="448000" />
-      <workItem from="1582854117535" duration="6544000" />
+      <workItem from="1582854117535" duration="6836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232454000" />
+    <option name="totallyTimeSpent" value="232746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
