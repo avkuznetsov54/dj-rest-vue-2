@@ -30,6 +30,7 @@ class MortgageProgramsAdmin(admin.ModelAdmin):
 
     list_display = ('programs_bank', 'programs_name', 'rate', 'first_payment')
     ordering = ['programs_bank']
+    readonly_fields = ['date_modified']
 
 
 admin.site.register(MortgagePrograms, MortgageProgramsAdmin)

@@ -117,7 +117,7 @@ export default {
         })
         .then(() => {
           this.wrongCred = false;
-          this.$router.push({ name: "mortgage-search" });
+          this.$router.push({ name: "home" });
         })
         .catch(err => {
           // console.log(err.response.data);

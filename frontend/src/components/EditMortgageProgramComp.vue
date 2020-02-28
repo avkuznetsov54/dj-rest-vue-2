@@ -545,6 +545,9 @@
           >mdi-checkbox-marked-circle</v-icon
         >
       </template>
+      <template v-slot:item.date_modified="{ item }">
+        <span> {{ item.date_modified | normDate }} </span>
+      </template>
 
       <!--      <template v-slot:top>-->
       <!--        <v-toolbar flat color="white">-->
@@ -785,6 +788,12 @@ export default {
         value: "is_visible"
       },
       {
+        text: "Дата изменения",
+        width: "5%",
+        align: "center",
+        value: "date_modified"
+      },
+      {
         text: "Действия",
         align: "right",
         width: "15%",
@@ -856,7 +865,20 @@ export default {
       });
     // this.initialize();
   },
-
+  filters: {
+    normDate(value) {
+      const date = new Date(value);
+      let year, month, day, h, m, s;
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      h = date.getHours();
+      m = date.getMinutes();
+      s = date.getSeconds();
+      const correct_date = day + "." + month + "." + year + " " + h + ":" + m + ":" + s;
+      return correct_date;
+    }
+  },
   methods: {
     ...mapActions("mortgages", [
       "FETCH_BANKS",

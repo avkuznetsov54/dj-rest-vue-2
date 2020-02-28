@@ -69,7 +69,8 @@ class MortgageProgramsSerializer(serializers.ModelSerializer):
                   'storeys',
                   'housing_wear',
                   'req_tech_docs',
-                  'add_info'
+                  'add_info',
+                  'date_modified'
                   )
 
     # def get_programs_bank(self, obj):

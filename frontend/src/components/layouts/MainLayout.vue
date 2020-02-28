@@ -246,9 +246,9 @@ export default {
   name: "main-layout",
   data: () => ({
     right: null,
-    drawer: false,
+    drawer: null,
     linksMenu: [
-      // { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
+      { title: "Главная", url: "/", exact: true, icon: "mdi-view-dashboard" },
       // { title: "Login", url: "/login", icon: "mdi-account" },
       // { title: "Registration", url: "/registr", icon: "mdi-account-plus" },
       { title: "Ипотека", url: "/mortgage-search", icon: "mdi-view-list" },
