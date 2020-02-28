@@ -2,59 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.env.prod_2" beforeDir="false" afterPath="$PROJECT_DIR$/../.env.prod_2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_327.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_327_558aBp5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_327_EZXzVhK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_327_cvi1jKN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_327_pAk4FkG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/biglogo_936.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_2XY3qir.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_7OLdrar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_92KPs6i.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_WVlD8Xm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_dbEz8Zl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_kkA8dcQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-otkritie_kmgGDQn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-sber.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-sber_ToZj6A0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo-sber_rfFjUSg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_2JHlsW9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_2KBoQuC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_3sBNstY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_5DhNVJp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_7lK7hoR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_87lD7TT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_J06VzLP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_JsNtpAN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_R65z3i5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_dlhBvtY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_hLT6F6q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_alfa_bank_qdv5aiA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank_JqsR3FO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank_WKeZolF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank_pNl5bWN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank_uo3Ar4m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_gazprombank_yyakqyZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_vtb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_vtb_FWYtVmV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_vtb_RYN0xba.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_vtb_tohz30s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/logo_bank/logo_vtb_wIbWIga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mortgages/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mortgages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mortgages/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mortgages/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.prod_2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.prod_2.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/EditMortgageProgramComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/EditMortgageProgramComp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layouts/MainLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/RegistrationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/RegistrationForm.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,8 +126,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mortgages/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="475">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -404,15 +354,16 @@
       <workItem from="1582080299273" duration="3935000" />
       <workItem from="1582166687350" duration="23411000" />
       <workItem from="1582681755822" duration="448000" />
-      <workItem from="1582854117535" duration="2994000" />
+      <workItem from="1582854117535" duration="3006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228904000" />
+    <option name="totallyTimeSpent" value="228916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17338218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -825,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state relative-caret-position="475">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

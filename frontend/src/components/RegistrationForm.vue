@@ -10,14 +10,14 @@
               </v-toolbar>
               <v-card-text>
                 <form @submit.prevent="registerUserForm">
-                  <v-text-field
-                    v-model="name"
-                    :error-messages="nameErrors"
-                    :counter="10"
-                    label="Name"
-                    required
-                    @blur="$v.name.$touch()"
-                  ></v-text-field>
+<!--                  <v-text-field-->
+<!--                    v-model="name"-->
+<!--                    :error-messages="nameErrors"-->
+<!--                    :counter="10"-->
+<!--                    label="ФИО"-->
+<!--                    required-->
+<!--                    @blur="$v.name.$touch()"-->
+<!--                  ></v-text-field>-->
                   <v-text-field
                     v-model="email"
                     :error-messages="emailErrors"
@@ -38,7 +38,7 @@
                     v-model="password"
                     :error-messages="passwordErrors"
                     :counter="8"
-                    label="Password"
+                    label="Пароль"
                     required
                     @blur="$v.password.$touch()"
                     :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -49,7 +49,7 @@
                     v-model="confirmPass"
                     :error-messages="confirmPassErrors"
                     :counter="8"
-                    label="Confirm Password"
+                    label="Повторить пароль"
                     required
                     @blur="$v.confirmPass.$touch()"
                     :append-icon="showConfirmPass ? 'mdi-eye' : 'mdi-eye-off'"
@@ -132,7 +132,7 @@ export default {
       if (!this.$v.name.$dirty) return errors;
       !this.$v.name.maxLength &&
         errors.push("Name must be at most 10 characters long");
-      !this.$v.name.required && errors.push("Name is required.");
+      !this.$v.name.required && errors.push("ФИО обязательно.");
       return errors;
     },
     usernameErrors() {
@@ -140,7 +140,7 @@ export default {
       if (!this.$v.username.$dirty) return errors;
       !this.$v.username.maxLength &&
         errors.push("Name must be at most 10 characters long");
-      !this.$v.username.required && errors.push("Name is required.");
+      !this.$v.username.required && errors.push("Username обязательно.");
       return errors;
     },
     passwordErrors() {
@@ -148,7 +148,7 @@ export default {
       if (!this.$v.password.$dirty) return errors;
       !this.$v.password.minLength &&
         errors.push("Пароль должен быть не менее 8 символов.");
-      !this.$v.password.required && errors.push("Password is required.");
+      !this.$v.password.required && errors.push("Пароль обязательен.");
       return errors;
     },
     confirmPassErrors() {
