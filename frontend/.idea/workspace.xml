@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/mydata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/mydata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -508,12 +511,12 @@
       <workItem from="1582080300144" duration="12134000" />
       <workItem from="1582166715678" duration="17901000" />
       <workItem from="1582681755306" duration="802000" />
-      <workItem from="1582854116291" duration="4633000" />
+      <workItem from="1582854116291" duration="5094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476256000" />
+    <option name="totallyTimeSpent" value="476717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -915,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/axios-base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

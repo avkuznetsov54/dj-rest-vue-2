@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const APIUrl = process.env.VUE_APP_API_ROOT;
+const APIUrl = process.env.VUE_APP_API_ROOT || "http://127.0.0.1:8000";
 // const APIUrl = "http://127.0.0.1:8000";
 // const APIUrl = "http://testserv01.tmweb.ru:8000/";
 

@@ -1,0 +1,2167 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "token_blacklist",
+        "model": "blacklistedtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "token_blacklist",
+        "model": "outstandingtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "auth_user",
+        "model": "mods"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "auth_user",
+        "model": "jobposition"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "auth_user",
+        "model": "office"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "auth_user",
+        "model": "subdivision"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "auth_user",
+        "model": "userprofile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "cars",
+        "model": "car"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "mortgages",
+        "model": "banks"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "mortgages",
+        "model": "mortgageprograms"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "mortgages",
+        "model": "targetcredits"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "silk",
+        "model": "profile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "silk",
+        "model": "request"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "silk",
+        "model": "response"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "silk",
+        "model": "sqlquery"
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 1,
+    "fields": {
+        "bank_name": "\u0421\u0411\u0415\u0420\u0411\u0410\u041d\u041a",
+        "bank_logo": "logo_bank/logo-sber.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 2,
+    "fields": {
+        "bank_name": "\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435",
+        "bank_logo": "logo_bank/logo-otkritie.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 26,
+    "fields": {
+        "bank_name": "\u0420\u0430\u0439\u0444\u0444\u0430\u0437\u0435\u043d \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-raifazen-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 34,
+    "fields": {
+        "bank_name": "\u0411\u0410\u041d\u041a \u0420\u041e\u0421\u0421\u0418\u0418",
+        "bank_logo": "logo_bank/logo-bankrossii.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 35,
+    "fields": {
+        "bank_name": "\u0410\u043b\u044c\u0444\u0430 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo_alfa_bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 36,
+    "fields": {
+        "bank_name": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo_gazprombank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 37,
+    "fields": {
+        "bank_name": "\u0417\u0430\u043f\u0441\u0438\u0431\u043a\u043e\u043c\u0431\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-zapsib-kom-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 38,
+    "fields": {
+        "bank_name": "\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-promzvyz-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 39,
+    "fields": {
+        "bank_name": "\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
+        "bank_logo": "logo_bank/logo-bank-sanktpiterburg.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 40,
+    "fields": {
+        "bank_name": "\u0412\u0422\u0411",
+        "bank_logo": "logo_bank/logo_vtb.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 41,
+    "fields": {
+        "bank_name": "\u0411\u0430\u043d\u043a \u0412\u043e\u0437\u0440\u0430\u0436\u0434\u0435\u043d\u0438\u0435",
+        "bank_logo": "logo_bank/logo-vozrazhdenie.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 42,
+    "fields": {
+        "bank_name": "\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-sovkombank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 43,
+    "fields": {
+        "bank_name": "\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-akbars-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 44,
+    "fields": {
+        "bank_name": "\u0414\u043e\u043c \u0420\u0424 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-domrf-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 45,
+    "fields": {
+        "bank_name": "\u041c\u0422\u0421 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-mts-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 46,
+    "fields": {
+        "bank_name": "\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-unikredit-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 47,
+    "fields": {
+        "bank_name": "\u0423\u0420\u0410\u041b\u0421\u0418\u0411 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-uralsib-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 48,
+    "fields": {
+        "bank_name": "\u0411\u0430\u043d\u043a \u0417\u0415\u041d\u0418\u0422",
+        "bank_logo": "logo_bank/logo-zenit-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 49,
+    "fields": {
+        "bank_name": "\u0410\u0431\u0441\u043e\u043b\u044e\u0442 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-absolute-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 50,
+    "fields": {
+        "bank_name": "\u0420\u0430\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-rosselhoz-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 51,
+    "fields": {
+        "bank_name": "\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0418\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-mosk-ind-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 52,
+    "fields": {
+        "bank_name": "\u0420\u041e\u0421\u0411\u0410\u041d\u041a \u0414\u041e\u041c",
+        "bank_logo": "logo_bank/logo-rosbankdom-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.banks",
+    "pk": 53,
+    "fields": {
+        "bank_name": "\u0421\u041c\u041f \u0411\u0430\u043d\u043a",
+        "bank_logo": "logo_bank/logo-smp-bank.png",
+        "preference_is_active": false,
+        "preference_value": null,
+        "preference_comment": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 2,
+    "fields": {
+        "target_name": "\u0420\u0435\u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 3,
+    "fields": {
+        "target_name": "\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u0432 \u043d\u043e\u0432\u043e\u0441\u0442\u0440\u043e\u0439\u043a\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 4,
+    "fields": {
+        "target_name": "\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u043d\u0430 \u0432\u0442\u043e\u0440\u0438\u0447\u043d\u043e\u043c \u0440\u044b\u043d\u043a\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 6,
+    "fields": {
+        "target_name": "\u0410\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u043d\u0430 \u0432\u0442\u043e\u0440\u0438\u0447\u043d\u043e\u043c \u0440\u044b\u043d\u043a\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 7,
+    "fields": {
+        "target_name": "\u0422\u0430\u0443\u043d\u0445\u0430\u0443\u0441",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 8,
+    "fields": {
+        "target_name": "\u0417\u0430\u0433\u043e\u0440\u043e\u0434\u043d\u044b\u0439 \u0434\u043e\u043c/\u0423\u0447\u0430\u0441\u0442\u043e\u043a",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 9,
+    "fields": {
+        "target_name": "\u0414\u043e\u043b\u044f \u0432 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0435 \u043d\u0430 \u0432\u0442\u043e\u0440\u0438\u0447\u043d\u043e\u043c \u0440\u044b\u043d\u043a\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 10,
+    "fields": {
+        "target_name": "\u041c\u0430\u0448\u0438\u043d\u043e\u043c\u0435\u0441\u0442\u043e/\u0413\u0430\u0440\u0430\u0436",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 11,
+    "fields": {
+        "target_name": "\u0421\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0434\u043e\u043c\u0430",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 12,
+    "fields": {
+        "target_name": "\u041a\u043e\u043c\u043d\u0430\u0442\u0430",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 13,
+    "fields": {
+        "target_name": "\u0420\u0435\u043c\u043e\u043d\u0442/\u043e\u0442\u0434\u0435\u043b\u043a\u0430 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u044b",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 14,
+    "fields": {
+        "target_name": "\u041a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u0430\u044f \u043d\u0435\u0434\u0432\u0438\u0436\u0438\u043c\u043e\u0441\u0442\u044c",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 15,
+    "fields": {
+        "target_name": "\u041d\u0435\u0446\u0435\u043b\u0435\u0432\u043e\u0439 \u0438\u043f\u043e\u0442\u0435\u0447\u043d\u044b\u0439 \u043a\u0440\u0435\u0434\u0438\u0442 \u043f\u043e\u0434 \u0437\u0430\u043b\u043e\u0433 \u0438\u043c\u0435\u044e\u0449\u0435\u0439\u0441\u044f \u043d\u0435\u0434\u0432\u0438\u0436\u0438\u043c\u043e\u0441\u0442\u0438",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.targetcredits",
+    "pk": 16,
+    "fields": {
+        "target_name": "\u0410\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u044b \u0432 \u043d\u043e\u0432\u043e\u0441\u0442\u0440\u043e\u0439\u043a\u0435",
+        "target_desc": ""
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 1,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 26,
+        "programs_name": "trtrtrtr",
+        "rate": 10.5,
+        "rate_salary": 10.4,
+        "first_payment": 35,
+        "min_sum_credit": 100000,
+        "max_sum_credit": 12000000,
+        "min_time_credit": 5,
+        "max_time_credit": 30,
+        "min_borrower_age": 24,
+        "max_borrower_age": 45,
+        "work_experience": 12,
+        "mandatory_documents": "\u0414\u0430\u0432\u043d\u043e \u0432\u044b\u044f\u0441\u043d\u0435\u043d\u043e, \u0447\u0442\u043e \u043f\u0440\u0438 \u043e\u0446\u0435\u043d\u043a\u0435 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 \u0438 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0447\u0438\u0442\u0430\u0435\u043c\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u043c\u0435\u0448\u0430\u0435\u0442 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0438\u0442\u044c\u0441\u044f. Lorem Ipsum",
+        "proof_of_income_document": "\u0414\u0430\u0432\u043d\u043e \u0432\u044b\u044f\u0441\u043d\u0435\u043d\u043e, \u0447\u0442\u043e \u043f\u0440\u0438 \u043e\u0446\u0435\u043d\u043a\u0435 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 \u0438 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0447\u0438\u0442\u0430\u0435\u043c\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u043c\u0435\u0448\u0430\u0435\u0442 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0438\u0442\u044c\u0441\u044f. Lorem Ipsum",
+        "time_for_bank_decision": "6 \u0434\u043d\u0435\u0439",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "yes",
+        "share_comment": "\u0434\u043e \u0446\u0435\u043b\u043e\u0433\u043e",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "no",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "\u0414\u0430\u0432\u043d\u043e \u0432\u044b\u044f\u0441\u043d\u0435\u043d\u043e, \u0447\u0442\u043e \u043f\u0440\u0438 \u043e\u0446\u0435\u043d\u043a\u0435 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 \u0438 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0447\u0438\u0442\u0430\u0435\u043c\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u043c\u0435\u0448\u0430\u0435\u0442 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0438\u0442\u044c\u0441\u044f. Lorem Ipsum, \u0414\u0430\u0432\u043d\u043e \u0432\u044b\u044f\u0441\u043d\u0435\u043d\u043e, \u0447\u0442\u043e \u043f\u0440\u0438 \u043e\u0446\u0435\u043d\u043a\u0435 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 \u0438 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0447\u0438\u0442\u0430\u0435\u043c\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u043c\u0435\u0448\u0430\u0435\u0442 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0438\u0442\u044c\u0441\u044f. Lorem Ipsum",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            6
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 5,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 36,
+        "programs_name": "\u041d\u043e\u0432\u043e\u0441\u0435\u043b\u044b 22",
+        "rate": 11.3,
+        "rate_salary": 11.0,
+        "first_payment": 45,
+        "min_sum_credit": 100000,
+        "max_sum_credit": 12000000,
+        "min_time_credit": null,
+        "max_time_credit": null,
+        "min_borrower_age": null,
+        "max_borrower_age": null,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": []
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 7,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 1,
+        "programs_name": "\u0421\u0431\u0435\u0440",
+        "rate": 4.7,
+        "rate_salary": 4.0,
+        "first_payment": 12,
+        "min_sum_credit": 100000,
+        "max_sum_credit": 5000000,
+        "min_time_credit": 3,
+        "max_time_credit": 35,
+        "min_borrower_age": 18,
+        "max_borrower_age": 50,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "no",
+        "redevelopment_comment": "rerererererer",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            9,
+            3,
+            10,
+            11,
+            7
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 8,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 2,
+        "programs_name": "\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435",
+        "rate": 11.0,
+        "rate_salary": 22.0,
+        "first_payment": 10,
+        "min_sum_credit": 500000,
+        "max_sum_credit": 35000000,
+        "min_time_credit": 10,
+        "max_time_credit": 35,
+        "min_borrower_age": 18,
+        "max_borrower_age": 70,
+        "work_experience": 6,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "yes",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            3
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 9,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 35,
+        "programs_name": "\u0441\u0442\u0430\u0440\u0442",
+        "rate": 4.0,
+        "rate_salary": 2.4,
+        "first_payment": 20,
+        "min_sum_credit": 150000,
+        "max_sum_credit": 15000000,
+        "min_time_credit": 5,
+        "max_time_credit": 35,
+        "min_borrower_age": 21,
+        "max_borrower_age": 75,
+        "work_experience": 6,
+        "mandatory_documents": "\u041f\u0430\u0441\u043f\u043e\u0440\u0442, \u0417\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u043a\u043d\u0438\u0436\u043a\u0438 \u0438\u043b\u0438 \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440, \u0421\u041d\u0418\u041b\u0421",
+        "proof_of_income_document": "\u0421\u043f\u0440\u0430\u0432\u043a\u0430 2-\u041d\u0414\u0424\u041b, \u0421\u043f\u0440\u0430\u0432\u043a\u0430 \u043f\u043e \u0444\u043e\u0440\u043c\u0435 \u0431\u0430\u043d\u043a\u0430, \u0412\u044b\u043f\u0438\u0441\u043a\u0430 \u043f\u043e \u0441\u0447\u0435\u0442\u0443",
+        "time_for_bank_decision": "\u043e\u0442 5 \u0434\u043e 10 \u0434\u043d\u0435\u0439",
+        "understatement_is_active": true,
+        "understatement_comment": "\u043d\u0430 \u0432\u0441\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b, ggn fjgfj . fnjfjnjnrjnfjref , rgergreg reg, rg rg, gregreg erg,erg egregrgerg ,ergre,gregerg , rgerg erg reg e,rg ergergemrgm gmermgermg emrgiemrigm eirgm remgekr gmergm",
+        "co_borrowers": "\u043b\u044e\u0431\u043e\u0439",
+        "commission": "1000 \u0440\u0443\u0431\u043b\u0435\u0439",
+        "seller_registration": "\u0438\u043d\u043e\u0433\u043e\u0440\u043e\u0434\u043d\u0438\u0439",
+        "express_issue": "yes",
+        "inclusion_children": "yes",
+        "room": "yes",
+        "room_comment": "\u043c\u043c\u043c\u043c\u043c, egregrgerg ,ergre,gregerg , rgerg erg reg",
+        "share": "yes",
+        "share_comment": "\u0434\u0434\u0434\u0434, egregrgerg ,ergre,gregerg , rgerg erg reg",
+        "private_house": "yes",
+        "private_comment": "\u0447\u0447\u0447\u0447\u0447\u0447",
+        "apartments": "yes",
+        "apartments_comment": "\u0430\u0430\u0430\u0430\u0430",
+        "redevelopment": "yes",
+        "redevelopment_comment": "\u043a\u0440\u043e\u043c\u0435 \u043b\u043e\u0434\u0436\u0438\u0438",
+        "overlap": "\u043a\u0438\u0440\u043f\u0438\u0447\u043d\u044b\u0435",
+        "storeys": "\u043b\u044e\u0431\u0430\u044f",
+        "housing_wear": "70 %",
+        "req_tech_docs": "",
+        "add_info": "Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum, Loren ipsum,",
+        "date_modified": "2020-02-28T02:11:19.038Z",
+        "programs_target": []
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 12,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 2,
+        "programs_name": "\u0418\u043f\u043e\u0442\u0435\u043a\u0430 \u043d\u0435 \u0432\u0441\u0435\u043c",
+        "rate": 12.0,
+        "rate_salary": 11.0,
+        "first_payment": 300,
+        "min_sum_credit": null,
+        "max_sum_credit": null,
+        "min_time_credit": null,
+        "max_time_credit": null,
+        "min_borrower_age": null,
+        "max_borrower_age": null,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T03:22:33.822Z",
+        "programs_target": [
+            16,
+            6,
+            9,
+            8,
+            3,
+            4,
+            10,
+            15,
+            13,
+            2,
+            11,
+            7
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 13,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 36,
+        "programs_name": "\u0421\u0442\u0440\u043e\u0439 \u0441\u0432\u043e\u0451",
+        "rate": 9.5,
+        "rate_salary": null,
+        "first_payment": 15,
+        "min_sum_credit": 100000,
+        "max_sum_credit": 100000000,
+        "min_time_credit": 5,
+        "max_time_credit": 45,
+        "min_borrower_age": 21,
+        "max_borrower_age": 75,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "yes",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            8,
+            3,
+            10,
+            15,
+            13,
+            11
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 15,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 26,
+        "programs_name": "dddddd",
+        "rate": 12.0,
+        "rate_salary": 11.0,
+        "first_payment": 28,
+        "min_sum_credit": null,
+        "max_sum_credit": null,
+        "min_time_credit": null,
+        "max_time_credit": null,
+        "min_borrower_age": null,
+        "max_borrower_age": null,
+        "work_experience": 4,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            16,
+            6
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 16,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 36,
+        "programs_name": "\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u0430\u044f 11",
+        "rate": 9.3,
+        "rate_salary": 5.0,
+        "first_payment": 10,
+        "min_sum_credit": null,
+        "max_sum_credit": null,
+        "min_time_credit": null,
+        "max_time_credit": null,
+        "min_borrower_age": null,
+        "max_borrower_age": null,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            8,
+            3
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 34,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 34,
+        "programs_name": "\u041a\u043e\u043f\u0438\u044f \u0412\u0441\u0435\u043c \u043f\u043e 5",
+        "rate": 8.3,
+        "rate_salary": 8.0,
+        "first_payment": 12,
+        "min_sum_credit": 120000,
+        "max_sum_credit": 10000000,
+        "min_time_credit": 3,
+        "max_time_credit": 15,
+        "min_borrower_age": 21,
+        "max_borrower_age": 75,
+        "work_experience": 6,
+        "mandatory_documents": "\u041f\u0430\u0441\u043f\u043e\u0440\u0442, \u0417\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u043a\u043d\u0438\u0436\u043a\u0438 \u0438\u043b\u0438 \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440, \u0421\u041d\u0418\u041b\u0421",
+        "proof_of_income_document": "(1 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u043d\u0430 \u0432\u044b\u0431\u043e\u0440) \u0421\u043f\u0440\u0430\u0432\u043a\u0430 2-\u041d\u0414\u0424\u041b, \u0421\u043f\u0440\u0430\u0432\u043a\u0430 \u043f\u043e \u0444\u043e\u0440\u043c\u0435 \u0431\u0430\u043d\u043a\u0430, \u0412\u044b\u043f\u0438\u0441\u043a\u0430 \u043f\u043e \u0441\u0447\u0435\u0442\u0443",
+        "time_for_bank_decision": "\u043e\u0442 3 \u0434\u043e 10 \u0434\u043d\u0435\u0439",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T02:30:37.699Z",
+        "programs_target": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 65,
+    "fields": {
+        "is_visible": false,
+        "programs_bank": 34,
+        "programs_name": "1111",
+        "rate": 8.0,
+        "rate_salary": null,
+        "first_payment": 15,
+        "min_sum_credit": 150000,
+        "max_sum_credit": 25000000,
+        "min_time_credit": 10,
+        "max_time_credit": 40,
+        "min_borrower_age": 18,
+        "max_borrower_age": 70,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "yes",
+        "room_comment": "edede e,edwe,dwe,d, wed,we,dwe,d,wed,ew,dew,,dwe,d,ew,dw,e",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": []
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 68,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 35,
+        "programs_name": "\u0424\u0438\u043d\u0438\u0448",
+        "rate": 13.0,
+        "rate_salary": 12.0,
+        "first_payment": 20,
+        "min_sum_credit": 150000,
+        "max_sum_credit": 15000000,
+        "min_time_credit": null,
+        "max_time_credit": null,
+        "min_borrower_age": null,
+        "max_borrower_age": null,
+        "work_experience": 2,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": true,
+        "understatement_comment": "rererere",
+        "co_borrowers": "\u041f\u0435\u0440\u0432\u044b\u0439",
+        "commission": "\u0412\u0442\u043e\u0440\u043e\u0439",
+        "seller_registration": "\u0422\u0440\u0435\u0442\u0438\u0439",
+        "express_issue": "",
+        "inclusion_children": "yes",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T03:14:07.082Z",
+        "programs_target": [
+            12,
+            10,
+            15,
+            13,
+            11,
+            7
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 69,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 1,
+        "programs_name": "\u0421\u0431\u0435\u0440 (\u041a\u043e\u043f\u0438\u044f)",
+        "rate": 10.7,
+        "rate_salary": 10.0,
+        "first_payment": 10,
+        "min_sum_credit": 100000,
+        "max_sum_credit": 30000000,
+        "min_time_credit": 5,
+        "max_time_credit": 50,
+        "min_borrower_age": 21,
+        "max_borrower_age": 75,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            16,
+            6,
+            10,
+            13,
+            7
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 70,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 1,
+        "programs_name": "\u0421\u0431\u0435\u0440 (\u041a\u043e\u043f\u0438\u044f) (\u041a\u043e\u043f\u0438\u044f)",
+        "rate": 9.7,
+        "rate_salary": 9.0,
+        "first_payment": 20,
+        "min_sum_credit": 1500000,
+        "max_sum_credit": 15000000,
+        "min_time_credit": 10,
+        "max_time_credit": 45,
+        "min_borrower_age": 21,
+        "max_borrower_age": 65,
+        "work_experience": null,
+        "mandatory_documents": "",
+        "proof_of_income_document": "",
+        "time_for_bank_decision": "",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            9,
+            8,
+            15,
+            13,
+            2
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 71,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 35,
+        "programs_name": "\u0424\u0438\u043d\u0438\u0448 2222",
+        "rate": 2.0,
+        "rate_salary": 1.0,
+        "first_payment": 20,
+        "min_sum_credit": 150000,
+        "max_sum_credit": 15000000,
+        "min_time_credit": 10,
+        "max_time_credit": 45,
+        "min_borrower_age": 18,
+        "max_borrower_age": 75,
+        "work_experience": 6,
+        "mandatory_documents": "\u041f\u0430\u0441\u043f\u043e\u0440\u0442, \u0417\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u043a\u043d\u0438\u0436\u043a\u0438 \u0438\u043b\u0438 \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440, \u0421\u041d\u0418\u041b\u0421",
+        "proof_of_income_document": "(1 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u043d\u0430 \u0432\u044b\u0431\u043e\u0440):\u0421\u043f\u0440\u0430\u0432\u043a\u0430 2-\u041d\u0414\u0424\u041b, \u0421\u043f\u0440\u0430\u0432\u043a\u0430 \u043f\u043e \u0444\u043e\u0440\u043c\u0435 \u0431\u0430\u043d\u043a\u0430, \u0412\u044b\u043f\u0438\u0441\u043a\u0430 \u043f\u043e \u0441\u0447\u0435\u0442\u0443",
+        "time_for_bank_decision": "3 \u0434\u043d\u044f",
+        "understatement_is_active": true,
+        "understatement_comment": "rererere",
+        "co_borrowers": "\u041f\u0435\u0440\u0432\u044b\u0439",
+        "commission": "\u0412\u0442\u043e\u0440\u043e\u0439",
+        "seller_registration": "\u0422\u0440\u0435\u0442\u0438\u0439",
+        "express_issue": "",
+        "inclusion_children": "yes",
+        "room": "no",
+        "room_comment": "lolololololo",
+        "share": "no",
+        "share_comment": "xcxcxcxcxc",
+        "private_house": "yes",
+        "private_comment": "3333",
+        "apartments": "yes",
+        "apartments_comment": "444444",
+        "redevelopment": "yes",
+        "redevelopment_comment": "\u044d\u0442\u043e \u043f\u0435\u0440\u0435\u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u043a\u0430",
+        "overlap": "\u044d\u0442\u043e \u043f\u0435\u0440\u0435\u043a\u0440\u044b\u0442\u0438\u044f",
+        "storeys": "\u044d\u0442\u043e \u044d\u0442\u0430\u0436\u043d\u043e\u0441\u0442\u044c",
+        "housing_wear": "\u044d\u0442\u043e \u0438\u0437\u043d\u043e\u0441 \u0436\u0438\u043b\u044c\u044f",
+        "req_tech_docs": "\u044d\u0442\u043e \u0442\u0435\u0445. \u0434\u043e\u043a\u0438",
+        "add_info": "\u044d\u0442\u043e \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            12,
+            10,
+            15,
+            13,
+            11,
+            7
+        ]
+    }
+},
+{
+    "model": "mortgages.mortgageprograms",
+    "pk": 73,
+    "fields": {
+        "is_visible": true,
+        "programs_bank": 37,
+        "programs_name": "\u0413\u043e\u0442\u043e\u0432\u043e\u0435 \u0438 \u0441\u0442\u0440\u043e\u044f\u0449\u0435\u0435\u0441\u044f \u0436\u0438\u043b\u044c\u0435",
+        "rate": 8.2,
+        "rate_salary": null,
+        "first_payment": 50,
+        "min_sum_credit": 50000,
+        "max_sum_credit": 50000000,
+        "min_time_credit": 1,
+        "max_time_credit": 3,
+        "min_borrower_age": 20,
+        "max_borrower_age": 75,
+        "work_experience": 6,
+        "mandatory_documents": "\u041f\u0430\u0441\u043f\u043e\u0440\u0442, \u0417\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u043a\u043d\u0438\u0436\u043a\u0438 \u0438\u043b\u0438 \u0442\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440, \u0412\u043e\u0435\u043d\u043d\u044b\u0439 \u0431\u0438\u043b\u0435\u0442 (\u0434\u043b\u044f \u043b\u0438\u0446 \u043c\u043e\u043b\u043e\u0436\u0435 27 \u043b\u0435\u0442)",
+        "proof_of_income_document": "(1 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u043d\u0430 \u0432\u044b\u0431\u043e\u0440) \u0421\u043f\u0440\u0430\u0432\u043a\u0430 2-\u041d\u0414\u0424\u041b",
+        "time_for_bank_decision": "\u043e\u0442 1 \u0447\u0430\u0441\u0430 \u0434\u043e 4 \u0434\u043d\u0435\u0439",
+        "understatement_is_active": false,
+        "understatement_comment": "",
+        "co_borrowers": "",
+        "commission": "",
+        "seller_registration": "",
+        "express_issue": "",
+        "inclusion_children": "",
+        "room": "",
+        "room_comment": "",
+        "share": "",
+        "share_comment": "",
+        "private_house": "",
+        "private_comment": "",
+        "apartments": "",
+        "apartments_comment": "",
+        "redevelopment": "",
+        "redevelopment_comment": "",
+        "overlap": "",
+        "storeys": "",
+        "housing_wear": "",
+        "req_tech_docs": "",
+        "add_info": "",
+        "date_modified": "2020-02-28T01:55:12.487Z",
+        "programs_target": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add blacklisted token",
+        "content_type": 7,
+        "codename": "add_blacklistedtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change blacklisted token",
+        "content_type": 7,
+        "codename": "change_blacklistedtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete blacklisted token",
+        "content_type": 7,
+        "codename": "delete_blacklistedtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view blacklisted token",
+        "content_type": 7,
+        "codename": "view_blacklistedtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add outstanding token",
+        "content_type": 8,
+        "codename": "add_outstandingtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change outstanding token",
+        "content_type": 8,
+        "codename": "change_outstandingtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete outstanding token",
+        "content_type": 8,
+        "codename": "delete_outstandingtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view outstanding token",
+        "content_type": 8,
+        "codename": "view_outstandingtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add mods",
+        "content_type": 9,
+        "codename": "add_mods"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change mods",
+        "content_type": 9,
+        "codename": "change_mods"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete mods",
+        "content_type": 9,
+        "codename": "delete_mods"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view mods",
+        "content_type": 9,
+        "codename": "view_mods"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add \u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c",
+        "content_type": 10,
+        "codename": "add_jobposition"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change \u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c",
+        "content_type": 10,
+        "codename": "change_jobposition"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete \u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c",
+        "content_type": 10,
+        "codename": "delete_jobposition"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view \u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c",
+        "content_type": 10,
+        "codename": "view_jobposition"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add \u041e\u0444\u0438\u0441",
+        "content_type": 11,
+        "codename": "add_office"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change \u041e\u0444\u0438\u0441",
+        "content_type": 11,
+        "codename": "change_office"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete \u041e\u0444\u0438\u0441",
+        "content_type": 11,
+        "codename": "delete_office"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view \u041e\u0444\u0438\u0441",
+        "content_type": 11,
+        "codename": "view_office"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add \u041f\u043e\u0434\u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u0438\u0435",
+        "content_type": 12,
+        "codename": "add_subdivision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change \u041f\u043e\u0434\u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u0438\u0435",
+        "content_type": 12,
+        "codename": "change_subdivision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete \u041f\u043e\u0434\u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u0438\u0435",
+        "content_type": 12,
+        "codename": "delete_subdivision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view \u041f\u043e\u0434\u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u0438\u0435",
+        "content_type": 12,
+        "codename": "view_subdivision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": 13,
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": 13,
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": 13,
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view user profile",
+        "content_type": 13,
+        "codename": "view_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add car",
+        "content_type": 14,
+        "codename": "add_car"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change car",
+        "content_type": 14,
+        "codename": "change_car"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete car",
+        "content_type": 14,
+        "codename": "delete_car"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view car",
+        "content_type": 14,
+        "codename": "view_car"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add \u0411\u0430\u043d\u043a",
+        "content_type": 15,
+        "codename": "add_banks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change \u0411\u0430\u043d\u043a",
+        "content_type": 15,
+        "codename": "change_banks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete \u0411\u0430\u043d\u043a",
+        "content_type": 15,
+        "codename": "delete_banks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view \u0411\u0430\u043d\u043a",
+        "content_type": 15,
+        "codename": "view_banks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u043f\u043e \u0438\u043f\u043e\u0442\u0435\u043a\u0435",
+        "content_type": 16,
+        "codename": "add_mortgageprograms"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u043f\u043e \u0438\u043f\u043e\u0442\u0435\u043a\u0435",
+        "content_type": 16,
+        "codename": "change_mortgageprograms"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u043f\u043e \u0438\u043f\u043e\u0442\u0435\u043a\u0435",
+        "content_type": 16,
+        "codename": "delete_mortgageprograms"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u043f\u043e \u0438\u043f\u043e\u0442\u0435\u043a\u0435",
+        "content_type": 16,
+        "codename": "view_mortgageprograms"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add \u0426\u0435\u043b\u044c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b",
+        "content_type": 17,
+        "codename": "add_targetcredits"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change \u0426\u0435\u043b\u044c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b",
+        "content_type": 17,
+        "codename": "change_targetcredits"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete \u0426\u0435\u043b\u044c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b",
+        "content_type": 17,
+        "codename": "delete_targetcredits"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view \u0426\u0435\u043b\u044c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b",
+        "content_type": 17,
+        "codename": "view_targetcredits"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add profile",
+        "content_type": 18,
+        "codename": "add_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change profile",
+        "content_type": 18,
+        "codename": "change_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete profile",
+        "content_type": 18,
+        "codename": "delete_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view profile",
+        "content_type": 18,
+        "codename": "view_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add request",
+        "content_type": 19,
+        "codename": "add_request"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change request",
+        "content_type": 19,
+        "codename": "change_request"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete request",
+        "content_type": 19,
+        "codename": "delete_request"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view request",
+        "content_type": 19,
+        "codename": "view_request"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add response",
+        "content_type": 20,
+        "codename": "add_response"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change response",
+        "content_type": 20,
+        "codename": "change_response"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete response",
+        "content_type": 20,
+        "codename": "delete_response"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view response",
+        "content_type": 20,
+        "codename": "view_response"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add sql query",
+        "content_type": 21,
+        "codename": "add_sqlquery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change sql query",
+        "content_type": 21,
+        "codename": "change_sqlquery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete sql query",
+        "content_type": 21,
+        "codename": "delete_sqlquery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view sql query",
+        "content_type": 21,
+        "codename": "view_sqlquery"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u0418\u043f\u043e\u0442\u0435\u043a\u0430",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$XPI7CMq1C60p$XPwTrevtu8toFhP1nV7l0Llq9kNkBer73wvNHaTSxkw=",
+        "last_login": "2020-02-28T08:29:39.495Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-02-28T08:28:03.652Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$zNLS4L15EwRx$VvR7srsYlRG5ymkLyaSUiUOTTUtt/jQCzDk6KqLJBic=",
+        "last_login": "2020-02-28T08:29:21Z",
+        "is_superuser": false,
+        "username": "cdcd",
+        "first_name": "",
+        "last_name": "",
+        "email": "cdcd@bgnsk.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-28T08:29:14Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-02-28T08:30:16.023Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u0418\u043f\u043e\u0442\u0435\u043a\u0430",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2020-02-28T08:30:28.508Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "cdcd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+}
+]
