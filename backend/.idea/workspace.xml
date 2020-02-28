@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydata.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +57,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
+            <state relative-caret-position="672">
               <caret line="187" column="68" lean-forward="true" selection-start-line="187" selection-start-column="68" selection-end-line="187" selection-end-column="68" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
@@ -355,12 +354,12 @@
       <workItem from="1582080299273" duration="3935000" />
       <workItem from="1582166687350" duration="23411000" />
       <workItem from="1582681755822" duration="448000" />
-      <workItem from="1582854117535" duration="4703000" />
+      <workItem from="1582854117535" duration="5064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230613000" />
+    <option name="totallyTimeSpent" value="230974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -777,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
+        <state relative-caret-position="672">
           <caret line="187" column="68" lean-forward="true" selection-start-line="187" selection-start-column="68" selection-end-line="187" selection-end-column="68" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
