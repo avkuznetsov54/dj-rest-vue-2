@@ -2,9 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac934dc0-24f1-43a8-ab1f-ea4de40e22ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/RegistrationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/RegistrationForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/app.4233c9e8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-44ee73f2.a47ff2fe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-55800d3a.5e40e86f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-73ccf7b0.e9ea9bb4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-75022b58.724574df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-c1f0d2d6.0483ca06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-c58cac38.d3850ea7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-e81e67d8.0127b762.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/css/chunk-vendors.eb555b32.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.1618c77b.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.927457ed.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.d6e3eba9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/fonts/materialdesignicons-webfont.f81583fc.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.24ce4fc7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/app.24ce4fc7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-1a4db9c0.ab61d2f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-1a4db9c0.ab61d2f8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.2fdfff5b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a30fc.2fdfff5b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0a3584.b61d9f20.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0ceb9e.805d7b1b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d0d61c0.db55ec49.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22d746.cd5ba4a1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-2d22db6b.17f97a9c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-3cf013d8.6de475a3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-3cf013d8.6de475a3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-44ee73f2.12407d40.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-44ee73f2.12407d40.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-55800d3a.e8caeda7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-55800d3a.e8caeda7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-5dc2c362.1b8d4713.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-5dc2c362.1b8d4713.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-73ccf7b0.46e24370.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-73ccf7b0.46e24370.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-75022b58.f3be2e68.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-75022b58.f3be2e68.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c1f0d2d6.d9bbd326.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c1f0d2d6.d9bbd326.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c58cac38.ee555b5a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-c58cac38.ee555b5a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-d5ba6a76.ec1a0c58.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-d5ba6a76.ec1a0c58.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e81e67d8.17d25fc7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-e81e67d8.17d25fc7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.b79f2c46.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/dist/js/chunk-vendors.b79f2c46.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +108,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1060">
-              <caret line="208" column="31" selection-start-line="208" selection-start-column="31" selection-end-line="208" selection-end-column="31" />
+            <state relative-caret-position="519">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
               </folding>
@@ -123,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mortgages/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -180,10 +234,10 @@
         <option value="$PROJECT_DIR$/project/urls.py" />
         <option value="$PROJECT_DIR$/auth_user/views.py" />
         <option value="$PROJECT_DIR$/mortgages/views.py" />
-        <option value="$PROJECT_DIR$/project/settings.py" />
         <option value="$PROJECT_DIR$/mortgages/serializers.py" />
         <option value="$PROJECT_DIR$/mortgages/models.py" />
         <option value="$PROJECT_DIR$/mortgages/admin.py" />
+        <option value="$PROJECT_DIR$/project/settings.py" />
       </list>
     </option>
   </component>
@@ -354,12 +408,12 @@
       <workItem from="1582080299273" duration="3935000" />
       <workItem from="1582166687350" duration="23411000" />
       <workItem from="1582681755822" duration="448000" />
-      <workItem from="1582854117535" duration="3006000" />
+      <workItem from="1582854117535" duration="3780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228916000" />
+    <option name="totallyTimeSpent" value="229690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -737,16 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1060">
-          <caret line="208" column="31" selection-start-line="208" selection-start-column="31" selection-end-line="208" selection-end-column="31" />
-          <folding>
-            <element signature="e#308#317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mortgages/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
@@ -777,9 +821,19 @@
     <entry file="file://$PROJECT_DIR$/mortgages/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="e#308#317#0" expanded="true" />
           </folding>
         </state>
       </provider>
