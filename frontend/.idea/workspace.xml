@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="de76945f-c3ae-4fc8-a318-f47e039381c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/mydata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/axios-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios-base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -508,15 +509,16 @@
       <workItem from="1582080300144" duration="12134000" />
       <workItem from="1582166715678" duration="17901000" />
       <workItem from="1582681755306" duration="802000" />
-      <workItem from="1582854116291" duration="4060000" />
+      <workItem from="1582854116291" duration="4256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="475683000" />
+    <option name="totallyTimeSpent" value="475879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989796" visible="true" weight="0.1910867" />
       <window_info id="Structure" order="1" sideWeight="0.50102043" side_tool="true" weight="0.1910867" />
