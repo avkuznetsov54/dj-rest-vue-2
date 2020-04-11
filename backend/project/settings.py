@@ -179,7 +179,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # added simplejwt plugin as default authentication class below
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.BasicAuthentication',  # убрать для proda !!!
+        'rest_framework.authentication.BasicAuthentication',  # убрать для proda !!!
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     # 'DEFAULT_RENDERER_CLASSES': (
