@@ -14,7 +14,7 @@
     "core-js": "^3.4.4",
     "idle-vue": "^2.0.5",
     "jwt-decode": "^2.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.5",
     "vue-cookies": "^1.6.1",
